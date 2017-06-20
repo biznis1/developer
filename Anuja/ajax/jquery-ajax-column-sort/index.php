@@ -1,5 +1,5 @@
 <?php
-	$conn = mysqli_connect("localhost", "root", "", "blog_samples");
+	$conn = mysqli_connect("localhost", "root", "root", "blog_samples");
 	
 	$orderBy = "post_at";
 	$order = "asc";

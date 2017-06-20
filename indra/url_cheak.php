@@ -1,4 +1,5 @@
 <?php
+
 function cheakUrl($url){
 	$f=fopen("$url","r");
 	$r=fread($f,1000);
