@@ -1,0 +1,13 @@
+1)Visit :- http://bulksms.ankiti.com/
+2)Click on singup link (http://app.bulksms.ankiti.com/?module=login&do=signup)
+3)singup page heading is "Login page"
+
+
+4)mail not received
+
+5)Notice :-
+	Notice: Undefined index: name in /sata1/server/ankiti3/Base/src/Sec/Login.php on line 246
+
+	Notice: Undefined index: id in /sata1/server/ankiti3/Base/src/Sec/Login.php on line 247
+
+	Notice: Undefined index: user_id in /sata1/server/ankiti3/Base/src/Sec/Login.php on line 267

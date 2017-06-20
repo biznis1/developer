@@ -1,0 +1,34 @@
+{
+  "toi_delhi": {
+    "orl": "http://epaperbeta.timesofindia.com/index.aspx?eid=31808&dt=20170614",
+    "durl": "'http://epaperbeta.timesofindia.com/index.aspx?eid=31808&dt='.date('Ymd')"
+  },
+  "toi_mumbai": {
+    "orl": "http://epaperbeta.timesofindia.com/index.aspx?eid=31804&dt=20170614",
+    "durl": "'http://epaperbeta.timesofindia.com/index.aspx?eid=31804&dt='.date('Ymd')"
+  },
+  "et_delhi": {
+    "orl": "http://epaperbeta.timesofindia.com/index.aspx?eid=31816&dt=20170614",
+    "durl": "'http://epaperbeta.timesofindia.com/index.aspx?eid=31816&dt='.date('Ymd')"
+  },
+  "et_mumbai": {
+    "orl": "http://epaperbeta.timesofindia.com/index.aspx?eid=31818&dt=20170614",
+    "durl": "'http://epaperbeta.timesofindia.com/index.aspx?eid=31818&dt='.date('Ymd')"
+  },
+  "hindu_login": {
+    "orl": "https://epaper.thehindu.com/index.php?rt=login/loginAction",
+    "id": "info@pressmonitor.com",
+    "pass": "news@1234",
+    "form_action": "https://epaper.thehindu.com/index.php?rt=api/checkemailid",
+    "id_name": "txtemail",
+    "pass_name": "txtpwd"
+  },
+  "dna_login": {
+    "orl": "http://epaper2.dnaindia.com/",
+    "id": "newsmonitor01@gmail.com",
+    "pass": "biznis405",
+    "form_action": "http://epaper2.dnaindia.com/loginchecknew.php",
+    "id_name": "uemail",
+    "pass_name": "upwd"
+  }
+}

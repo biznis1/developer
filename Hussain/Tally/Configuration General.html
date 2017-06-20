@@ -1,0 +1,64 @@
+{"alphas":1,"add_record":1,
+"top": "<style>	h1{margin-top: 0px;margin-bottom: 0px;}
+    .h1_heading{font-size:26px;text-align:center;color:black;}
+	.h2_heading{color:black;font-size:20px;text-align:center;}
+	legend {display: block;width: 100%; padding: 0;margin-bottom: 20px;font-size: 21px;font-weight: 700;line-height: inherit;color: #333;border: 0;border-bottom: 1px solid #e5e5e5;}
+   label{float: none !important; width: 100% !important;      text-transform: capitalize;  display: inline-block; max-width: 100% !important;    font-size: 16px;    margin-bottom: 5px;    font-weight: 700;    text-align: left;}
+    .color1{color:#FF8C00;}
+    .glyphicon {color: #333;position: relative;top: 1px;display: inline-block;font-family: 'Glyphicons Halflings';font-style: normal;font-weight: 400;line-height: 1;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}			
+.checkbox label, .radio label { vertical-align: middle;min-height: 20px;padding-left: 20px;margin-bottom: 0;font-weight: 400;cursor: pointer;display: block;float: left;padding-right: 10px;white-space: nowrap;}
+ img {vertical-align: middle; width: 100% !important;}
+ h2 {MARGIN-LEFT: 5%; margin-right: 5%;margin-top: 15px;margin-bottom: 22px;padding-bottom: 6px;border-bottom: 1px solid #333;}
+ fieldset {border: 1px solid #337ab7 !important; margin: 15px;min-width: 0;padding: 10px;position: relative;border-radius: 4px;background-color: #f5f5f5; padding-left: 10px!important;}		
+ legend {font-size: 16px;font-weight: 500;color: #eee;margin-bottom: 0px;width: 35%;border: 1px solid #ddd;border-radius: 4px;padding: 5px 5px 5px 10px;background-color: #337ab7;}
+.alpaca-field.alpaca-field-image .alpaca-image-display, .alpaca-wizard .alpaca-wizard-buttons, .alpaca-wizard .alpaca-wizard-progress-bar {margin-top: 0px;}
+h1 {font-size: 28px;color:white;}
+input, textarea {width: 60%;max-width: 100%;}
+.btn-default { margin-top: -20px;color: #fff;background-color: #337ab7;border-color: #ccc;}</style>",
+
+
+"fields": "use_accounting_terminology_of,default_appearance_of_names_in_reports,default_appearance_of_stock_item_names_in_reports,style_of_short_tithi,separator_used_in_short_tithi,decimal_character_to_use,thousands_seperator_to_use,put_sign_before_currency_or_unit_symbols,show_numbers_in_millions_and_not_lakhs,show_monthly_reports_with_graphs,use_seperate_menu_for_final_account_statements,ignore_errors_and_continue_during_data_impot_applicable_for_importing_vouchers_in_xml_format,export_base_currency_symbol_along_with_amount,show_tables_with_masters_only_in_current_language",
+
+
+"field_use_accounting_terminology_of":{"select":["0","1"],"labels":["India/SAARC","International"]},
+"field_default_appearance_of_names_in_reports":{"select":["0","1","2","3"],"labels":["Alias (Name)","Alias Only","Name (Alias)","Names Only"]},
+"field_default_appearance_of_stock_item_names_in_reports":{"select":["0","1","2","3","4","5","6","7","8","9","10","11","12","13"],"labels":["Alais (Name)","Alais Only","Description (Name)","Description (part No.)","Name (Alais)","Name (Description)","Name Only","Name (Part No.)","Name (Part No.)","Part No. Alais Only","Part No. Alais (Part No.)","Part No. (Description)","Part No. (Name)","Part No. Only","Part No. (Part No. Alais)"]},
+"field_style_of_short_tithi":{"select":["0","1","2"],"labels":["dd-mm-yy","mm-dd-yy","yy-mm-dd"]},
+"field_separator_used_in_short_tithi":{"select":["0","1"],"labels":["null","-"]},
+"field_decimal_character_to_use":{"select":["0","1"],"labels":["null","."]},
+"field_thousands_seperator_to_use":{"select":["0","1"],"labels":["null",","]},
+"field_put_sign_before_currency_or_unit_symbols":{"select":["0","1"],"labels":["Yes","No"]},
+"field_show_numbers_in_millions_and_not_lakhs":{"select":["0","1"],"labels":["Yes","No"]},
+"field_show_monthly_reports_with_graphs":{"select":["0","1"],"labels":["Yes","No"]},
+"field_use_seperate_menu_for_final_account_statements":{"select":["0","1"],"labels":["Yes","No"]},
+"field_ignore_errors_and_continue_during_data_impot_applicable_for_importing_vouchers_in_xml_format":{"select":["0","1"],"labels":["Yes","No"]},
+"field_export_base_currency_symbol_along_with_amount":{"select":["0","1"],"labels":["Yes","No"]},
+"field_show_tables_with_masters_only_in_current_language":{"select":["0","1"],"labels":["Yes","No"]},
+
+
+	"view": {
+	 "id": "registration",
+        "parent": "bootstrap-edit",
+        "layout" : {
+            "template": "<div class='row'><div class='col-md-12 registration'><div class='panel panel-primary'><div class='panel-heading'><h1 class='text-center'>Configuration General</h1></div><div class='panel-body'><div class='row'><div class='contact-info'><div class='col-md-12'><fieldset><legend>Country Details</legend><div class='row'><div class='col-md-6' id='use_accounting_terminology_of-field'></div></div></fieldset><fieldset><legend>Style of Names</legend><div class='row'><div class='col-md-6' id='default_appearance_of_names_in_reports-field'></div><div class='col-md-6' id='default_appearance_of_stock_item_names_in_reports-field'></div></div></fieldset><fieldset><legend>Style of Dates</legend><div class='row'><div class='col-md-6' id='style_of_short_tithi-field'></div><div class='col-md-6' id='separator_used_in_short_tithi-field'></div></div></fieldset><fieldset><legend>Configuration of Numbers</legend><div class='row'><div class='col-md-6' id='decimal_character_to_use-field'></div><div class='col-md-6' id='thousands_seperator_to_use-field'></div><div class='col-md-6' id='put_sign_before_currency_or_unit_symbols-field'></div><div class='col-md-6' id='show_numbers_in_millions_and_not_lakhs-field'></div></div></fieldset><fieldset><legend>Other Options</legend><div class='row'><div class='col-md-6' id='show_monthly_reports_with_graphs-field'></div><div class='col-md-6' id='use_seperate_menu_for_final_account_statements-field'></div><div class='col-md-12' id='ignore_errors_and_continue_during_data_impot_applicable_for_importing_vouchers_in_xml_format-field'></div><div class='col-md-6' id='export_base_currency_symbol_along_with_amount-field'></div><div class='col-md-6' id='show_tables_with_masters_only_in_current_language-field'></div></div></fieldset></div></div></div></div></div></div></div>",
+			"bindings": {
+			 
+			  "use_accounting_terminology_of": "use_accounting_terminology_of-field",
+			  "default_appearance_of_names_in_reports":"default_appearance_of_names_in_reports-field",
+			  "default_appearance_of_stock_item_names_in_reports":"default_appearance_of_stock_item_names_in_reports-field",
+			  "style_of_short_tithi":"style_of_short_tithi-field",
+			  "separator_used_in_short_tithi":"separator_used_in_short_tithi-field",
+			  "decimal_character_to_use":"decimal_character_to_use-field",
+			  "thousands_seperator_to_use":"thousands_seperator_to_use-field",
+			  "put_sign_before_currency_or_unit_symbols":"put_sign_before_currency_or_unit_symbols-field",
+			  "show_numbers_in_millions_and_not_lakhs":"show_numbers_in_millions_and_not_lakhs-field",
+			  "show_monthly_reports_with_graphs":"show_monthly_reports_with_graphs-field",
+			  "use_seperate_menu_for_final_account_statements":"use_seperate_menu_for_final_account_statements-field",
+			  "ignore_errors_and_continue_during_data_impot_applicable_for_importing_vouchers_in_xml_format":"ignore_errors_and_continue_during_data_impot_applicable_for_importing_vouchers_in_xml_format-field",	
+			  "export_base_currency_symbol_along_with_amount":"export_base_currency_symbol_along_with_amount-field",
+			  "show_tables_with_masters_only_in_current_language":"show_tables_with_masters_only_in_current_language-field"
+			  
+            }
+        }
+	}
+}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Menu - Default functionality</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#menu" ).menu({
+      items: "> :not(.ui-widget-header)"
+    });
+  } );
+  </script>
+  <style>
+  .ui-menu { width: 200px; }
+  .ui-widget-header { padding: 0.2em; }
+  </style>
+</head>
+<body>
+ 
+<ul id="menu">
+  <li class="ui-widget-header"><div>Category 1</div></li>
+  <li><div>Option 1</div></li>
+  <li><div>Option 2</div></li>
+  <li><div>Option 3</div></li>
+  <li class="ui-widget-header"><div>Category 2</div></li>
+  <li><div>Option 4</div></li>
+  <li><div>Option 5</div></li>
+  <li><div>Option 6</div></li>
+</ul>
+ 
+ 
+</body>
+</html>
