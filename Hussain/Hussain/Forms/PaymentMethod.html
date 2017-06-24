@@ -1,0 +1,45 @@
+{"alphas":1,"add_record":1,
+"top": "<style>	h1{margin-top: 0px;margin-bottom: 0px;}
+    .h1_heading{font-size:26px;text-align:center;color:black;}
+	.h2_heading{color:black;font-size:20px;text-align:center;}
+	legend {display: block;width: 100%; padding: 0;margin-bottom: 20px;font-size: 21px;font-weight: 700;line-height: inherit;color: #333;border: 0;border-bottom: 1px solid #e5e5e5;}
+   label{float: none !important; width: 100% !important;      text-transform: capitalize;  display: inline-block; max-width: 100% !important;    font-size: 16px;    margin-bottom: 5px;    font-weight: 700;    text-align: left;}
+    .color1{color:#FF8C00;}
+    .glyphicon {color: #333;position: relative;top: 1px;display: inline-block;font-family: 'Glyphicons Halflings';font-style: normal;font-weight: 400;line-height: 1;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}			
+.checkbox label, .radio label { vertical-align: middle;min-height: 20px;padding-left: 20px;margin-bottom: 0;font-weight: 400;cursor: pointer;display: block;float: left;padding-right: 10px;white-space: nowrap;}
+ img {vertical-align: middle; width: 100% !important;}
+ h2 {MARGIN-LEFT: 5%; margin-right: 5%;margin-top: 15px;margin-bottom: 22px;padding-bottom: 6px;border-bottom: 1px solid #333;}
+ fieldset {border: 1px solid #337ab7 !important; margin: 15px;min-width: 0;padding: 10px;position: relative;border-radius: 4px;background-color: #f5f5f5; padding-left: 10px!important;}		
+ legend {font-size: 16px;font-weight: 500;color: #eee;margin-bottom: 0px;width: 35%;border: 1px solid #ddd;border-radius: 4px;padding: 5px 5px 5px 10px;background-color: #337ab7;}
+.alpaca-field.alpaca-field-image .alpaca-image-display, .alpaca-wizard .alpaca-wizard-buttons, .alpaca-wizard .alpaca-wizard-progress-bar {margin-top: 0px;}
+h1 {font-size: 28px;color:white;}
+input, textarea {width: 60%;max-width: 100%;}
+.btn-default { margin-top: -20px;color: #fff;background-color: #337ab7;border-color: #ccc;}</style>",
+
+
+"fields": "select_your_debit_card,name_on_card,select_your_bank,card_number,exp_month,exp_year",
+
+"field_select_your_debit_card":{"select":["0","1","2","3"],"labels":["All Visa/Master Card/DebitCard","All Rupay Debit Cards","All SBI Maestro Debit Cards","Citi Bank Maestro Debit Card"]},
+"field_select_your_bank":{"select":["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","56","57","58","59","60","61","62","63","64","65","66","67"],"labels":["Axis Bank","HDFC Bank","ICICI Bank","State Bank of India","Airtel Payments Bank","Allahabad Bank","Andhra Bank","Bandhan bank","Bank of Bahrain and Kuwait","Bank of Baroda - Corporate Banking","Bank of Baroda Retail Banking","Bank of India","Bank of Maharashtra","Bassien Catholic Co-Operative Bank","Bharatiya Mahila Bank","Canara Bank","Catholic Syrian Bank","Central Bank of India","City Union Bank","Corporation Bank","Cosmos Bank","DCB Bank Limited","Dena Bank","Deutsche Bank","Dhanlakshmi Bank","Digibank by DBS","Federal Bank","IDBI Bank","IDFC Bank","ING Vysya Bank","Indian Bank","Indian Overseas Bank","IndusInd Bank","Jammu & Kashmir Bank","Janata Sahakari Bank","Kalyan Janata Sahakari Bank","Karnataka Bank Ltd","Karur Vysya Bank","Kotak Bank","Laxmi Vilas Bank-Corporate","Laxmi Vilas Bank-Retail","Oriental Bank of Commerce","PNB YUVA Netbanking","Punjab &  Maharashtra Co-operative Bank","Punjab & Sind Bank","Punjab National Bank-Corporate Banking","Punjab National Bank - Retail Banking","RBL Bank Limited","Saraswat Bank","Shamrao Vitthal Co-operative Bank","South Indian Bank","Standard Chartered Bank","State Bank of Bikaner & Jaipur","State Bank of Hyderabad","State Bank of Mysore","State Bank of Patiala","State Bank of Travancore","Syndicate Bank","TJSB Bank","Tamil Nadu State Co-operative Bank","Tamilnad Mercantile Bank Ltd.","The Mehsana Urban Co Op Bank Ltd","The Royal Bank of Scotland","Union Bank of India","United Bank of India","Vijaya Bank","Yes Bank Ltd"]},
+"field_card_number":{"filed_type":"number"},
+"field_exp_month":{"select":["0","1","2","3","4","5","6","7","8","9","10","11"],"labels":["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"]},
+"field_exp_year":{"select":["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39"],"labels":["2018","2019","2020","2021","2022","2023","2024","2025","2026","2027","2028","2029","2030","2031","2032","2033","2034","2035","2036","2037","2038","2039","2040","2041","2042","2043","2044","2045","2046","2047","2048","2049","2050","2051","2052","2053","2054","2055","2056","2057"]},
+
+	"view": {
+	 "id": "registration",
+        "parent": "bootstrap-edit",
+        "layout" : {
+            "template": "<div class='row'><div class='col-md-12 registration'><div class='panel panel-primary'><div class='panel-heading'><h1 class='text-center'>Payment Method</h1></div><div class='panel-body'><div class='row'><div class='contact-info'><div class='col-md-12'><fieldset><legend>Debit Card</legend><div class='row'><div class='col-md-6' id='select_your_debit_card-field'></div></div></fieldset><fieldset><legend>Credit Card Dtails</legend><div class='row'><div class='col-md-4' id='name_on_card-field'></div><div class='col-md-4' id='card_number-field'></div><div class='col-md-2' id='exp_month-field'></div><div class='col-md-2' id='exp_year-field'></div></div></fieldset><fieldset><legend>Net Banking</legend><div class='row'><div class='col-md-6' id='select_your_bank-field'></div></div></fieldset></div></div></div></div></div></div></div>",
+			"bindings": {
+			 
+			"select_your_debit_card": "select_your_debit_card-field",
+			"name_on_card":"name_on_card-field",
+			"select_your_bank":"select_your_bank-field",
+			"card_number":"card_number-field",
+			"exp_month":"exp_month-field",
+			"exp_year":"exp_year-field"
+			  
+            }
+        }
+	}
+}

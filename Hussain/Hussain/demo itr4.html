@@ -1,0 +1,112 @@
+{"alphas":1,"add_record":1,
+"top": "<style>    h1{margin-top: 0px;margin-bottom: 0px;}
+    .h1_heading{font-size:26px;text-align:center;color:black;}
+    .h2_heading{color:black;font-size:20px;text-align:center;}
+    legend {display: block;width: 100%; padding: 0;margin-bottom: 20px;font-size: 21px;font-weight: 700;line-height: inherit;color: #333;border: 0;border-bottom: 1px solid #e5e5e5;}
+   label{float: none !important; width: 100% !important;      text-transform: capitalize;  display: inline-block; max-width: 100% !important;    font-size: 16px;    margin-bottom: 5px;    font-weight: 700;    text-align: left;}
+    .color1{color:#FF8C00;}
+    .glyphicon {color: #333;position: relative;top: 1px;display: inline-block;font-family: 'Glyphicons Halflings';font-style: normal;font-weight: 400;line-height: 1;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}           
+.checkbox label, .radio label { vertical-align: middle;min-height: 20px;padding-left: 20px;margin-bottom: 0;font-weight: 400;cursor: pointer;display: block;float: left;padding-right: 10px;white-space: nowrap;}
+ img {vertical-align: middle; width: 100% !important;}
+ h2 {MARGIN-LEFT: 5%; margin-right: 5%;margin-top: 15px;margin-bottom: 22px;padding-bottom: 6px;border-bottom: 1px solid #333;}
+ fieldset {border: 1px solid #337ab7 !important; margin: 15px;min-width: 0;padding: 10px;position: relative;border-radius: 4px;background-color: #f5f5f5; padding-left: 10px!important;}       
+ legend {font-size: 16px;font-weight: 500;color: #eee;margin-bottom: 0px;width: 35%;border: 1px solid #ddd;border-radius: 4px;padding: 5px 5px 5px 10px;background-color: #337ab7;}
+.alpaca-field.alpaca-field-image .alpaca-image-display, .alpaca-wizard .alpaca-wizard-buttons, .alpaca-wizard .alpaca-wizard-progress-bar {margin-top: 0px;}
+h1 {font-size: 28px;color:white;}
+input, textarea {width: 60%;max-width: 100%;}
+.btn-default { margin-top: -20px;color: #fff;background-color: #337ab7;border-color: #ccc;}</style>",
+
+
+
+
+"fields": "first_name,middle_name,last_name,pan,Aadhaar_Number_Aadhaar_Enrollment_id,flat_door_block_no,name_of_premises_village_building,status,road_street_post_office,area_locality,date_of_birth,gender,town_city_district,country,state,pincode,email_address,mobile_no,std_code,phone_no,mobile_no_sec,desig_officer_ward_or_circle,employee_category,return_file_sec,portugese_cc_5A,pan_of_spouse,orig_ret_filed_date,notice_no,def_ret_orig_ret_filed_date,if_revised_defective_then_enter_receipt_number_of_original_return,return_type,receipt_no,date_of_filling_original_return,residential_status,tax_status,income_from_business_prof,income_from_sal,type_of_hp,total_income_of_hp,amout",
+
+
+
+
+"field_last_name":{"schema":{"required":true}},
+"field_flat_door_block_no":{"schema":{"required":true}},
+"field_address":{"field_type":"textarea"},
+"field_area_locality":{"schema":{"minLength":1,"maxLength":50,"required":true}},
+"field_date_of_birth":{"field_type":"date"},
+"field_town_city_district":{"schema":{"required":true}},
+"field_country":{"field_type":"country"},
+"field_state":{"field_type":"state"},
+"field_pincode":{"field_type":"number"},
+"field_email_address":{"field_type":"email","schema":{"required":true}},
+"field_mobile_no":{"schema":{"size": 10,"pattern":"[1-9]{1}[0-9]{9}","required":true,"type": "string"}},
+"field_return_file_sec":{"schema":{"required":true}},
+"field_portugese_cc_5A":{"select":["0","1"],"labels":["Yes","No"],"schema":{"required":true}},
+"field_coverage":{"select":["0","1","2"],"labels":["Account with Inventory","Only Inventory","Only Account"]},
+"field_beginning_of_financial_year":{"field_type":"date"},
+"field_books_begining_from":{"field_type":"date"},
+"field_company_password":{"field_type":"password"},
+"field_use_audit_features":{"select":["0","1"],"labels":["Yes","No"]},
+"fiel_use_maker_checker_concept":{"select":["0","1"],"labels":["Yes","No"]},
+"field_lock_user_access":{"select":["0","1"],"labels":["Yes","No"]},
+"field_number_of_decimal_places":{"field_type":"number"},
+"field_symbol_for_decimal_points":{"field_type":"number"},
+"field_amount":{"select":["0","1"],"labels":["In Indian Style(Crores)","Western Style(Millions)"]},
+"field_pan":{"schema":{"size": 10,"required": true,"pattern":"^[A-Z]{5,5}[0-9]{4,4}[A-Z]$","type": "string"}},
+"field_gender":{"select":["0","1","3"],"labels":["M-MALE","F-FEMALE","X-HUF/FIRM"],"schema":{"required":true}},
+"field_status":{"select":["0","1","2"],"labels":["I-INDIVIDUAL","H-HUF","F-FIRM(Other than LLP)"],"schema":{"required":true}},
+"field_return_type":{"select":["0","1"],"labels":["O-Original","R-Revised"],"schema":{"required":true}},
+"field_residential_status":{"select":["0","1","2"],"labels":["RES-Resident","NRI-Non-Resident","NOR-Resident but not ordinarly Resident"],"schema":{"required": true}},
+"field_tax_status":{"select":["0","1","2"],"labels":["Tax Refundable","Tax Payable","Nil Tax Payable"],"schema":{"required": true}},
+
+
+
+
+
+
+    "view": {
+     "id": "registration",
+        "parent": "bootstrap-edit",
+        "layout" : {
+            "template": "<div class='row'><div class='col-md-12 registration'><div class='panel panel-primary'><div class='panel-heading'><h1 class='text-center'>INDIAN INCOME TAX RETURN Company</h1><h4 class='text-center'>[FOR PRESUMPTIVE INCOME  FROM BUSINESS & PROFESSION]</h4></div><div class='panel-body'><div class='row'><div class='contact-info'><div class='col-md-12'><fieldset><div class='row'><div class='col-md-3' id='first_name-field'></div><div class='col-md-3' id='middle_name-field'></div><div class='col-md-3' id='last_name-field'></div><div class='col-md-3' id='pan-field'></div></div></fieldset><fieldset><div class='row'><div class='col-md-3' id='flat_door_block_no-field'></div><div class='col-md-6' id='name_of_premises_village_building-field'></div><div class='col-md-3' id='status-field'></div></div></fieldset><fieldset><div class='row'><div class='col-md-3' id='road_street_post_office-field'></div><div class='col-md-3' id='area_locality-field'></div><div class='col-md-3' id='date_of_birth-field'></div><div class='col-md-3' id='gender-field'></div></div></fieldset><fieldset><div class='row'><div class='col-md-3' id='town_city_district-field'></div><div class='col-md-3' id='state-field'></div><div class='col-md-3' id='country-field'></div><div class='col-md-3' id='pincode-field'></div></div></fieldset><fieldset><div class='row'><div class='col-md-4' id='email_address-field'></div><div class='col-md-3' id='mobile_no-field'></div><div class='col-md-2' id='std_code-field'></div><div class='col-md-3' id='phone_no-field'></div><div class='col-md-6' id='mobile_no_sec-field'></div><div class='col-md-6' id='Aadhaar_Number_Aadhaar_Enrollment_id-field'></div></div></fieldset><fieldset><div class='row'><div class='col-md-6' id='desig_officer_ward_or_circle-field'></div><div class='col-md-6' id='return_file_sec-field'></div></div></fieldset><fieldset><div class='row'><div class='col-md-9' id='portugese_cc_5A-field'></div><div class='col-md-3' id='pan_of_spouse-field'></div></div></fieldset><fieldset><div class='row'><div class='col-md-6' id='return_type-field'></div></div></fieldset><fieldset><div class='row'><div class='col-md-6' id='receipt_no-field'></div><div class='col-md-6' id='orig_ret_filed_date-field'></div></div></fieldset><fieldset><div class='row'><div class='col-md-6' id='notice_no-field'></div><div class='col-md-6' id='def_ret_orig_ret_filed_date-field'></div></div></fieldset><fieldset><div class='row'><div class='col-md-6' id='residential_status-field'></div></div></fieldset><fieldset><div class='row'><div class='col-md-6' id='tax_status-field'></div></div></fieldset><fieldset><div class='row'><div class='col-md-6' id='income_from_business_prof-field'></div><div class='col-md-6' id='income_from_sal-field'></div><div class='col-md-6' id='type_of_hp-field'></div><div class='col-md-6' id='amout-field'></div></div></fieldset></div></div></div></div></div></div></div></div>",
+			
+			
+            "bindings": {
+                "first_name": "first_name-field",
+                "middle_name": "middle_name-field",
+                "last_name": "last_name-field",
+                "pan": "pan-field",   
+				"Aadhaar_Number_Aadhaar_Enrollment_id":"Aadhaar_Number_Aadhaar_Enrollment_id-field",
+                "flat_door_block_no": "flat_door_block_no-field",
+                "name_of_premises_village_building": "name_of_premises_village_building-field",
+                "road_street_post_office":"road_street_post_office-field",
+                "area_locality":"area_locality-field",
+                "date_of_birth":"date_of_birth-field",
+                "town_city_district":"town_city_district-field",
+				"gender":"gender-field",
+				"std_code":"std_code-field",
+                "country": "country-field",
+                "state": "state-field",
+                "pincode": "pincode-field",
+                "email_address": "email_address-field",
+                "mobile_no": "mobile_no-field",
+				"phone_no":"phone_no-field",
+				"mobile_no_sec":"mobile_no_sec-field",
+				"desig_officer_ward_or_circle":"desig_officer_ward_or_circle-field",
+				"return_type":"return_type-field",
+                "employee_category": "employee_category-field",
+                "return_file_sec": "return_file_sec-field",
+				"portugese_cc_5A":"portugese_cc_5A-field",
+				"status":"status-field",
+                "pan_of_spouse": "pan_of_spouse-field",
+				"receipt_no":"receipt_no-field",
+				"orig_ret_filed_date":"orig_ret_filed_date-field",
+				"notice_no":"notice_no-field",
+				"def_ret_orig_ret_filed_date":"def_ret_orig_ret_filed_date-field",
+				"residential_status":"residential_status-field",
+				"tax_status":"tax_status-field",
+				"income_from_business_prof":"income_from_business_prof-field",
+				"income_from_sal":"income_from_sal-field",
+				"type_of_hp":"type_of_hp-field",
+				"amout":"amout-field"
+				
+				
+            }
+        }
+    }
+}

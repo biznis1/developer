@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Comic Character Searcher</title>
+	<script src="js/handlebars-1.0.0.beta.6.js"></script>
+	<script id="result-template" type="text/x-handlebars-template">
+	<h2>Results</h2>
+	<p>
+	Your search returned {{number_of_total_results}} result(s).
+	</p>
+
+	{{#each results}}
+	<div class="result">
+	<h3>{{name}}</h3>
+	<p>{{{leftTrim description}}}</p>
+	<a href="{{site_detail_url}}">
+	{{#if image.super_url}}
+	<img src="{{image.super_url}}">
+	{{else}}
+	<img src="generic.png">
+	{{/if}}
+	</a>
+	</div>
+	{{/each}}
+	</script>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+	Comic Character Search: 
+	<input type="text" id="search" autofocus> <i>Results credit ComicVine.com</i>
+
+	<div id="resultDiv"></div>
+
+	<script>
+	var baseURL = "http://api.comicvine.com/search/?api_key=4da2671a38f182f28110923ac684980d9658628a&format=jsonp&json_callback=handleResponse&resources=character&field_list=image,site_detail_url,name,description";
+
+	var template;
+	var resultDiv = document.querySelector("#resultDiv");
+
+	//Custom helper to trim and remove html as well
+	Handlebars.registerHelper('leftTrim', function(text) {
+		text = text.replace(/<.*?>/g," ").trim();
+		if(text.length > 100) return text.substring(0,100) +"...";
+		else return text;
+	});
+
+	document.addEventListener("DOMContentLoaded", function() {
+		console.log("Business Time");
+
+		var source = document.querySelector("#result-template").innerHTML;
+		template = Handlebars.compile(source);
+
+		document.querySelector("#search").addEventListener("keyup", function() {
+			var text = this.value.trim();
+			if(text.length <= 3) return;
+
+			var reqURL = baseURL + "&query="+escape(text);
+			//Credit: http://stackoverflow.com/a/9649610/52160
+			var script = document.createElement('script');
+			script.src = reqURL;
+			document.getElementsByTagName('head')[0].appendChild(script);
+
+		});
+	});
+
+	function handleResponse(resp) {
+		//console.dir(resp);
+		if(resp.error && resp.error == "OK") {
+			var html = template(resp);
+			resultDiv.innerHTML = html;
+		}
+	}
+	</script>
+
+</body>
+</html>

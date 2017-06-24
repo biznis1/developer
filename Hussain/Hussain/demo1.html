@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo 1</title>
+	<script src="js/handlebars-1.0.0.beta.6.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+	<script id="result-template" type="text/x-handlebars-template">
+	<h2>Your Details</h2>
+	<p>
+	Your name is {{firstname}} {{lastname}} Your password is {{password}} and you are {{age}} years old.
+	</p>
+	</script>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+	<h2>Create Page</h2>
+
+	<input type="text" id="firstname" placeholder="First Name"><br/>
+	<input type="text" id="lastname" placeholder="Last Name"><br/>
+	<input type="password" id="password" placeholder="Password"><br/>
+	<input type="number" id="age" placeholder="Age"><br/>
+	<button id="demoButton">Submit</button>
+
+	<div id="resultDiv"></div>
+
+	<script>
+
+	document.addEventListener("DOMContentLoaded", function() {
+
+		//Get the contents from the script block 
+		var source = document.querySelector("#result-template").innerHTML;
+		//Compile that baby into a template
+		template = Handlebars.compile(source);
+
+		document.querySelector("#demoButton").addEventListener("click", function() {
+			var fname = document.querySelector("#firstname").value;
+			var lname = document.querySelector("#lastname").value;
+			var pword = document.querySelector("#password").value;
+			var age = document.querySelector("#age").value;
+
+			var html = template({firstname:fname, lastname:lname,password:pword,age:age});
+			document.querySelector("#resultDiv").innerHTML = html;
+
+		});
+	});
+
+
+	</script>
+
+</body>
+</html>

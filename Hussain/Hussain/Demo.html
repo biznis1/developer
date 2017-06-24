@@ -1,0 +1,385 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+			<!-- jquery -->
+			<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+			<!-- bootstrap -->
+			<link type="text/css" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+			<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+			<!-- handlebars -->
+			<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+
+			<!-- Plugin JavaScript -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+			<!--bootstrap slider -->
+			<script type="text/javascript" src="http://seiyria.com/bootstrap-slider/js/bootstrap-slider.js"></script>
+
+			<!-- handsontable (for GridField) -->
+			<script src="http://www.alpacajs.org/lib/handsontable/dist/jquery.handsontable.full.js"></script>
+			<link rel="stylesheet" media="screen" href="http://www.alpacajs.org/lib/handsontable/dist/jquery.handsontable.full.css"/>
+
+			<!-- alpaca -->
+			<link type="text/css" href="//code.cloudcms.com/alpaca/1.5.22/bootstrap/alpaca.min.css" rel="stylesheet" />
+			<script type="text/javascript" src="http://code.cloudcms.com/alpaca/1.5.22/bootstrap/alpaca.min.js"></script>
+
+			<!-- priceformat -->
+			<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-price-format/2.1/jquery.priceformat.min.js"></script>		
+		
+		<style>	
+				.h1_heading{				
+					font-size:26px;
+					text-align:center;
+					color:black;
+				}
+			
+				.h2_heading{			
+					color:black;
+					font-size:20px;
+					text-align:center;
+				}
+			
+				legend {
+					display: block;
+					width: 100%;
+					padding: 0;
+					margin-bottom: 20px;
+					font-size: 21px;
+					font-weight: 700;
+					line-height: inherit;
+					color: #333;
+					border: 0;
+					border-bottom: 1px solid #e5e5e5;
+				}
+
+				label {
+					display: inline-block;
+					max-width: 100%;
+					font-size: 16px;
+					margin-bottom: 5px;
+					font-weight: 500;
+				}
+				.color1{
+					color:#FF8C00;
+				}
+		</style>
+	
+</head>
+<body>
+	
+<div class='container'>
+  <div class='row'>
+   <div id="form"></div></div></div>
+   <script type="text/javascript">
+   $(document).ready(function() {
+    var data = {
+	        "image": "http://www.alpacajs.org/images/chunio.png",
+	        "check-file":"sandwich, cookie, drink ,chips"
+	        };
+    var schema = {
+            "type": "object",
+			
+		    "required": ["check-file"],
+			
+            "properties": {
+			 
+		
+		    "username": {
+                "type": "string",
+                "title": "User Name",
+                "required": true,
+                "pattern": "^[a-zA-Z0-9_]+$"
+            },
+			"password":{
+			"fromat": "password"
+			},
+			
+			 "email": {
+			 "type": "string",
+                "format": "email",
+                "required": true
+            },
+			
+			"select-from": {
+				"type":"string",
+				"title":"My Source Language",
+				"enum":['excellent','ok','so so']
+            },
+			
+			"time-frame": {
+				"type":"string",
+				"title":"Time Frame",
+				"enum":['excellent','ok','so so']
+            },
+						
+			"select-to": {
+				"type":"string",
+				"title":"My Destination Language",
+				"enum":['excellent','ok','so so']
+            },
+					
+            "project-brief": {
+				"type":"string",
+				"title":"Project Brief (Limit of 250 Words)"
+            },
+							
+			"budget": {
+				"type":"string",
+				"title":"Budget",
+				"enum":['excellent','ok','so so']
+            },
+							
+			"expert-list": {
+				"type":"string",
+				"title":"Expert List",
+				"enum":['hmm','ok','so so']
+            },
+		
+            "choose-date": {
+                "type": "text",
+				"title":"Choose Date",
+                "format": "date",
+                "required": true
+            },
+				   
+		    "vegetarian": {
+                "type": "boolean",
+                "required": true,
+                "enum": [true, false],
+                "default": false
+            },
+			
+         
+            "photoFile": {
+                "type": "string",
+                "format": "uri"
+            },
+			
+            "team": {
+                    "type": "string",
+                    "enum": ["Anzhi-Makhachkla", "Arsenal", "Atletico-Madrid", "Barcelona", "Bayern-Munich", "Benfica", "Borussia-Dortmund", "Chelsea", "Eintracht-Frankfurt", "FC-Porto", "FC-Twente", "Juventus", "Malaga", "Manchester-City", "Manchester-United", "Marseille", "Napoli", "Paris-Saint-Germain", "Real-Madrid", "Shakhtar-Donetsk", "Tottenham-Hotspur"]
+            },
+				
+            "check-file": {
+            "type": "boolean",
+            "default": true,
+			"enum": ["sandwich", "chips", "cookie", "drink"]
+            }
+        }
+    };
+
+    /**
+     * Layout options for the form
+     */
+    var options = {
+          "fields": {
+			
+		    "username": {
+                "size": 20,
+                "label": "User Name"
+            },
+			
+            "password": {
+                "type": "password",
+                "size": 20,
+                "label": "Password"
+            },
+			
+            "image": {
+                "type": "image",
+                "label": "Image",
+                "view": "bootstrap-display"
+            },
+			
+		    "name1": {
+                "label": "Your Name"
+            },
+			
+            "birthday": {
+                "label": "Your Birthday"
+            },
+			
+            "email": {
+                "label": "Email Address"
+            },
+			
+            "preference": {
+                "label": "Your Destination",
+                "type": "select",
+                "optionLabels": ["Orlando, USA", "Tokyo, Japan", "Amsterdam, Netherlands"]
+            },
+			
+		    "name": {
+				"size": 20,
+				"helper": "Please enter your name.",
+				"placeholder": "Enter your name"
+            },
+			
+            "feedback" : {
+				"type": "textarea",
+				"rows": 5,
+				"cols": 40,
+				"helper": "Please Enter Your Feedback.",
+                "wordlimit": 250
+            },
+			
+		    "districts": {
+                "type": "text",
+                "label": "Your Name"
+            },
+			
+			"travel": {
+                "type": "radio",
+                "label": "Travel Arrangements",
+                "optionLabels": [
+                    "I will use your travel agent.",
+                    "I will make my own travel arrangements.",
+                    "I am local and do not require travel arrangements."
+                ]
+            },
+			
+            "photoFile": {
+                "type": "file",
+                "label": "Upload File"
+            },
+			
+			"vegetarian": {
+                "type": "radio",
+                "label": "Are you a vegetarian:",
+                "optionLabels": ["Yes", "No"]
+            },
+			
+			"ranking": {
+				"type": "select",
+				"helper": "Select your ranking.",
+				"optionLabels": ["Awesome!", "It's Ok", "Hmm..."]
+			},
+		
+			"expert-list": {
+				"type": "select",
+				"helper": "Select Any Expert.",
+				"optionLabels": ["General", "It's Ok", "Hmm..."],
+				"noneLabel": "-- Select --"
+			},
+		
+		    "film_locations": {
+                "type": "text",
+                "label": "Field1"
+            },
+			
+		    "film_contacted": {
+                "type": "text",
+                "label": "Field2"
+            },
+			
+            "team": {
+                    "type": "select",
+                    "size": 20,
+                    "label": "Team",
+                    "helper": "Select your preferred team",
+                    "onFieldChange": function(e) {
+                        $("#logo1").empty();
+                        var value = this.getValue();
+                        if (value) {
+                            var img = $("<img src='/images/club-logos/" + value + ".png'>");
+                            $("#logo1").append(img);
+                     }
+				}		
+			},
+			
+			"check-file": {
+				"type": "checkbox",
+				"rightLabel": "Sign me up for the News Letter!",
+				"label": "What would you like with your order?",
+				"optionLabels": ["A Sandwich", "Potato Chips", "A Cookie", "Soft Drink"]
+			}
+            },
+		
+            "form": {
+            "attributes": {
+                "method": "POST",
+                "action": "save.php",
+                "enctype": "multipart/form-data"
+            },
+			
+            "buttons": {
+                "submit": {
+                    "value": "Submit Form"
+					          
+                }
+            },
+			
+			"styles": {
+                    "buttons": {
+                        "color": "white",
+                        "background-color": "#337ab7"
+                }
+            }
+        }
+		
+    }
+	
+	
+	;
+
+    /**
+     * If you'd like to define a custom layout (html) file for your form, you first define a new view.
+     */
+    Alpaca.registerView({
+        "id": "registration",
+        "parent": "bootstrap-create",
+        "title": "Registration Create View for the Web",
+	
+        "layout" : {
+            "template": "<div class='row'><div class='col-md-12 registration'><div class='panel panel-primary'><div class='panel-heading'><h2 class='text-center'>Get A Quote Form</h2></div><div class='panel-body'><div class='row'><h2 style='padding-left: 14px;margin-top: 10px;'>Demo</h2><div class='contact-info'><div class='col-md-12'><div class='row'><div class='col-md-12' id='prant-info-field1'></div><div class='col-md-12' id='expert-list-field'></div><div class='col-md-12' id='ranking-field'></div><div class='col-md-12' id='email-field'></div><div class='col-md-12' id='photoFile-field'></div><div class='col-md-12' id='name-field'></div><div class='col-md-12' id='image-field'></div><div class='col-md-12' id='feedback-field'></div><div class='col-md-12' id='vegetarian-field'></div><div class='col-md-12' id='username-field'></div><div class='col-md-12' id='name1-field'></div><div class='col-md-12' id='birthday-field'></div><div class='col-md-12' id='preference-field'></div><div class='col-md-12' id='password-field'></div><div class='col-md-12' id='travel-field'></div><div class='col-md-12' id='team-field'></div><div class='col-md-12' id='check-file-field'></div></div></div></div><h2 style='padding-left: 14px;margin-top: 10px;'>Text Field </h2><div class='contact-info'><div class='col-md-12'><div class='row'><div class='col-md-4' id='film-society-info-fields1'></div><div class='col-md-4' id='film-society-info-fields2'></div></div></div></div></div></div></div></div></div>",
+			"bindings": {		
+                "districts": "prant-info-field1",
+                "name": "name-field",
+                "feedback": "feedback-field",
+                "email": "email-field",
+                "expert-list": "expert-list-field",
+                "vegetarian": "vegetarian-field",
+                "travel": "travel-field",
+                "photoFile": "photoFile-field",
+                "username": "username-field",
+                "password": "password-field",
+                "team": "team-field",
+                "name1": "name1-field",
+                "birthday": "birthday-field",
+                "preference": "preference-field",
+                "check-file": "check-file-field",
+                "image": "image-field",		
+                "ranking": "ranking-field",	
+                "film_locations": "film-society-info-fields1",
+                "film_contacted": "film-society-info-fields2"
+            }
+        },
+        "messages": {
+            "invalidEmail": "Please enter a valid email address.",
+            "invalidPhone": "Please enter a valid phone number.",
+            "wordLimitExceeded": "The maximum word limit of {0} has been exceeded."
+        }
+    });
+
+	
+	
+    /**
+     * Render the form.
+     *
+     * We call alpaca() with the data, schema and options to tell Alpaca to render into the selected dom element(s).
+     *
+     */
+    $("#form").alpaca({
+        "data": data,
+        "schema": schema,
+        "options": options,
+       
+        "view": "registration",
+        "type": "create"
+    });
+});
+        </script>
+    </body>
+</html>

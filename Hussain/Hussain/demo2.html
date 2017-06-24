@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test 2</title>
+	<script src="js/handlebars-1.0.0.beta.6.js"></script>
+	<script id="result-template" type="text/x-handlebars-template">
+	<h2>Your Favorite Things</h2>
+
+	{{#if things}}
+		<ul>
+		{{#each things}}
+			<li>{{this}}</li>
+		{{/each}}
+		</ul>
+	{{else}}
+
+		<p>
+		Apparently, you like nothing. Poor you.
+		</p>
+
+	{{/if}}
+	</script>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+	<h2>List of Things</h2>
+	<p>
+		Enter a comma-separated list of things you like.
+	</p>
+	<input type="text" id="things" placeholder="Things you like..."><br/>
+	<button id="demoButton">Demo</button>
+
+	<div id="resultDiv"></div>
+
+	<script>
+
+	document.addEventListener("DOMContentLoaded", function() {
+
+		//Get the contents from the script block 
+		var source = document.querySelector("#result-template").innerHTML;
+		//Compile that baby into a template
+		template = Handlebars.compile(source);
+
+		document.querySelector("#demoButton").addEventListener("click", function() {
+			var things = document.querySelector("#things").value;
+			if(things.length) var arrThings = things.split(",");
+
+			var html = template({things:arrThings});
+			document.querySelector("#resultDiv").innerHTML = html;
+
+		});
+	});
+
+
+	</script>
+
+</body>
+</html>

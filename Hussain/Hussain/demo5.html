@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Template</title>
+	<script type="text/javascript" src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v2.0.0.js" title="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v2.0.0.js"
+            handlebars-v2.0.0.js"></script>
+	<script type="text/javascript" src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v2.0.0.js"></script>
+	
+	</head>
+<body>
+	<script id="entry-template" type="text/x-handlebars-template">
+		<h1>{{title}}</h1>
+     {{body}}
+	 </script>
+	<script type="text/javascript">var source   = $("#entry-template").html();
+	var template = Handlebars.compile(source);
+	var data = {title: "My New Post", body: "This is my first post!"};
+	$('body').html(template(data));
+	</script>
+</body>
+	
+</html>

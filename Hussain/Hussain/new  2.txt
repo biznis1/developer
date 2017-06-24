@@ -1,0 +1,325 @@
+{"alphas":1,"add_record":1,
+"top": "<style>	h1{margin-top: 0px;margin-bottom: 0px;}
+    .h1_heading{font-size:26px;text-align:center;color:black;}
+	.h2_heading{color:black;font-size:20px;text-align:center;}
+	legend {display: block;width: 100%; padding: 0;margin-bottom: 20px;font-size: 21px;font-weight: 700;line-height: inherit;color: #333;border: 0;border-bottom: 1px solid #e5e5e5;}
+   label{float: none !important; width: 100% !important;      text-transform: capitalize;  display: inline-block; max-width: 100% !important;    font-size: 16px;    margin-bottom: 5px;    font-weight: 700;    text-align: left;}
+    .color1{color:#FF8C00;}
+    .glyphicon {color: #333;position: relative;top: 10px;display: inline-block;font-family: 'Glyphicons Halflings';font-style: normal;font-weight: 400;line-height: 1;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}			
+.checkbox label, .radio label { vertical-align: middle;min-height: 20px;padding-left: 20px;margin-bottom: 0;font-weight: 400;cursor: pointer;display: block;float: left;padding-right: 10px;white-space: nowrap;}
+ img {vertical-align: middle; width: 100% !important;}
+ h2 {MARGIN-LEFT: 5%; margin-right: 5%;margin-top: 15px;margin-bottom: 22px;padding-bottom: 6px;border-bottom: 1px solid #333;}
+ fieldset {border: 1px solid #337ab7 !important; margin: 15px;min-width: 0;padding: 10px;position: relative;border-radius: 4px;background-color: #f5f5f5; padding-left: 10px!important;}		
+ legend {font-size: 16px;font-weight: 500;color: #eee;margin-bottom: 0px;width: 35%;border: 1px solid #ddd;border-radius: 4px;padding: 5px 5px 5px 10px;background-color: #337ab7;}
+.alpaca-field.alpaca-field-image .alpaca-image-display, .alpaca-wizard .alpaca-wizard-buttons, .alpaca-wizard .alpaca-wizard-progress-bar {margin-top: 0px;}
+h1 {font-size: 28px;color:white;}
+input, textarea {width: 60%;max-width: 100%;}
+.btn-default { margin-top: 0px;color: #fff;background-color: #337ab7;border-color: #ccc;}
+.btn-group-vertical>.btn, .btn-group>.btn{float:none;}
+</style>",
+
+
+"fields": "memorandum_number,date,cost_centre_class,particulars_for_debit,particulars_for_credit,debit,credit,narration,brc_details,donation_intital", 
+"field_credit":{"field_type":"number"},
+"field_debit":{"field_type":"number"},
+"field_date":{"field_type":"date"},
+"field_cost_centre_class":{"select":["0","1"],"labels":["Applicable","Not-Applicable"]},
+"field_memorandum_number":{"data":  [{
+       "Sl. No.": "key1",
+        "title": "title1",
+        "amount": 253,
+        "rating": "good"
+    }],"schema": {
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "key": {
+                    "type": "number",
+                    "title": "Sl. No."
+                },
+                "title": {
+                    "type": "string",
+                    "title": "Name of donee"
+                },
+                  "Deductor": {
+                    "type": "string",
+                    "title": "Address"
+                },
+                "amount": {
+                    "type": "string",
+                    "title": "City of Town or District"
+                },
+              
+                "rating": {
+                    "type": "number",
+                    "enum": ["2016", "2015", "2014","2013","2012","2011","2010","2009","2008","2007","2006","2005","2004","2003","2002","2001"],
+                    "title": "State Code"
+                },
+                   "Tax Deduction": {
+                    "type": "number",
+                    "title": "Pin Code"
+                },
+                   "Claim": {
+                    "type": "number",
+                    "title": "Pan of donee"
+                },
+                   "Amount Claim": {
+                    "type": "number",
+                    "title": "Amount of donation"
+                },
+                  "Eligible": {
+                    "type": "number",
+                    "title": "Eligible Amount of donation"
+                }
+            }
+        }
+    },
+    "options": {
+        "type": "table",
+        "items": {
+            "fields": {
+                "rating": {
+                    "type": "select"
+                }
+            }
+        }
+    }},
+	"field_particulars_for_debit":{"data": [{
+        "key": "key1",
+        "title": "title1",
+        "amount": 2.53,
+        "rating": "good"
+    }, {
+        "key": "key2",
+        "title": "title2",
+        "amount": 1.80,
+        "rating": "poor"
+    }, {
+        "key": "key3",
+        "title": "title3",
+        "amount": 5.60,
+        "rating": "excellent"
+    }],"schema": {
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "key": {
+                    "type": "number",
+                    "title": "Sl. No."
+                },
+                "title": {
+                    "type": "string",
+                    "title": "Name of donee"
+                },
+                  "Deductor": {
+                    "type": "string",
+                    "title": "Address"
+                },
+                "amount": {
+                    "type": "string",
+                    "title": "City of Town or District"
+                },
+              
+                "rating": {
+                    "type": "number",
+                    "enum": ["2016", "2015", "2014","2013","2012","2011","2010","2009","2008","2007","2006","2005","2004","2003","2002","2001"],
+                    "title": "State Code"
+                },
+                   "Tax Deduction": {
+                    "type": "number",
+                    "title": "Pin Code"
+                },
+                   "Claim": {
+                    "type": "number",
+                    "title": "Pan of donee"
+                },
+                   "Amount Claim": {
+                    "type": "number",
+                    "title": "Amount of donation"
+                },
+                  "Eligible": {
+                    "type": "number",
+                    "title": "Eligible Amount of donation"
+                }
+            }
+        }
+    },
+    "options": {
+        "type": "table",
+        "items": {
+            "fields": {
+                "rating": {
+                    "type": "select"
+                }
+            }
+        }
+    }},
+"field_brc_details":{"data": [{
+        "Sl. No.": "key1",
+        "title": "title1",
+        "amount": 2.53,
+        "rating": "good"
+    }, {
+        "Sl. No.": "key2",
+        "title": "title2",
+        "amount": 1.80,
+        "rating": "poor"
+    }, {
+        "Sl. No.": "key3",
+        "title": "title3",
+        "amount": 5.60,
+        "rating": "excellent"
+    }],"schema": {
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "key": {
+                    "type": "number",
+                    "title": "Sl. No."
+                },
+                "title": {
+                    "type": "string",
+                    "title": "Name of donee"
+                },
+                  "Deductor": {
+                    "type": "string",
+                    "title": "Address"
+                },
+                "amount": {
+                    "type": "string",
+                    "title": "City of Town or District"
+                },
+              
+                "rating": {
+                    "type": "number",
+                    "enum": ["2016", "2015", "2014","2013","2012","2011","2010","2009","2008","2007","2006","2005","2004","2003","2002","2001"],
+                    "title": "State Code"
+                },
+                   "Tax Deduction": {
+                    "type": "number",
+                    "title": "Pin Code"
+                },
+                   "Claim": {
+                    "type": "number",
+                    "title": "Pan of donee"
+                },
+                   "Amount Claim": {
+                    "type": "number",
+                    "title": "Amount of donation"
+                },
+                  "Eligible": {
+                    "type": "number",
+                    "title": "Eligible Amount of donation"
+                }
+            }
+        }
+    },
+    "options": {
+        "type": "table",
+        "items": {
+            "fields": {
+                "rating": {
+                    "type": "select"
+                }
+            }
+        }
+    }},
+"field_donation_intital":{"data": [{
+        "Sl. No.": "key1",
+        "title": "title1",
+        "amount": 2.53,
+        "rating": "good"
+    }, {
+        "Sl. No.": "key2",
+        "title": "title2",
+        "amount": 1.80,
+        "rating": "poor"
+    }, {
+        "Sl. No.": "key3",
+        "title": "title3",
+        "amount": 5.60,
+        "rating": "excellent"
+    }],"schema": {
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "key": {
+                    "type": "number",
+                    "title": "Sl. No."
+                },
+                "title": {
+                    "type": "string",
+                    "title": "Name of donee"
+                },
+                  "Deductor": {
+                    "type": "string",
+                    "title": "Address"
+                },
+                "amount": {
+                    "type": "string",
+                    "title": "City of Town or District"
+                },
+              
+                "rating": {
+                    "type": "number",
+                    "enum": ["2016", "2015", "2014","2013","2012","2011","2010","2009","2008","2007","2006","2005","2004","2003","2002","2001"],
+                    "title": "State Code"
+                },
+                   "Tax Deduction": {
+                    "type": "number",
+                    "title": "Pin Code"
+                },
+                   "Claim": {
+                    "type": "number",
+                    "title": "Pan of donee"
+                },
+                   "Amount Claim": {
+                    "type": "number",
+                    "title": "Amount of donation"
+                },
+                  "Eligible": {
+                    "type": "number",
+                    "title": "Eligible Amount of donation"
+                }
+            }
+        }
+    },
+    "options": {
+        "type": "table",
+        "items": {
+            "fields": {
+                "rating": {
+                    "type": "select"
+                }
+            }
+        }
+    }},	
+
+
+	"view": {
+	 "id": "registration",
+        "parent": "bootstrap-edit",
+        "layout" : {
+            "template": "<div class='row'><div class='col-md-12 registration'><div class='panel panel-primary'><div class='panel-heading'><h1 class='h1_heading text-center'>Schedule 80G</h1></div><div class='panel-body'><div class='row'><div class='contact-info'><div class='col-md-12'><h2 class='text-center'>Details of Donations entitled for Deduction Under Section of 80G</h2><fieldset><legend>A</legend><div class='row'><div class='col-md-12' id='memorandom_number-field'></div></div></fieldset><fieldset><legend>B</legend><div class='row'><div class='col-md-12' id='particulars_for_debit-field'></div></div></fieldset><fieldset><legend>C</legend><div class='row'><div class='col-md-12' id='brc_details-field'></div></div></fieldset><fieldset><legend>D</legend><div class='row'><div class='col-md-12' id='donation_intital-field'></div></div></fieldset></div></div></div></div></div></div></div>",
+
+			"bindings": {
+			 
+			  "memorandum_number": "memorandom_number-field",
+			  "date":"date-field",
+			  "cost_centre_class":"cost_centre_class-field",
+			  "particulars_for_debit":"particulars_for_debit-field",
+              "particulars_for_credit":"particulars_for_credit-field",
+			  "debit":"debit-field",
+			  "credit":"credit-field",
+			  "narration":"narration-field",
+			  "brc_details":"brc_details-field",
+                          "donation_intital":"donation_intital-field"
+			  
+            }
+        }
+	}
+}
