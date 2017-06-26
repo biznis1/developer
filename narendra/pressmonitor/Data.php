@@ -8,7 +8,7 @@ $db = new DB_Functions();
 $response = array("error" => FALSE);
  
     // receiving the post params
-    $text = $_POST['text'];
+    $text = $_POST['txt'];
     $textarea = $_POST['textarea'];
 
 	
@@ -21,7 +21,7 @@ $response = array("error" => FALSE);
             // user stored successfully
             $response["error"] = FALSE;
             $response["data"]["data_id"]= $user["data_id"];
-            $response["data"]["text"] = $user["text"];
+            $response["data"]["txt"] = $user["txt"];
             $response["data"]["textarea"] = $user["textarea"];
             $response["vendor"]["created_at"] = $user["created_at"];
            
