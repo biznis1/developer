@@ -1,0 +1,39 @@
+*{
+margin:0px;
+padding:0px;
+}
+#head{
+	width:auto;
+	height:100px;
+	background:#4d4dff;
+}
+#ph2{
+font-size:40px;
+line-height:100px;
+color:white;
+}
+#container1{
+background:white;
+width:35%;
+margin:18px auto;
+border-radius:9px 9px 9px 9px;
+}
+#form{
+	width:100%;
+	font-size:20;
+	border-radius:9px 9px 9px 9px;
+	padding-left:5px;
+}
+input{
+	padding:3px 3px 3px 3px;
+	padding-left:5px;
+	padding-right:5px;
+	font-size:18;
+	margin:5px;
+}
+#captcha
+{
+	background:gray;
+	color:white;
+	
+}

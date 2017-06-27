@@ -1,0 +1,45 @@
+*
+{
+margin:0px;
+padding:0px;	
+}
+.top-bar{
+	 padding:5px;
+	 background:linear-gradient(red, yellow,green);
+}
+.top-middle{
+	padding:15px;
+	font-size:35px;
+}
+.bottom-bar{
+	 padding:8px;
+	 background:linear-gradient(red, yellow,green);
+}
+.bottom-middle{
+	padding:5px;
+	font-size:20px;
+}
+.middle{
+	 padding:10px;
+}
+.middle1{
+	padding:5px;
+	font-size:20px;
+	color:red;
+}
+.table1{
+	box-shadow:4px 4px 6px black;
+}
+.table-header{
+	font-size:20px;
+	color:purple;
+	text-shadow:2px 2px yellow;
+}
+input[type=button]
+{
+	width:100%;
+}
+input
+{
+	text-align:center;
+}

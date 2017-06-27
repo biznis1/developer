@@ -1,0 +1,113 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+span{
+	color:red;
+}
+#container{
+	width:auto;
+	height:auto;
+}
+#ph2{
+font-size:40px;
+line-height:100px;
+color:white;
+text-shadow:3px 2px black;
+}
+#head{
+	width:auto;
+	height:100px;
+	background:#4d4dff;
+}
+.content{
+	width:auto;
+	height:518px;
+}
+.login{
+	width:35%;
+	margin:20px;
+	height:395px;
+	background:white;
+	border:1px solid white;
+	border-radius:9px 9px 9px 9px;
+	float:left;
+}
+.pic{
+	width:58%;
+	margin:20px;
+	height:395px;
+	background:white;
+	border:1px solid white;
+	border-radius:9px 9px 9px 9px;
+	float:left;
+}
+table{
+	width:100%;
+	height:395px;
+	font-size:20px;
+}
+input[type=submit]{
+	width:15%;
+	height:25px;
+	font-size:15px;
+	background:green;
+	color:white;
+	border-color:green;
+}
+a{
+	text-decoration:none;
+	color:blue;
+}
+a:hover{
+	text-decoration:underline;
+	color:red;
+}
+input{
+	padding-left:5px;
+	padding-right:5px;
+	font-size:20;
+}
+.bio{
+	margin:20px;
+	width:45%;
+	height:360px;
+}
+.icon
+{
+	width:10%;
+	height:23px;
+	display:inline-block;
+	margin:2px;
+}
+.footer{
+			border:2px solid white;
+			background:white;
+			border-radius:120px 120px 120px 120px;
+			width:96%;
+			height:130px;
+			margin-left:20px;
+			text-align:center;
+			font-size:18px;
+			float:left;
+			padding-top:7px;
+			
+		}
+input[type=button]{
+	background:green;
+	color:white;
+	height:25px;
+	font-size:14px;
+	border-color:green;
+	line-height:23px;
+}
+.aboutsite{
+	background:white;
+	width:43%;
+	height:320px;
+	float:right;
+	margin:10px;
+	color:green;
+	font-size:20px;
+	text-align:justify;
+}
