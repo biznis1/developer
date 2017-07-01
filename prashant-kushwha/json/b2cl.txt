@@ -1,0 +1,26 @@
+{
+  "b2cl": [
+    {
+      "pos": "05",
+      "inv": [
+        {
+          "chksum": "ASDFGJKLPTBBJKBJKBBJKBB",
+          "inum": "92661",
+          "idt": "10-01-2016",
+          "val": 784586.33,
+          "etin": "27AHQPA8875L1ZU",
+          "itms": [
+            {
+              "num": 1,
+              "itm_det": {
+                "rt": 0,
+                "txval": 0,
+                "iamt": 0
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

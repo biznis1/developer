@@ -21,12 +21,10 @@ if(isset($ch))
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js">
 </head>
 <body style="bgcolor:blue">
 
-<form method="POST" action="#" name="shpwd" class="form-horizontal">
+<form method="POST" action="#" class="form-horizontal">
 <div class="row">
 <div class="col-md-6">
 <div class="input-group">
@@ -49,6 +47,7 @@ $(document).ready(function(){
 		$("#pwd").attr("type", "text");
 	});
 	$("#spwd").mouseout(function(){
+		$("#picture").attr('src','hide.png');
 		$("#pwd").attr("type", "password");
 	});
 	var count=0;
@@ -70,30 +69,6 @@ $(document).ready(function(){
 	});
 	
 });
-
-$(function() {
-  $("form[name='shpwd']").validate({
-    // Specify validation rules
-    rules: {
-      pwd: {
-        required: true,
-        minlength: 8
-      }
-    },
-    messages: {
-      pwd: {
-        required: "<span style='color:red'>* Please provide a password</span>",
-        minlength: "<span style='color:red'>* Your password must be at least 8 characters long</span>"
-      }
-    }
-    
-  });
-
-   $("#sub").click(function(event) {
-         alert("Thank you very much! Your data has been successfully submitted!");
-    });
-});
-
 </script>
 </body>
 </html>

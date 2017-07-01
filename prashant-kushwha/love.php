@@ -22,7 +22,7 @@ body {
 
 <h1>
   <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im Prashant.", "I am Creative.", "I Love to Develop." ]'>
-    
+    <span class="wrap"></span>
   </a>
 </h1>
 <script>

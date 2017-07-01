@@ -1,6 +1,4 @@
-<?php
-
-$json='{
+{
   "b2b": [
     {
       "ctin": "01AABCE2207R1Z5",
@@ -34,17 +32,4 @@ $json='{
       ]
     }
   ]
-}';
-$arr = json_decode($json,true);
-
-foreach($arr['b2b'][0]['inv'][0]['itms'][0]['itm_det'] as $index=>$items){
-	
-	$arr1['itm_det'][$index]=$items;
 }
-echo "<pre>";
-print_r($arr1);
-echo "</pre>";
-
-echo "<pre>";
-print_r($arr);
-echo "</pre>";

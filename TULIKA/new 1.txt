@@ -1,0 +1,438 @@
+{"alphas":1,"add_record":1,
+"top": "<style>	h1{margin-top: 0px;margin-bottom: 0px;}
+    .h1_heading{font-size:26px;text-align:center;color:black;}
+	.h2_heading{color:black;font-size:20px;text-align:center;}
+	legend {display: block;width: 100%; padding: 0;margin-bottom: 20px;font-size: 21px;font-weight: 700;line-height: inherit;color: #333;border: 0;border-bottom: 1px solid #e5e5e5;}
+   label{float: none !important; width: 100% !important;      text-transform: capitalize;  display: inline-block; max-width: 100% !important;    font-size: 16px;    margin-bottom: 5px;    font-weight: 700;    text-align: left;}
+    .color1{color:#FF8C00;}
+    .glyphicon {color: #333;position: relative;top: 1px;display: inline-block;font-family: 'Glyphicons Halflings';font-style: normal;font-weight: 400;line-height: 1;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}			
+.checkbox label, .radio label { vertical-align: middle;min-height: 20px;padding-left: 20px;margin-bottom: 0;font-weight: 400;cursor: pointer;display: block;float: left;padding-right: 10px;white-space: nowrap;}
+ img {vertical-align: middle; width: 100% !important;}
+ h2 {MARGIN-LEFT: 5%; margin-right: 5%;margin-top: 15px;margin-bottom: 22px;padding-bottom: 6px;border-bottom: 1px solid #333;}
+ fieldset {border: 1px solid #337ab7 !important; margin: 15px;min-width: 0;padding: 10px;position: relative;border-radius: 4px;background-color: #f5f5f5; padding-left: 10px!important;}		
+ legend {font-size: 16px;font-weight: 500;color: #eee;margin-bottom: 0px;width: 100%;border: 1px solid #ddd;border-radius: 4px;padding: 5px 5px 5px 10px;background-color: #337ab7;}
+.alpaca-field.alpaca-field-image .alpaca-image-display, .alpaca-wizard .alpaca-wizard-buttons, .alpaca-wizard .alpaca-wizard-progress-bar {margin-top: 0px;}
+h1 {font-size: 28px;color:white;}
+input, textarea {width: 60%;max-width: 100%;}
+.btn-default { margin-top: -20px;color: #fff;background-color: #337ab7;border-color: #ccc;}</style>",
+
+
+"fields":"claim made under,section_18_1_a,section_18_1_b,section_18_1_c,section_18_1_d,gstin,legal_name,trade_name_if_any,date_from_which_liability_to_pay_tax_arises_under_section_9_3_and_section_9_4,date_of_grant_of_voluntary_registration,date_on_which_goods_and_services_becomes_taxable,7a_details,7b_details,8a_details,8b_details,8c_details",
+"field_section_18_1_a":{"select":["0","1"],"labels":["yes","no"]},
+"field_section_18_1_b":{"select":["0","1"],"labels":["yes","no"]},
+"field_section_18_1_c":{"select":["0","1"],"labels":["yes","no"]},
+"field_section_18_1_d":{"select":["0","1"],"labels":["yes","no"]},
+"field_7a_details":{"data":  [{
+    }],"schema": {
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "SR_NO": {
+                   
+                   "type":"string",
+                    "title": "SR_NO"
+                },
+                "title": {
+                    "type": "string",
+                    "title": "GSTIN/Registration under CX/VAT of supplier"
+                },
+                "amount": {
+                    "type": "string",
+                    "title": "*Invoice/Bill of entry No."
+                },
+                "amount": {
+                    "type": "string",
+                    "title": "*Invoice/Bill of entry Date"
+                },
+                "approved": {
+                    "type": "string",
+                    "title": "Description of inputs held in stock, inputs contained in semi-finished or finished goods held in stock and capital goods"
+                },
+				"Rate": {
+                    "type": "string",
+                    "title": "Unit Quantity Code (UQC)"
+                },
+				"Taxable": {
+                    "type": "string",
+                    "title": "Qty"
+                },
+				"tax": {
+                    "type": "string",
+                    "title": "Value**(As adjusted by debit note/credit note)"
+                },
+				"CT": {
+                    "type": "string",
+                    "title": "Amount of ITC claimed of Central Tax(Rs.)"
+                },
+				"Ut": {
+                    "type": "string",
+                    "title": "Amount of ITC claimed of State Tax(Rs.)"
+                },
+				"CessA": {
+                    "type": "string",
+                    "title": "Amount of ITC claimed of UT Tax(Rs.)"
+                },
+                "CessB": {
+                    "type": "string",
+                    "title": "Amount of ITC claimed of Integrated Tax(Rs.)"
+                },
+                "CessC": {
+                    "type": "string",
+                    "title": "Amount of ITC claimed of Cess(Rs.)"
+                }
+                
+            }
+        }
+    },
+    "options": {
+        "type": "table"
+        
+    }},
+	"field_7b_details":{"data":  [{
+    }],"schema": {
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "SR_NO": {
+                   
+                   "type":"string",
+                    "title": "SR_NO"
+                },
+                "title": {
+                    "type": "string",
+                    "title": "GSTIN/Registration under CX/VAT of supplier"
+                },
+                "amount": {
+                    "type": "string",
+                    "title": "*Invoice/Bill of entry No."
+                },
+                "amount": {
+                    "type": "string",
+                    "title": "*Invoice/Bill of entry Date"
+                },
+                "approved": {
+                    "type": "string",
+                    "title": "Description of inputs held in stock, inputs contained in semi-finished or finished goods held in stock and capital goods"
+                },
+				"Rate": {
+                    "type": "string",
+                    "title": "Unit Quantity Code (UQC)"
+                },
+				"Taxable": {
+                    "type": "string",
+                    "title": "Qty"
+                },
+				"tax": {
+                    "type": "string",
+                    "title": "Value**(As adjusted by debit note/credit note)"
+                },
+				"CT": {
+                    "type": "string",
+                    "title": "Amount of ITC claimed of Central Tax(Rs.)"
+                },
+				"Ut": {
+                    "type": "string",
+                    "title": "Amount of ITC claimed of State Tax(Rs.)"
+                },
+				"CessA": {
+                    "type": "string",
+                    "title": "Amount of ITC claimed of UT Tax(Rs.)"
+                },
+                "CessB": {
+                    "type": "string",
+                    "title": "Amount of ITC claimed of Integrated Tax(Rs.)"
+                },
+                "CessC": {
+                    "type": "string",
+                    "title": "Amount of ITC claimed of Cess(Rs.)"
+                }
+                
+            }
+        }
+    },
+    "options": {
+        "type": "table"
+        
+    }},
+	"field_8a_details":{"data":  [{
+    }],"schema": {
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "SR_NO": {
+                   
+                   "type":"string",
+                    "title": "SR_NO"
+                },
+                "title": {
+                    "type": "string",
+                    "title": "GSTIN/Registration under CX/VAT of supplier"
+                },
+                "amount": {
+                    "type": "string",
+                    "title": "*Invoice/Bill of entry No."
+                },
+                "amount": {
+                    "type": "string",
+                    "title": "*Invoice/Bill of entry Date"
+                },
+                "approved": {
+                    "type": "string",
+                    "title": "Description of inputs held in stock, inputs contained in semi-finished or finished goods held in stock and capital goods"
+                },
+				"Rate": {
+                    "type": "string",
+                    "title": "Unit Quantity Code (UQC)"
+                },
+				"Taxable": {
+                    "type": "string",
+                    "title": "Qty"
+                },
+				"tax": {
+                    "type": "string",
+                    "title": "Value**(As adjusted by debit note/credit note)"
+                },
+				"CT": {
+                    "type": "string",
+                    "title": "Amount of ITC claimed of Central Tax(Rs.)"
+                },
+				"Ut": {
+                    "type": "string",
+                    "title": "Amount of ITC claimed of State Tax(Rs.)"
+                },
+				"CessA": {
+                    "type": "string",
+                    "title": "Amount of ITC claimed of UT Tax(Rs.)"
+                },
+                "CessB": {
+                    "type": "string",
+                    "title": "Amount of ITC claimed of Integrated Tax(Rs.)"
+                },
+                "CessC": {
+                    "type": "string",
+                    "title": "Amount of ITC claimed of Cess(Rs.)"
+                }
+                
+            }
+        }
+    },
+    "options": {
+        "type": "table"
+        
+    }},
+	"field_8b_details":{"data":  [{
+    }],"schema": {
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "SR_NO": {
+                   
+                   "type":"string",
+                    "title": "SR_NO"
+                },
+                "title": {
+                    "type": "string",
+                    "title": "GSTIN/Registration under CX/VAT of supplier"
+                },
+                "amount": {
+                    "type": "string",
+                    "title": "*Invoice/Bill of entry No."
+                },
+                "amount": {
+                    "type": "string",
+                    "title": "*Invoice/Bill of entry Date"
+                },
+                "approved": {
+                    "type": "string",
+                    "title": "Description of inputs held in stock, inputs contained in semi-finished or finished goods held in stock and capital goods"
+                },
+				"Rate": {
+                    "type": "string",
+                    "title": "Unit Quantity Code (UQC)"
+                },
+				"Taxable": {
+                    "type": "string",
+                    "title": "Qty"
+                },
+				"tax": {
+                    "type": "string",
+                    "title": "Value**(As adjusted by debit note/credit note)"
+                },
+				"CT": {
+                    "type": "string",
+                    "title": "Amount of ITC claimed of Central Tax(Rs.)"
+                },
+				"Ut": {
+                    "type": "string",
+                    "title": "Amount of ITC claimed of State Tax(Rs.)"
+                },
+				"CessA": {
+                    "type": "string",
+                    "title": "Amount of ITC claimed of UT Tax(Rs.)"
+                },
+                "CessB": {
+                    "type": "string",
+                    "title": "Amount of ITC claimed of Integrated Tax(Rs.)"
+                },
+                "CessC": {
+                    "type": "string",
+                    "title": "Amount of ITC claimed of Cess(Rs.)"
+                }
+                
+            }
+        }
+    },
+    "options": {
+        "type": "table"
+        
+    }},
+	"field_8c_details":{"data":  [{
+    }],"schema": {
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "SR_NO": {
+                   
+                   "type":"string",
+                    "title": "SR_NO"
+                },
+                "title": {
+                    "type": "string",
+                    "title": "GSTIN/Registration under CX/VAT of supplier"
+                },
+                "amount": {
+                    "type": "string",
+                    "title": "*Invoice/Bill of entry No."
+                },
+                "amount": {
+                    "type": "string",
+                    "title": "*Invoice/Bill of entry Date"
+                },
+                "approved": {
+                    "type": "string",
+                    "title": "Description of inputs held in stock, inputs contained in semi-finished or finished goods held in stock and capital goods"
+                },
+				"Rate": {
+                    "type": "string",
+                    "title": "Unit Quantity Code (UQC)"
+                },
+				"Taxable": {
+                    "type": "string",
+                    "title": "Qty"
+                },
+				"tax": {
+                    "type": "string",
+                    "title": "Value**(As adjusted by debit note/credit note)"
+                },
+				"CT": {
+                    "type": "string",
+                    "title": "Amount of ITC claimed of Central Tax(Rs.)"
+                },
+				"Ut": {
+                    "type": "string",
+                    "title": "Amount of ITC claimed of State Tax(Rs.)"
+                },
+				"CessA": {
+                    "type": "string",
+                    "title": "Amount of ITC claimed of UT Tax(Rs.)"
+                },
+                "CessB": {
+                    "type": "string",
+                    "title": "Amount of ITC claimed of Integrated Tax(Rs.)"
+                },
+                "CessC": {
+                    "type": "string",
+                    "title": "Amount of ITC claimed of Cess(Rs.)"
+                }
+                
+            }
+        }
+    },
+    "options": {
+        "type": "table"
+        
+    }},
+
+	"view": {
+	 "id": "registration",
+        "parent": "bootstrap-edit",
+        "layout" : {
+            "template": "<div class='row'>
+			<div class='col-md-12 registration'><div class='panel panel-primary'><div class='panel-heading'>
+			<h1 class='text-center'>Form GST ITC-1</h1></div>
+			<div class='panel-body'><div class='row'><div class='contact-info'><div class='col-md-12'>
+			<h4 class='text-center'>declaration for claim of input tax credit under sub-section(1)of section 18</h4>
+			<fieldset><legend>claim made under</legend>
+			<div class='col-md-6' id='section_18_1_a-field'></div>
+			<div class='col-md-6' id='section_18_1_b-field'></div>
+			<div class='col-md-6' id='section_18_1_c-field'></div>
+			<div class='col-md-6' id='section_18_1_d-field'></div></div>
+			</div></fieldset>
+			<fieldset><div class='row'><div class='col-md-6' id='gstin-field'></div>
+			<div class='col-md-6' id='legal_name-field'></div>
+			<div class='col-md-6' id='trade_name_if_any-field'></div>
+			<div class='col-md-6' id='date_from_which_liability_to_pay_tax_arises_under_section_9_3_and_section_9_4-field'></div>
+			<div class='col-md-6' id='date_of_grant_of_voluntary_registration-field'></div>
+			<div class='col-md-6' id='date_on_which_goods_and_services_becomes_taxable-field'></div>
+			</div></fieldset>
+			<h5 class='text-left'> 7.Claim under section 18(1) or section 18(1)(b)</h5>
+			<h6 class='text-left'> Details of stock of input and input contained in semi-finished goods or finished goods on which ITC is claimed</h6>
+			<fieldset><legend class='text-center'> 7 (a) Inputs held in stock </legend> 
+			<div class='row'><div class='col-md-12'id='7a_details-field'></div></div></fieldset>
+			<fieldset><legend class='text-center'> 7 (b) Inputs contain in semi finished and finished goods held in stock</legend>
+			 <div class='row'><div class='col-md-12' id='7b_details-field'></div></div>
+			 <h5 class='text-center'>*In case it is not feasible to identify invoice the principle of first in and first out may be followed</h5></fieldset>
+			 <h5 class='text-left'> 8.Claim under section 18(1)or section 18(1)(b)</h5>
+			<h6 class='text-left'> Details of stock of input and input contained in semi-finished goods or finished goods on which ITC is claimed</h6>
+			<fieldset><legend class='text-center'> 8(a) Inputs held in stock </legend> 
+			<div class='row'><div class='col-md-12'id='8a_details-field'></div></div></fieldset>
+			<fieldset><legend class='text-center'> 8(b)Inputs contain in semi finished and finished goods held in stock </legend> 
+			<div class='row'><div class='col-md-12'id='8b_details-field'></div></div></fieldset>
+			<fieldset><legend class='text-center'> 8(c)Capital goods in stock</legend> 
+			<div class='row'><div class='col-md-12'id='8c_details-field'></div></div>
+			 <h5 class='text-center'>*In case it is not feasible to identify invoice the principle of first in and first out may be followed</h5>
+			 <h5 class='text-center'>**The value of capital goods shall be the invoice value reduced by five percentage points per quarter of a year or part thereof from the date of invoice</h5> </fieldset>
+			
+			</div></div></div></div></div>",
+			"bindings": {
+			 "claim made under":"claim made under-field",
+			 "section_18_1_a":"section_18_1_a-field",
+			 "section_18_1_b":"section_18_1_b-field",
+			 "section_18_1_c":"section_18_1_c-field",
+			 "section_18_1_d":"section_18_1_d-field",
+			 "gstin":"gstin-field",
+			 "legal_name":"legal_name-field",
+			 "trade_name_if_any":"trade_name_if_any-field",
+			"date_from_which_liability_to_pay_tax_arises_under_section_9_3_and_section_9_4":"date_from_which_liability_to_pay_tax_arises_under_section_9_3_and_section_9_4-field",
+			 "date_of_grant_of_voluntary_registration":"date_of_grant_of_voluntary_registration-field",
+			"date_on_which_goods_and_services_becomes_taxable":"date_on_which_goods_and_services_becomes_taxable-field",
+			"7a_details":"7a_details-field",
+			"7b_details":"7b_details-field",
+			"8a_details":"8a_details-field",
+			"8b_details":"8b_details-field",
+			"8c_details":"8c_details-field"
+			
+			 
+			  
+			  
+			 
+			   
+			   
+			  
+			  
+			  
+			 
+			  
+			  
+			  
+			  
+			  
+            }
+        }
+	}
+}

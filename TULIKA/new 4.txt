@@ -1,0 +1,4 @@
+{"add_record":1,
+"fields":"i_py,c_py,s_py,cs_py",
+"field_cs_py":{"field_type":"number"}
+}

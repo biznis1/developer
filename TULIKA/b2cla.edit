@@ -1,0 +1,83 @@
+{"alphas":1,"add_record":1,
+"top":"<style>h1{margin-top:0px;margin-bottom:0px;}
+.h1_heading{font-size:26px;text-align:center;color:black;}
+.h2_heading{color:black;font-size:20px;text-align:center;}
+legend {display:block;width:100%;padding:0;margin-bottom:20px;font-size:21px;font-weight:700;line-height:inherit;color:#333;border:0;border-bottom:1pxsolid#e5e5e5;}
+label{float:none!important;width:100% !important;text-transform:capitalize;display:inline-block;max-width:100%!important;font-size:16px;margin-bottom:5px;font-weight:700;text-align: left;}
+.color1{color:#FF8C00;}
+.glyphicon{color:#333;position:relative;top:1px;display:inline-block;font-family:'GlyphiconsHalflings';font-style:normal;font-weight:400;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}			
+.checkbox label,.radiolabel{vertical-align:middle;min-height:20px;padding-left:20px;margin-bottom:0;font-weight:400;cursor:pointer;display:block;float:left;padding-right:10px;white-space:nowrap;}
+img{vertical-align:middle;width:100%!important;}
+h2{MARGIN-LEFT:5%;margin-right:5%;margin-top:15px;margin-bottom:22px;padding-bottom:6px;border-bottom:1pxsolid#333;}
+fieldset{border:1pxsolid#337ab7!important;margin:15px;min-width:0;padding:10px;position:relative;border-radius:4px;background-color:#f5f5f5;padding-left:10px!important;}		
+legend {font-size: 16px;font-weight: 500;color: #eee;margin-bottom: 0px;width: 100%;border: 1px solid #ddd;border-radius: 4px;padding: 5px 5px 5px 10px;background-color: #337ab7;}
+.alpaca-field.alpaca-field-image.alpaca-image-display,.alpaca-wizard.alpaca-wizard-buttons,.alpaca-wizard.alpaca-wizard-progress-bar{margin-top: 0px;}
+h1{font-size:28px;color:white;}
+input,textarea{width:60%;max-width:100%;}
+.btn-default{color:#fff;background-color:#337ab7;border-color:#ccc;}
+.alpaca-field-table.actionbar,.table.actionbar,table.dt-rowReorder-float.actionbar{
+white-space:nowrap;
+text-align:center;
+width:247px;
+}
+.alpaca-array-actionbar{
+overflow:visible;
+}
+.btn-group,.btn-group-vertical{
+position:relative;
+display:inline-block;
+vertical-align:middle;
+}
+</style>",
+"fields":"state_cd,chksum,oinum,oidt,cname,num,idt,val,pos,prs,od_num,od_dt,etin,B2CLA","field_B2CLA":{"data":[{}],"schema":{"type":"array","items":{"type":"object",
+"properties":{"num":{
+"type": "any",
+"title": "num"
+},
+"ty":{
+"type":"any",
+"title": "ty"
+},
+"hsn_sc":{
+"type":"any",
+"title": "hsn_sc"
+},
+"irt":{
+"type":"any",
+"title":"irt"
+},
+"txval":{
+"type":"any",
+"title":"txval"
+},
+"irt":{
+"type":"any",
+"title":"irt"
+},
+"iamt":{
+"type":"any",
+"title":"iamt"
+}}}},
+"options":{
+"type":"table"
+}},
+"view":{"id":"registration","parent":"bootstrap-edit","layout":{"template":"<div class='row'><div class='col-md-12registration'><div class='panelpanel-primary'><div class='panel-heading'><h1class='text-center'>B2CLA</h1></div><div class='panel-body'><div class='row'><div class='contact-info'><div class='col-md-12'><fieldset><div class='col-md-6'id='chksum-field'></div><div class='col-md-6'id='oinum-field'></div><div class='col-md-6'id='oidt-field'></div><div class='col-md-6'id='cname-field'></div><div class='col-md-6'id='inum-field'></div><div class='col-md-6'id='idt-field'></div><div class='col-md-6'id='val-field'></div><div class='col-md-6'id='pos-field'></div><div class='col-md-6'id='prs-field'></div><div class='col-md-6'id='od_num-field'></div><div class='col-md-6'id='od_dt-field'></div><div class='col-md-6'id='etin-field'></div><div class='col-md-6'id='B2CLA-field'></div></div></fieldset></div></div></div></div></div>","bindings":{"B2CLA":"B2CLA-field","chksum":"chksum-field","oinum":"oinum-field","oidt":"oidt-field","cname":"cname-field","inum":"inum-field","idt":"idt-field","val":"val-field","pos":"pos-field","rchrg":"rchrg-field","prs":"prs-field",od_num":"od_num-field","od_dt":"od_dt-field","etin":"etin-field"}}}}
+              
+              
+              
+              
+              
+              
+  
+        
+    
+
+
+            
+
+
+
+
+
+
+

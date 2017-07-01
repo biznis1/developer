@@ -1,0 +1,475 @@
+{"alphas":1,"add_record":1,
+"top": "<style>	h1{margin-top: 0px;margin-bottom: 0px;}
+    .h1_heading{font-size:26px;text-align:center;color:black;}
+	.h2_heading{color:black;font-size:20px;text-align:center;}
+	legend {display: block;width: 100%; padding: 0;margin-bottom: 20px;font-size: 21px;font-weight: 700;line-height: inherit;color: #333;border: 0;border-bottom: 1px solid #e5e5e5;}
+   label{float: none !important; width: 100% !important;      text-transform: capitalize;  display: inline-block; max-width: 100% !important;    font-size: 16px;    margin-bottom: 5px;    font-weight: 700;    text-align: left;}
+    .color1{color:#FF8C00;}
+    .glyphicon {color: #333;position: relative;top: 1px;display: inline-block;font-family: 'Glyphicons Halflings';font-style: normal;font-weight: 400;line-height: 1;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}			
+.checkbox label, .radio label { vertical-align: middle;min-height: 20px;padding-left: 20px;margin-bottom: 0;font-weight: 400;cursor: pointer;display: block;float: left;padding-right: 10px;white-space: nowrap;}
+ img {vertical-align: middle; width: 100% !important;}
+ h2 {MARGIN-LEFT: 5%; margin-right: 5%;margin-top: 15px;margin-bottom: 22px;padding-bottom: 6px;border-bottom: 1px solid #333;}
+ fieldset {border: 1px solid #337ab7 !important; margin: 15px;min-width: 0;padding: 10px;position: relative;border-radius: 4px;background-color: #f5f5f5; padding-left: 10px!important;}		
+ legend {font-size: 16px;font-weight: 500;color: #eee;margin-bottom: 0px;width: 100%;border: 1px solid #ddd;border-radius: 4px;padding: 5px 5px 5px 10px;background-color: #337ab7;}
+.alpaca-field.alpaca-field-image .alpaca-image-display, .alpaca-wizard .alpaca-wizard-buttons, .alpaca-wizard .alpaca-wizard-progress-bar {margin-top: 0px;}
+h1 {font-size: 28px;color:white;}
+input, textarea {width: 60%;max-width: 100%;}
+.btn-default {color: #fff;background-color: #337ab7;border-color: #ccc;}
+.alpaca-field-table .actionbar, .table .actionbar, table.dt-rowReorder-float .actionbar {
+    white-space: nowrap;
+    text-align: center;
+    width: 247px;
+  
+}
+
+.alpaca-array-actionbar {
+    overflow: visible;
+}
+
+.btn-group, .btn-group-vertical {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+</style>",
+"fields": "1_gstin,2_a_legal_name,2_b_trade_name_if_any,3a_details,3b_details,4a_details,4b_details",
+"field_3a_details":{"data":  [{
+    }],"schema": {
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+			 "SR_NO": {
+                   
+                   "type":"string",
+                    "title": "Gstin/Name of job worker if unregistered"
+                },
+                
+                "amt": {
+                    "type": "string",
+                    "title": "Challan No."
+                },
+                "amount": {
+                    "type": "string",
+                    "title": "Challan Date"
+                },
+                "approved": {
+                    "type": "string",
+                    "title": "Place of supply"
+                },
+				"approve": {
+                    "type": "string",
+                    "title": "Description"
+                },
+				"Rate": {
+                    "type": "string",
+                    "title": "Unit Quantity Code (UQC)"
+                },
+				"Taxable": {
+                    "type": "string",
+                    "title": "Quantity"
+                },
+				"title": {
+                    "type": "string",
+                    "title": "Taxable value"
+                },
+				"type": {
+                    "type": "string",
+                    "title": "Type of goods(input/capital goods)"
+                },
+				
+				"CT_amount": {
+                    "type": "string",
+                    "title": "Amount of Central Tax(Rs.)"
+                },
+				"CT_rate": {
+				"type":"string",
+				"title":"Rate(%) of Central Tax(Rs.)"
+				},
+				"Ut_amount": {
+                    "type": "string",
+                    "title": "Amount of State Tax(Rs.)"
+                },
+				"Ut_rate": {
+                    "type": "string",
+                    "title": "Rate(%) of State Tax(Rs.)"
+                },
+				"CessA_amount": {
+                    "type": "string",
+                    "title": "Amount of UT Tax(Rs.)"
+                },
+				"CessA_rate": {
+                    "type": "string",
+                    "title": "Rate(%) of UT Tax(Rs.)"
+					},
+                "CessB_amount": {
+                    "type": "string",
+                    "title": "Amount of Integrated Tax(Rs.)"
+                },
+				"CessB_rate": {
+                    "type": "string",
+                    "title": "Rate(%) of Integrated Tax(Rs.)"
+                },
+                "CessC": {
+                    "type": "string",
+                    "title": "Amount of Cess(Rs.)"
+                }
+                
+            }
+        }
+    },
+    "options": {
+        "type": "table"
+        
+    }},
+	"field_3b_details":{"data":  [{
+    }],"schema": {
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+			 "SR_NO of original document": {
+                   
+                   "type":"string",
+                    "title": "Gstin/name of job worker of original details "
+					},
+					"amt": {
+                    "type": "string",
+                    "title": "Challan No of original details"
+                },
+				"amount": {
+                    "type": "string",
+                    "title": "Challan Date of original details"
+                },
+				"SR_NO of revised details": {
+                   
+                   "type":"string",
+                    "title": "Gstin/Name of job worker of revised details "
+					},
+				"amt of revised details": {
+                    "type": "string",
+                    "title": "Challan No of revised details"
+                },
+				"amount of revised details": {
+                    "type": "string",
+                    "title": "Challan Date of revised details"
+                },
+				"amti": {
+                    "type": "string",
+                    "title": "Goods receipt date in case of direct delievery to job worker"
+                },
+				
+                "approved": {
+                    "type": "string",
+                    "title": "Place of supply of revised details"
+					},
+				"approve": {
+                    "type": "string",
+                    "title": "Description of revised details"
+                },
+				"Rate": {
+                    "type": "string",
+                    "title": "Unit Quantity Code (UQC) of revised details"
+                },
+				"Taxable": {
+                    "type": "string",
+                    "title": "Quantity of revised details"
+                },
+				"title": {
+                    "type": "string",
+                    "title": "Taxable value of revised details"
+                },
+				"type": {
+                    "type": "string",
+                    "title": "Type of goods(input/capital goods) of revised details"
+                },
+				"CT_amount": {
+                    "type": "string",
+                    "title": "Amount of Central Tax(Rs.)"
+                },
+				"CT_rate": {
+				"type":"string",
+				"title":"Rate(%) of Central Tax(Rs.)"
+				},
+				"Ut_amount": {
+                    "type": "string",
+                    "title": "Amount of State Tax(Rs.)"
+                },
+				"Ut_rate": {
+                    "type": "string",
+                    "title": "Rate(%) of State Tax(Rs.)"
+                },
+				"CessA_amount": {
+                    "type": "string",
+                    "title": "Amount of UT Tax(Rs.)"
+                },
+				"CessA_rate": {
+                    "type": "string",
+                    "title": "Rate(%) of UT Tax(Rs.)"
+					},
+                "CessB_amount": {
+                    "type": "string",
+                    "title": "Amount of Integrated Tax(Rs.)"
+                },
+				"CessB_rate": {
+                    "type": "string",
+                    "title": "Rate(%) of Integrated Tax(Rs.)"
+                },
+                "CessC": {
+                    "type": "string",
+                    "title": "Amount of Cess(Rs.)"
+                }
+					}
+					}
+					},
+					
+		"options": {
+        "type": "table"
+        
+    }},			
+    "field_4a_details":{"data":  [{
+    }],"schema": {
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+			 "SR_NO of original document": {
+                   
+                   "type":"string",
+                    "title": "Gstin/Name of job worker"
+					},
+					"am": {
+                    "type": "string",
+                    "title": "Received back/sent out directly"
+                },
+					"amt": {
+                    "type": "string",
+                    "title": "Original challan no"
+                },
+				"amount": {
+                    "type": "string",
+                    "title": "Original challan date"
+                },
+				"app": {
+                    "type": "string",
+                    "title": "Invoice details in case of sent out directly No"
+                },
+				"apps": {
+                    "type": "string",
+                    "title": "Invoice details in case of sent out directly Date"
+                },
+				"approve": {
+                    "type": "string",
+                    "title": "Description of revised details"
+                },
+				"Rate": {
+                    "type": "string",
+                    "title": "Unit Quantity Code (UQC) of revised details"
+                },
+				"Taxable": {
+                    "type": "string",
+                    "title": "Quantity"
+                },
+				"title": {
+                    "type": "string",
+                    "title": "Taxable value"
+                },
+				"type": {
+                    "type": "string",
+                    "title": "Type of goods(input/capital goods)"
+                },
+				"CT_amount": {
+                    "type": "string",
+                    "title": "Amount of Central Tax(Rs.)"
+                },
+				"CT_rate": {
+				"type":"string",
+				"title":"Rate(%) of Central Tax(Rs.)"
+				},
+				"Ut_amount": {
+                    "type": "string",
+                    "title": "Amount of State Tax(Rs.)"
+                },
+				"Ut_rate": {
+                    "type": "string",
+                    "title": "Rate(%) of State Tax(Rs.)"
+                },
+				"CessA_amount": {
+                    "type": "string",
+                    "title": "Amount of UT Tax(Rs.)"
+                },
+				"CessA_rate": {
+                    "type": "string",
+                    "title": "Rate(%) of UT Tax(Rs.)"
+					},
+                "CessB_amount": {
+                    "type": "string",
+                    "title": "Amount of Integrated Tax(Rs.)"
+                },
+				"CessB_rate": {
+                    "type": "string",
+                    "title": "Rate(%) of Integrated Tax(Rs.)"
+                },
+                "CessC": {
+                    "type": "string",
+                    "title": "Amount of Cess(Rs.)"
+                }
+					}
+					}
+					},
+					
+		"options": {
+        "type": "table"
+        
+    }},	
+	"field_4b_details":{"data":  [{
+    }],"schema": {
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+			"am": {
+                    "type": "string",
+                    "title": "Received back/sent out directly"
+                },
+			
+			 "SR_NO of original details": {
+                   
+                   "type":"string",
+                    "title": "Gstin/Name of job worker of original details"
+					},
+					
+					"amt": {
+                    "type": "string",
+                    "title": "Challan no of original details"
+                },
+				"amount": {
+                    "type": "string",
+                    "title": "Challan date of original details"
+                },
+				"amt of revised details": {
+                    "type": "string",
+                    "title": "Challan no of revised details"
+                },
+				"amount of revised details": {
+                    "type": "string",
+                    "title": "Challan date of revised details"
+                },
+				"app": {
+                    "type": "string",
+                    "title": "Invoice details in case of sent out directly No of revised details"
+                },
+				"apps": {
+                    "type": "string",
+                    "title": "Invoice details in case of sent out directly Date of revised details"
+                },
+				"approve": {
+                    "type": "string",
+                    "title": "Description of revised details"
+                },
+				"Rate": {
+                    "type": "string",
+                    "title": "Unit Quantity Code (UQC) of revised details"
+                },
+				"Taxable": {
+                    "type": "string",
+                    "title": "Quantity"
+                },
+				"title": {
+                    "type": "string",
+                    "title": "Taxable value"
+                },
+				"type": {
+                    "type": "string",
+                    "title": "Type of goods(input/capital goods)"
+                },
+				"CT_amount": {
+                    "type": "string",
+                    "title": "Amount of tax involved in goods received of Central Tax(Rs.)"
+                },
+				"CT_rate": {
+				"type":"string",
+				"title":"Amount of tax involved in goods received of  Rate(%) of Central Tax(Rs.)"
+				},
+				"Ut_amount": {
+                    "type": "string",
+                    "title": "Amount of tax involved in goods received of State Tax(Rs.)"
+                },
+				"Ut_rate": {
+                    "type": "string",
+                    "title": "Amount of tax involved in goods received of  Rate(%) of State Tax(Rs.)"
+                },
+				"CessA_amount": {
+                    "type": "string",
+                    "title": " Amount of tax involved in goods received of Amount of UT Tax(Rs.)"
+                },
+				"CessA_rate": {
+                    "type": "string",
+                    "title": " Amount of tax involved in goods received of Rate(%) of UT Tax(Rs.)"
+					},
+                "CessB_amount": {
+                    "type": "string",
+                    "title": " Amount of tax involved in goods received of Amount of Integrated Tax(Rs.)"
+                },
+				"CessB_rate": {
+                    "type": "string",
+                    "title": "Amount of tax involved in goods received of  Rate(%) of Integrated Tax(Rs.)"
+                },
+                "CessC": {
+                    "type": "string",
+                    "title": "Amount of tax involved in goods received of  Amount of Cess(Rs.)"
+                }
+					}
+					}
+					},
+					
+		"options": {
+        "type": "table"
+        
+    }},			            
+	"view": {
+	 "id": "registration",
+        "parent": "bootstrap-edit",
+        "layout" : {
+            "template": "<div class='row'><div class='col-md-12 registration'><div class='panel panel-primary'>
+			<div class='panel-heading'><h1 class='text-center'>Form GST-ITC-04</h1></div>
+			<div class='panel-body'><div class='row'><div class='contact-info'><div class='col-md-12'>
+			<h4 class='text-center'>Details of goods/capital goods sent to job worker and received back</h4>
+			<div class='row'><div class='col-md-6' id='1_gstin-field'></div>
+			<div class='col-md-6' id='2_a_legal_name-field'></div>
+			<div class='col-md-6' id='2_b_trade_name_if_any-field'></div></div>
+			
+			<fieldset><legend>3(a) Details of inputs/capital goods sent for job-work</legend>
+			<div class='row'><div class='col-md-12' id='3a_details-field'></div></div></fieldset>
+			<fieldset><legend>3(b)Amendment of details of inputs/capital goods removed for job-work </legend>
+			<div class='row'><div class='col-md-12' id='3b_details-field'></div></div></fieldset>
+			<fieldset><legend>4(a)Details of inputs/capital goods received back from job worker or sent out from business place of job-work </legend>
+			<div class='row'><div class='col-md-12' id='4a_details-field'></div></div></fieldset>
+			<fieldset><legend>4(b)Amendments of Details of inputs/capital goods received back or disposed of from business place of job-work</legend>
+			<div class='row'><div class='col-md-12' id='4b_details-field'></div></div></fieldset>
+			<fieldset><h5 class='text-left'> 5. Verification(By authorized signatory)</h5>
+			<h6 class='text-left'>I hereby solemnly affirm and declare that the information given herein above is true and correct to the best of my knowledge and
+             belief and nothing has been concealed therefrom. </h6>
+           <h6 class='text-right'> Signature ________________</h6>
+           <h6 class='text-right'>Name of authorized signatory____________________</h6>
+           <h6 class='text-right'>Designation/status___________________</h6>
+           <h6 class='text-left'>Place</h6>
+		   <h6 class='text-left'>Date</h6>
+             </fieldset>
+			</div></div></div></div></div>",
+			"bindings": {
+			"1_gstin":"1_gstin-field",
+			"2_a_legal_name":"2_a_legal_name-field",
+			"2_b_trade_name_if_any":"2_b_trade_name_if_any-field",
+			"3a_details":"3a_details-field",
+			"3b_details":"3b_details-field",
+			"4a_details":"4a_details-field",
+			"4b_details":"4b_details-field"
+			}
+			}
+			}
+			}
+			
+			
+			
+			
