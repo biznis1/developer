@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Media Monitoring Technology Panel</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <script>
+$( document ).ready( function() {
+  $('#textarea1').val('New Text');
+  $('#textarea1').trigger('autoresize');
+
+}); 
+</script>
+    
+   <style>
+     .btn-flat {
+    box-shadow: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;    float: right !important;
+    transition: background-color .2s;
+}  
+       .input-field {
+    position: relative;
+    margin-top: 0px;
+}
+       td, th {
+    padding: 5px 5px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+    border-radius: 2px;
+}
+       input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #9e9e9e;
+    border-radius: 0;
+    outline: none;
+    height: 3rem;
+    width: 100%;
+    font-size: 1rem;
+    margin: 0 0 0px 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: content-box;
+    transition: all 0.3s;
+}
+    </style>
+    
+</head>
+<body onload="saveData()" >
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">MMS - Media Monitoring Technology Panel</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Links</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Links</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <div class="row">
+          <h2 class="header center orange-text">Subjects List</h2>
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="ns" type="text" class="validate">
+          <label for="ns">Ns</label>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="code" type="text" class="validate">
+          <label for="code">Code</label>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="url" type="text" class="validate">
+          <label for="url">URL</label>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="name" type="text" class="validate">
+          <label for="name">Name</label>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="content" type="text" class="validate">
+          <label for="content">Content</label>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="tags" type="text" class="validate">
+          <label for="tags">Tags</label>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="children" type="text" class="validate">
+          <label for="children">Children</label>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="status" type="text" class="validate">
+          <label for="status">Status</label>
+        </div>
+      </div>
+  
+      <div class="row">
+          <div class="input-field col s12">
+          <textarea id="configjson" class="materialize-textarea"></textarea>
+          <label for="configjson">Config JSON</label>
+        </div>
+      </div>
+  
+
+    </form>
+  </div>
+      <br><br>
+
+        
+        <table class="striped">
+             <h5 class="left">Section</h5>
+        <thead>
+          <tr>
+              <th>Code</th>
+              <th>Name</th>
+              <th>Priority</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+              <div class="input-field col s6">
+              <input id="last_name" name="code[]" value="A" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="name[]" value="European Union" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="priority[]" value=100 type="text" class="validate">
+              
+            </div>
+            </td>
+          </tr>
+            
+            <tr>
+            <td>
+              <div class="input-field col s6">
+              <input id="last_name" name="code[]"  value="at"type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="name[]" value="austria" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="priority[]" value=90 type="text" class="validate">
+              
+            </div>
+            </td>
+          </tr>
+            
+            <tr>
+            <td>
+              <div class="input-field col s6">
+              <input id="last_name" name="code[]" value="be" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="name[]" value="belgium" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="priority[]"  value="88" type="text" class="validate">
+              
+            </div>
+            </td>
+          </tr>
+            
+            <tr>
+            <td>
+              <div class="input-field col s6">
+              <input id="last_name" name="code[]" value="bg" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="name[]" value="bulgaria" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="priority[]" value= "86" type="text" class="validate">
+              
+            </div>
+            </td>
+          </tr>
+            
+            <tr>
+            <td>
+              <div class="input-field col s6">
+              <input id="last_name" name="code[]" value="cy" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="name[]" value="cyprus" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="priority[]" value="84" type="text" class="validate">
+              
+            </div>
+            </td>
+          </tr>
+            
+            <tr>
+            <td>
+              <div class="input-field col s6">
+              <input id="last_name" name="code[]" value="cz" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="name[]" value="czech republic" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="priority[]"  value="82" type="text" class="validate">
+              
+            </div>
+            </td>
+          </tr>
+            
+            <tr>
+            <td>
+              <div class="input-field col s6">
+              <input id="last_name" name="code[]" value="de" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="name[]" value="germany" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="priority[]"  value="80" type="text" class="validate">
+              
+            </div>
+            </td>
+          </tr>
+            
+            <tr>
+            <td>
+              <div class="input-field col s6">
+              <input id="last_name" name="code[]"value="dk" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="name[]" value="denmark" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="priority[]" value="70" type="text" class="validate">
+              
+            </div>
+            </td>
+          </tr>
+            
+            <tr>
+            <td>
+              <div class="input-field col s6">
+              <input id="last_name" name="code[]" value="fi" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="name[]" value="finland" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="priority[]" value="68" type="text" class="validate">
+              
+            </div>
+            </td>
+          </tr>
+            
+            <tr>
+            <td>
+              <div class="input-field col s6">
+              <input id="last_name" name="code[]" value="fr"  type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="name[]" value="france" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="priority[]" value="66" type="text" class="validate">
+              
+            </div>
+            </td>
+          </tr>
+            
+            <tr>
+            <td>
+              <div class="input-field col s6">
+              <input id="last_name" name="code[]" value="gr" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="name[]" value="greece" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="priority[]" value="64"type="text" class="validate">
+              
+            </div>
+            </td>
+          </tr>
+            
+            <tr>
+            <td>
+              <div class="input-field col s6">
+              <input id="last_name" name="code[]" value="hu" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="name[]" value="hungary" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="priority[]" value="62" type="text" class="validate">
+              
+            </div>
+            </td>
+          </tr>
+            
+            <tr>
+            <td>
+              <div class="input-field col s6">
+              <input id="last_name" name="code[]"  value="ie" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="name[]"  value="ireland" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="priority[]"  value="60" type="text" class="validate">
+              
+            </div>
+            </td>
+          </tr>
+            
+            <tr>
+            <td>
+              <div class="input-field col s6">
+              <input id="last_name" name="code[]"  value="it" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="name[]" value="italy"  type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="priority[]" value="50" type="text" class="validate">
+              
+            </div>
+            </td>
+          </tr>
+            
+            
+            <tr>
+            <td>
+              <div class="input-field col s6">
+              <input id="last_name" name="code[]"  value="lt" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="name[]" value="lithuania"  type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="priority[]"  value="48" type="text" class="validate">
+              
+            </div>
+            </td>
+          </tr>
+            
+            <tr>
+            <td>
+              <div class="input-field col s6">
+              <input id="last_name" name="code[]" value="lu"  type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="name[]"  value="luxembourg" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="priority[]"  value="46" type="text" class="validate">
+              
+            </div>
+            </td>
+          </tr>
+            
+            <tr>
+            <td>
+              <div class="input-field col s6">
+              <input id="last_name" name="code[]"  value="lv" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="name[]"  value="latvia" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="priority[]"  value="44"type="text" class="validate">
+              
+            </div>
+            </td>
+          </tr>
+            
+            <tr>
+            <td>
+              <div class="input-field col s6">
+              <input id="last_name" name="code[]"  value="mt" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="name[]" value="malta"  type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="priority[]" value="42" type="text" class="validate">
+              
+            </div>
+            </td>
+          </tr>
+            
+            <tr>
+            <td>
+              <div class="input-field col s6">
+              <input id="last_name" name="code[]"  value="nl" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="name[]" value="netherlands"  type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="priority[]"  value="40" type="text" class="validate">
+              
+            </div>
+            </td>
+          </tr>
+            
+            <tr>
+            <td>
+              <div class="input-field col s6">
+              <input id="last_name" name="code[]"  value="no" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="name[]" value="norway"  type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="priority[]" value="38" type="text" class="validate">
+              
+            </div>
+            </td>
+          </tr>
+            
+            <tr>
+            <td>
+              <div class="input-field col s6">
+              <input id="last_name" name="code[]" value="pl"  type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="name[]"  value="poland" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="priority[]"  value="36" type="text" class="validate">
+              
+            </div>
+            </td>
+          </tr>
+            
+            <tr>
+            <td>
+              <div class="input-field col s6">
+              <input id="last_name" name="code[]" value="pt"  type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="name[]" value="portugal"  type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="priority[]"  value="34" type="text" class="validate">
+              
+            </div>
+            </td>
+          </tr>
+            
+            <tr>
+            <td>
+              <div class="input-field col s6">
+              <input id="last_name" name="code[]"  value="ro" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="name[]" value="romania"  type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="priority[]"  value="32" type="text" class="validate">
+              
+            </div>
+            </td>
+          </tr>
+            
+            <tr>
+            <td>
+              <div class="input-field col s6">
+              <input id="last_name" name="code[]"  value="rs" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="name[]"  value="serbia" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="priority[]"  value="30" type="text" class="validate">
+              
+            </div>
+            </td>
+          </tr>
+            
+            <tr>
+            <td>
+              <div class="input-field col s6">
+              <input id="last_name" name="code[]"  value="se" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="name[]"  value="sweden" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="priority[]"  value="28" type="text" class="validate">
+              
+            </div>
+            </td>
+          </tr>
+            
+            <tr>
+            <td>
+              <div class="input-field col s6">
+              <input id="last_name" name="code[]" value="si"  type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="name[]" value="slovenia"  type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="priority[]"  value="26" type="text" class="validate">
+              
+            </div>
+            </td>
+          </tr>
+            
+            <tr>
+            <td>
+              <div class="input-field col s6">
+              <input id="last_name" name="code[]"  value="sk" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="name[]"  value="slovakia" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="priority[]"  value="24" type="text" class="validate">
+              
+            </div>
+            </td>
+          </tr>
+            
+            <tr>
+            <td>
+              <div class="input-field col s6">
+              <input id="last_name" name="code[]"  value="sp" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="name[]" value="spain"  type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="priority[]"  value="22" type="text" class="validate">
+              
+            </div>
+            </td>
+          </tr>
+            
+            <tr>
+            <td>
+              <div class="input-field col s6">
+              <input id="last_name" name="code[]" value="uk"  type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="name[]"  value="united kingdom" type="text" class="validate">
+              
+            </div>
+            </td>
+            <td>
+            <div class="input-field col s6">
+              <input id="last_name" name="priority[]"  value="20" type="text" class="validate">
+              
+            </div>
+            </td>
+          </tr>
+     
+       
+        
+        
+            
+            
+          
+        </tbody>
+            
+            
+         
+      </table>
+        <br>
+        
+            <a onclick="saveData()" href="#!" class="left modal-action modal-close waves-effect waves-green btn-flat ">Submit</a>
+        <br><br><br>
+        
+    </div>
+  </div>
+
+
+  <footer class="page-footer orange">
+    
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Business News and Information Services</a>
+      </div>
+    </div>
+  </footer>
+
+ <script>
+        function saveData(){
+          $(function() {
+              var newArray2 = [];
+                var code = $('input[name="code[]"]').map(function() {
+                    return this.value
+                }).get();
+              var name = $('input[name="name[]"]').map(function() {
+                    return this.value
+                }).get();
+              var priority = $('input[name="priority[]"]').map(function() {
+                    return this.value
+                }).get();
+              
+//              console.log(name);
+              var rowArray;
+              for(var i=0; i<code.length; i++){
+                  rowArray = {code:code[i], name:name[i], priority:priority[i]};
+                  newArray2[i] = rowArray;
+              }
+              console.log('arrayIs',newArray2);
+              console.log('arrayIs',JSON.stringify(newArray2));
+              
+            });
+            
+          
+        }
+    </script>
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>

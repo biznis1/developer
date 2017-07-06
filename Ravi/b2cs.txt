@@ -1,0 +1,46 @@
+{
+  "b2cs": [
+    {
+      "chksum": "ASDFGJKLPTBBJKBJKBBJKBB",
+      "sply_ty": "INTER",
+      "rt": 5,
+      "typ": "E",
+      "etin": "20ABCDE7588L1ZJ",
+      "pos": "05",
+      "txval": 110,
+      "iamt": 10,
+      "csamt": 10
+    },
+    {
+      "chksum": "ASDFGJKLPTBBJKBJKBBJKBB",
+      "sply_ty": "INTER",
+      "rt": 5,
+      "typ": "OE",
+      "pos": "05",
+      "txval": 440,
+      "iamt": 40,
+      "csamt": 10
+    },
+    {
+      "chksum": "ASDFGJKLPTBBJKBJKBBJKBB",
+      "sply_ty": "INTRA",
+      "rt": 0,
+      "typ": "E",
+      "etin": "20ABCDE7588L1ZJ",
+      "txval": 0,
+      "camt": 0,
+      "samt": 0,
+      "csamt": 0
+    },
+    {
+      "chksum": "ASDFGJKLPTBBJKBJKBBJKBB",
+      "rt": 5,
+      "sply_ty": "INTER",
+      "typ": "OE",
+      "txval": 100,
+      "camt": 10,
+      "samt": 10,
+      "csamt": 10
+    }
+  ]
+}

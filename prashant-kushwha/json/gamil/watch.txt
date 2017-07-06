@@ -1,0 +1,7 @@
+{
+  "labelIds": [
+    "string"
+  ],
+  "labelFilterAction": "string",
+  "topicName": "string"
+}

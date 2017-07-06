@@ -1,0 +1,17 @@
+{
+  "nil_supplies": {
+    "chksum": "AflJufPlFStqKBZ",
+    "inter": {
+      "cpddr": 0,
+      "exptdsply": 5394970.87,
+      "ngsply": 992.93,
+      "nilsply": 0
+    },
+    "intra": {
+      "cpddr": 1000,
+      "exptdsply": 5394970.87,
+      "ngsply": 992.93,
+      "nilsply": 0
+    }
+  }
+}

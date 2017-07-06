@@ -1,0 +1,11 @@
+{
+  "ids": [
+    string
+  ],
+  "addLabelIds": [
+    string
+  ],
+  "removeLabelIds": [
+    string
+  ]
+}

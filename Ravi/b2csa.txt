@@ -1,0 +1,28 @@
+{
+  "b2csa": [
+    {
+      "chksum": "AflJufPlFStqKBZ",
+      "omon": "122016",
+      "oty": "S",
+      "ohsn_sc": "S2811",
+      "osupst_cd": "04",
+      "ty": "G",
+      "hsn_sc": "G811",
+      "state_cd": "05",
+      "txval": 10000,
+      "irt": 3,
+      "iamt": 500,
+      "crt": 4,
+      "camt": 500,
+      "srt": 5,
+      "samt": 900,
+      "csrt": 3,
+      "csamt": 833,
+      "prs": "Y",
+      "od_num": "DR008400",
+      "od_dt": "20-11-2016",
+      "etin": "20ABCDE7588L1ZJ",
+      "typ": "E"
+    }
+  ]
+}

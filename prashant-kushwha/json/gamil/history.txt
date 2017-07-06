@@ -1,0 +1,39 @@
+{
+  "history": [
+    {
+      "id": "unsigned long",
+      "messages": [
+        "users.messages Resource"
+      ],
+      "messagesAdded": [
+        {
+          "message": "users.messages Resource"
+        }
+      ],
+      "messagesDeleted": [
+        {
+          "message": "users.messages Resource"
+        }
+      ],
+      "labelsAdded": [
+        {
+          "message": "users.messages Resource",
+          "labelIds": [
+            "string"
+          ]
+        }
+      ],
+      "labelsRemoved": [
+        {
+          "message": "users.messages Resource",
+          "labelIds": [
+            "string"
+          ]
+        }
+      ]
+    }
+  ],
+  "nextPageToken": "string",
+  "historyId": "unsigned long"
+}
+

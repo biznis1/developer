@@ -1,0 +1,5 @@
+{
+  "smimeInfo": [
+    users.settings.sendAs.smimeInfo Resource
+  ]
+}

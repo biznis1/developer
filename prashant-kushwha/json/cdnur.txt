@@ -1,0 +1,27 @@
+{
+  "cdnur": [
+    {
+      "chksum": "ASDFGJKLPTBBJKBJKBBJKBB",
+      "typ": "B2CL",
+      "ntty": "C",
+      "nt_num": "533515",
+      "nt_dt": "23-09-2016",
+      "rsn": "Not Mentioned",
+      "p_gst": "N",
+      "inum": "915914",
+      "val": 123123,
+      "idt": "23-09-2016",
+      "itms": [
+        {
+          "num": 1,
+          "itm_det": {
+            "rt": 10,
+            "txval": 5225.28,
+            "iamt": 845.22,
+            "csamt": 789.52
+          }
+        }
+      ]
+    }
+  ]
+}

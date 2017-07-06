@@ -1,0 +1,4 @@
+{
+  "forwardingEmail": string,
+  "verificationStatus": string
+}

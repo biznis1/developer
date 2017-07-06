@@ -1,0 +1,6 @@
+{
+  "enabled": boolean,
+  "autoExpunge": boolean,
+  "expungeBehavior": string,
+  "maxFolderSize": integer
+}

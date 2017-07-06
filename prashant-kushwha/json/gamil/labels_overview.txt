@@ -1,0 +1,11 @@
+ {
+  "id": "string",
+  "name": "string",
+  "messageListVisibility": "string",
+  "labelListVisibility": "string",
+  "type": "string",
+  "messagesTotal": "integer",
+  "messagesUnread": "integer",
+  "threadsTotal": "integer",
+  "threadsUnread": "integer"
+}

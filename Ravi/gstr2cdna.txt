@@ -1,0 +1,44 @@
+{
+  "cdna": [
+    {
+      "ctin": "01AAAAP1208Q1ZS",
+      "cfs": "Y/N",
+      "nt": [
+        {
+          "flag": "A",
+          "chksum": "AflJufPlFStqKBZ",
+          "ntty": "C",
+          "nt_num": "533515",
+          "nt_dt": "23-09-2016",
+          "ont_num": "533515",
+          "ont_dt": "23-09-2016",
+          "rsn": "Not mentioned",
+          "inum": "915914",
+          "idt": "23-09-2016",
+          "val": 5225.28,
+          "irt": 48.76,
+          "iamt": 845.22,
+          "crt": 95.79,
+          "camt": 37661.29,
+          "srt": 6.45,
+          "samt": 42.13,
+          "csrt": 10,
+          "csamt": 789.52,
+          "updby": "R/S",
+          "rchrg": "N",
+          "itc": {
+            "elg": "ip",
+            "tx_i": 147.2,
+            "tx_s": 159.3,
+            "tx_c": 159.3,
+            "tx_cs": 0,
+            "tc_c": 0,
+            "tc_i": 7896.3,
+            "tc_s": 4563.2,
+            "tc_cs": 0
+          }
+        }
+      ]
+    }
+  ]
+}

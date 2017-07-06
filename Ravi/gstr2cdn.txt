@@ -1,0 +1,44 @@
+{
+  "cdn": [
+    {
+      "ctin": "01AAAAP1208Q1ZS",
+      "cfs": "Y",
+      "nt": [
+        {
+          "flag": "A",
+          "chksum": "AflJufPlFStqKBZ",
+          "ntty": "C",
+          "nt_num": "533515",
+          "nt_dt": "23-09-2016",
+          "inum": "915914",
+          "rsn": "Not Mentioned",
+          "p_gst": "N",
+          "idt": "23-09-2016",
+          "updby": "R",
+          "opd": "2016-10",
+          "cflag": "U",
+          "itms": [
+            {
+              "num": 1,
+              "itm_det": {
+                "rt": 10.1,
+                "txval": 6210.99,
+                "iamt": 0,
+                "camt": 614.44,
+                "samt": 5.68,
+                "csamt": 621.09
+              },
+              "itc": {
+                "elg": "ip",
+                "tx_i": 147.2,
+                "tx_s": 159.3,
+                "tx_c": 159.3,
+                "tx_cs": 0
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

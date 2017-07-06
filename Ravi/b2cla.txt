@@ -1,0 +1,45 @@
+{
+  "b2cla": [
+    {
+      "state_cd": "06",
+      "inv": [
+        {
+          "chksum": "AflJufPlFStqKBZ",
+          "oinum": "9266",
+          "oidt": "10-02-2016",
+          "cname": "Glass store shop",
+          "inum": "92661",
+          "idt": "10-01-2016",
+          "val": 784586.33,
+          "pos": "04",
+          "prs": "N",
+          "od_num": "DR008400",
+          "od_dt": "20-11-2016",
+          "etin": "27AHQPA8875L1ZU",
+          "itms": [
+            {
+              "num": 1,
+              "itm_det": {
+                "ty": "S",
+                "hsn_sc": "S2469",
+                "txval": 10000,
+                "irt": 3,
+                "iamt": 833.33
+              }
+            },
+            {
+              "num": 2,
+              "itm_det": {
+                "ty": "G",
+                "hsn_sc": "G2469",
+                "txval": 10000,
+                "irt": 3,
+                "iamt": 500
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

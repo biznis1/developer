@@ -1,0 +1,9 @@
+{
+  "id": string,
+  "issuerCn": string,
+  "isDefault": boolean,
+  "expiration": long,
+  "pem": string,
+  "pkcs12": bytes,
+  "encryptedKeyPassword": string
+}

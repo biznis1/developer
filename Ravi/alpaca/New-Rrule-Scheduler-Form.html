@@ -1,0 +1,367 @@
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+        <link type="text/css" href="http://code.cloudcms.com/alpaca/1.5.17/bootstrap/alpaca.min.css" rel="stylesheet" />
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" >
+<link href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+
+        <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.0/handlebars.js"></script>
+        <script type="text/javascript" src="http://code.cloudcms.com/alpaca/1.5.17/bootstrap/alpaca.min.js"></script>
+		<style>
+    .h1_heading
+			
+			{
+			font-size:26px;
+			text-align:center;
+			color:black;
+			}
+			
+			.h2_heading
+			
+			{
+			color:black;
+			font-size:20px;
+			text-align:center;
+			}
+			
+			legend {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: inherit;
+    color: #333;
+    border: 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+label {
+
+    vertical-align: middle;
+    min-height: 20px;
+    /* padding-left: 20px; */
+    /* margin-bottom: 0; */
+    /* font-weight: 400; */
+    cursor: pointer;
+    /* display: block; */
+    float: left;
+    padding-right: 10px;
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 100%;
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: 700;
+ 
+}
+.color1{
+color:#FF8C00;
+}
+.glyphicon {
+    color: #333;
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}			
+.checkbox label, .radio label {
+    vertical-align: middle;
+    min-height: 20px;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: pointer;
+    display: block;
+    float: left;
+    padding-right: 10px;
+    white-space: nowrap;
+}
+
+la
+
+</style>
+	
+</head>
+<body>
+	
+<div class='container'>
+  <div class='row'>
+   <div id="form"></div></div></div>
+   <script type="text/javascript">
+   $(document).ready(function() {
+    var data = {
+	        "image": "http://www.alpacajs.org/images/chunio.png",
+	        "date1": "30/12/2013"
+	        };
+    var schema = {
+            "type": "object",
+		
+            "properties": {
+		
+		    "interval": {
+                "minimum": 1,
+                "maximum": 366,
+                "title": "Interval [1 to 366]",
+              
+            },
+		
+		    "bysetpos": {
+                "minimum": 1,
+                "maximum": 366,
+                "title": "By Set Pos [1 to 366]"
+            },
+		
+		    "byweeknumber": {
+                "minimum": 1,
+                "maximum": 53,
+                "title": "By Week Number [1 to 53]"
+            },
+		
+		    "byyearday": {
+                "minimum": 1,
+                "maximum": 366,
+                "title": "By Year Day [1 to 366]"
+            },
+		
+		    "bymonthday": {
+                "minimum": 1,
+                "maximum": 31,
+                "title": "By Month Day [1 to 31]"
+            },
+		
+		    "byhour": {
+                "minimum": 1,
+                "maximum": 24,
+                "title": "By Hour [1 to 24]"
+            },
+		
+		    "byminute": {
+                "minimum": 1,
+                "maximum": 60,
+                "title": "By Minute [1 to 60]"
+            },
+		
+		    "bysecond": {
+                "minimum": 1,
+                "maximum": 60,
+                "title": "By Second [1 to 60]"
+            },
+		
+			"wkst": {
+				"required": true,
+				"enum": ["monday", "tuesday", "wednesday", "thursday","friday","saturday","sunday"]
+					},
+		
+		
+            "date1": {
+               "format": "date"
+            },
+			   
+			"frequency": {
+				"type":"string",
+				"title":"Frequency List",
+				"enum":['yearly','monthly','weekly','daily','hourly','minutely','secondly']
+            },
+				
+            "byweekday": {
+            "type": "boolean",
+            "default": true,
+			"enum": ["monday", "tuesday","wednesday","thursday","friday", "saturday", "sunday"]
+            },
+				
+            "bymonth": {
+            "type": "boolean",
+            "default": true,
+			"enum": ["jan", "feb","mar","apr","may","jun","jul","aug","sept","oct", "nov", "dec"]
+            }
+        }
+    };
+
+    /**
+     * Layout options for the form
+     */
+    var options = {
+          "fields": {
+		  
+            "interval": {
+               "type": "integer",
+                "label": "Interval [1 to 366]"
+            },
+			
+            "bysetpos": {
+                   "type": "integer",
+                "label": "By Set Pos [1 to 366]"
+            },
+			
+            "byweeknumber": {
+                   "type": "integer",
+                "label": "By Week Number [1 to 53]"
+            },
+			
+            "byyearday": {
+                   "type": "integer",
+                "label": "By Year Day [1 to 366]"
+            },
+			
+            "bymonthday": {
+                   "type": "integer",
+                "label": "By Month Day [1 to 31]"
+            },
+			
+            "byhour": {
+                   "type": "integer",
+                "label": "By Hour [1 to 24]"
+            },
+			
+            "byminute": {
+                   "type": "integer",
+                "label": "By Minute [1 to 60]"
+            },
+			
+            "bysecond": {
+                   "type": "integer",
+                "label": "By Second [1 to 60]"
+            },
+			
+			
+            "wkst": {
+                   "type": "radio",
+				   "label": "Week Start Day List",
+					"helper": "Pick Desired Week Start Day",
+					"optionLabels": {
+						"monday": "Monday",
+						"tuesday": "Tuesday",
+						"wednesday": "Wednesday",
+						"thursday": "Thursday",
+						"friday": "Friday",
+						"saturday": "Saturday",
+						"sunday": "Sunday"
+        }
+            },
+		
+	    "frequency": {
+				"type": "select",
+				
+					"optionLabels": {
+						"yearly": "Yearly",
+						"monthly": "Monthly",
+						"weekly": "Weekly",
+						"daily": "Daily",
+						"hourly": "Hourly",
+						"minutely": "Minutely",
+						"secondly": "Secondly"
+             },
+				"noneLabel": "-- Select --"
+			},	
+			   "date1": {
+				"type": "date",
+       "picker": {
+            "format": "DD/MM/YY"
+        },
+        "manualEntry": true,
+		"hideInitValidationError": false
+			},	
+			
+		
+			
+			"byweekday": {
+				"type": "checkbox",
+				"rightLabel": "Sign me up for the News Letter!",
+			
+				"label": "By Week Day",
+				"optionLabels": ["Monday", "Tuesday","Wednesday","Thursday","Friday", "Saturday", "Sunday"]
+			},
+			"bymonth": {
+				"type": "checkbox",
+				"rightLabel": "Sign me up for the News Letter!",
+				
+				"label": "By Month",
+				"optionLabels": ["January", "February","March","April","May","June","July","August","September","October", "November", "December"]
+			}
+            },
+		
+            "form": {
+            "attributes": {
+                "method": "POST",
+                "action": "save.php",
+                "enctype": "multipart/form-data"
+            },
+			
+            "buttons": {
+                "submit": {
+                    "value": "Submit Form"
+					          
+                }
+            },
+			
+			"styles": {
+                    "buttons": {
+                        "color": "white",
+                        "background-color": "#337ab7"
+                }
+            }
+        }
+		
+    }
+	
+	
+	;
+
+    /**
+     * If you'd like to define a custom layout (html) file for your form, you first define a new view.
+     */
+    Alpaca.registerView({
+        "id": "registration",
+        "parent": "bootstrap-create",
+        "title": "Registration Create View for the Web",
+        "layout" : {
+            "template": "<div class='row'><div class='col-md-12 registration'><div class='panel panel-primary'><div class='panel-heading'><h2 class='text-center'>R-Rule Scheduler Form</h2></div><div class='panel-body'><div class='row'><div class='contact-info'><div class='col-md-12'><div class='row'><div class='col-md-4' id='expert-list-field'></div><div class='col-md-4' id='interval-field'></div><div class='col-md-4' id='bysetpos-field'></div><div class='col-md-4' id='byweeknumber-field'></div><div class='col-md-4' id='byyearday-field'></div><div class='col-md-4' id='bymonthday-field'></div><div class='col-md-4' id='byhour-field'></div><div class='col-md-4' id='byminute-field'></div><div class='col-md-4' id='bysecond-field'></div><div class='col-md-12' id='byweekday-field'></div><div class='col-md-12' id='bymonth-field'></div></div></div></div></div></div></div></div></div>",
+			"bindings": {		
+                "frequency": "expert-list-field",
+                "byweekday": "byweekday-field",
+                "bysetpos": "bysetpos-field",
+                "byweeknumber": "byweeknumber-field",
+                "byyearday": "byyearday-field",
+                "bymonthday": "bymonthday-field",
+                "byhour": "byhour-field",
+                "byminute": "byminute-field",
+                "bysecond": "bysecond-field",
+                "date1": "date1-field",
+                "wkst": "wkst-field",
+                "interval": "interval-field",
+                "bymonth": "bymonth-field"
+      
+             
+            }
+        }
+    });
+
+	
+	
+    /**
+     * Render the form.
+     *
+     * We call alpaca() with the data, schema and options to tell Alpaca to render into the selected dom element(s).
+     *
+     */
+    $("#form").alpaca({
+        "data": data,
+        "schema": schema,
+        "options": options,
+       
+        "view": "registration",
+        "type": "create"
+    });
+});
+        </script>
+    </body>
+</html>

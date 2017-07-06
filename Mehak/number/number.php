@@ -165,4 +165,7 @@ function decoct($gr)
 }
 
 }
+$a=new abc();
+$gr=$_GET;
+ echo $a->abs($gr);
  

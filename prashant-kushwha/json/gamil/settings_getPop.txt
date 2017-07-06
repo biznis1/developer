@@ -1,0 +1,4 @@
+{
+  "accessWindow": string,
+  "disposition": string
+}

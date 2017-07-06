@@ -1,0 +1,7 @@
+{
+  "drafts": [
+    "users.drafts Resource"
+  ],
+  "nextPageToken": "string",
+  "resultSizeEstimate": "unsigned integer"
+}

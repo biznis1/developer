@@ -1,0 +1,8 @@
+message_overviewDecode :- done
+mess_modifyDecode :- done
+draftsDecode :- done
+drafts_listDecode :- done
+drafts_overviewDecode :- done
+drafts_sendDecode :- done
+getProfileDecode :- done
+historyDecode :- done

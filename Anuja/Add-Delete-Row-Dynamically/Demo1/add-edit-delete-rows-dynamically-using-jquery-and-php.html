@@ -1,0 +1,121 @@
+
+<html>
+ <head>
+  <title>Ajax Table Inline Edit</title>
+  <script>
+	 // Column names must be identical to the actual column names in the database, if you dont want to reveal the column names, you can map them with the different names at the server side.
+	 var columns = new Array("fname","lname","tech","email","address");
+	 var placeholder = new Array("Enter First Name","Enter Last Name","Enter Technology","Enter Email","Enter Address");
+	 var inputType = new Array("text","text","text","text","textarea");
+	 var table = "tableDemo";
+	 
+	 // Set button class names 
+	 var savebutton = "ajaxSave";
+	 var deletebutton = "ajaxDelete";
+	 var editbutton = "ajaxEdit";
+	 var updatebutton = "ajaxUpdate";
+	 var cancelbutton = "cancel";
+	 
+	 var saveImage = "http://amitpatil.me/demos/add-edit-delete-rows-dynamically-using-jquery-and-php/images/save.png"
+	 var editImage = "http://amitpatil.me/demos/add-edit-delete-rows-dynamically-using-jquery-and-php/images/edit.png"
+	 var deleteImage = "http://amitpatil.me/demos/add-edit-delete-rows-dynamically-using-jquery-and-php/images/remove.png"
+	 var cancelImage = "http://amitpatil.me/demos/add-edit-delete-rows-dynamically-using-jquery-and-php/images/back.png"
+	 var updateImage = "http://amitpatil.me/demos/add-edit-delete-rows-dynamically-using-jquery-and-php/images/save.png"
+
+	 // Set highlight animation delay (higher the value longer will be the animation)
+	 var saveAnimationDelay = 3000; 
+	 var deleteAnimationDelay = 1000;
+	  
+	 // 2 effects available available 1) slide 2) flash
+	 var effect = "flash"; 
+  
+  </script>
+  <script src="http://192.168.2.61/dev/Anuja/Add-Delete-Row-Dynamically/Demo1/js/jquery-1.11.0.min.js"></script>	
+  <script src="http://192.168.2.61/dev/Anuja/Add-Delete-Row-Dynamically/Demo1/js/jquery-ui.js"></script>	
+  <script src="http://192.168.2.61/dev/Anuja/Add-Delete-Row-Dynamically/Demo1/js/script.js"></script>	
+  <link rel="stylesheet" href="http://192.168.2.61/dev/Anuja/Add-Delete-Row-Dynamically/Demo1/css/style.css">
+  <style>
+	  .blog-name a{
+		font-family: verdana;
+		background: #FFD987;
+		height: 30px;
+		border-bottom: 2px solid #BEBEBE;
+		font-size: 20px;
+		padding-left: 20%;
+		display: block;
+		color: black;
+		text-decoration: none;
+		line-height: 30px;
+	  }
+	  .blog-post{
+		background: #E8F0F6;
+		height: 30px;
+
+		padding-left: 20%;
+		line-height: 30px;
+		border-bottom: 1px solid #BEBEBE;
+	  }
+	  .blog-post a{
+			color : black;
+		font-size: 16px;
+		line-height: 25px;
+	  } 
+  </style>
+ </head>
+ <body>
+    <div class="header">  
+		
+	<div style="color:#3e88d2;text-align: center;"><strong>Double click the TD to enable editing mode.</strong></div>
+	<table border="0" class="tableDemo bordered">
+		<tr class="ajaxTitle">
+			<th width="2%">Sr</th>
+			<th width="16%">First Name</th>
+			<th width="16%">Last Name</th>
+			<th width="12%">Technology</th>
+			<th width="20%">Email</th>
+			<th width="18%">Address</th>
+			<th width="14%">Action</th>
+		</tr>
+				<tr id="147">
+			<td>1</td>
+			<td class="fname">Nilesh</td>
+			<td class="lname">Shirgave</td>
+			<td class="tech">wordpress</td>
+			<td class="email">nilesh@domain.com</td>
+			<td class="address">Kolhapur</td>
+			<td>
+				<a href="javascript:;" id="147" class="ajaxEdit"><img src="" class="eimage"></a>
+				<a href="javascript:;" id="147" class="ajaxDelete"><img src="" class="dimage"></a>
+			</td>
+		</tr>
+				<tr id="148">
+			<td>2</td>
+			<td class="fname">Sandip</td>
+			<td class="lname">Patil</td>
+			<td class="tech">.net</td>
+			<td class="email">sandip@domain.com</td>
+			<td class="address">Kolhapur</td>
+			<td>
+				<a href="javascript:;" id="148" class="ajaxEdit"><img src="" class="eimage"></a>
+				<a href="javascript:;" id="148" class="ajaxDelete"><img src="" class="dimage"></a>
+			</td>
+		</tr>
+				<tr id="149">
+			<td>3</td>
+			<td class="fname">Amit</td>
+			<td class="lname">Patil</td>
+			<td class="tech">php</td>
+			<td class="email">amit@domain.com</td>
+			<td class="address">Karad</td>
+			<td>
+				<a href="javascript:;" id="149" class="ajaxEdit"><img src="" class="eimage"></a>
+				<a href="javascript:;" id="149" class="ajaxDelete"><img src="" class="dimage"></a>
+			</td>
+		</tr>
+			</table>
+
+
+ </body>
+</html>
+
+

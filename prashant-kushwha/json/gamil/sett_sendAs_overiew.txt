@@ -1,0 +1,17 @@
+{
+  "sendAsEmail": string,
+  "displayName": string,
+  "replyToAddress": string,
+  "signature": string,
+  "isPrimary": boolean,
+  "isDefault": boolean,
+  "treatAsAlias": boolean,
+  "smtpMsa": {
+    "host": string,
+    "port": integer,
+    "username": string,
+    "password": string,
+    "securityMode": string
+  },
+  "verificationStatus": string
+}

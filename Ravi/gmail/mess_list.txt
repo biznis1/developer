@@ -1,0 +1,7 @@
+{
+  "messages": [
+    users.messages Resource
+  ],
+  "nextPageToken": string,
+  "resultSizeEstimate": unsigned integer
+}

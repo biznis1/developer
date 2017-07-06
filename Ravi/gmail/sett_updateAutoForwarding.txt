@@ -1,0 +1,5 @@
+{
+  "enabled": boolean,
+  "emailAddress": string,
+  "disposition": string
+}

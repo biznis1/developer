@@ -1,0 +1,8 @@
+{
+  "id": string,
+  "snippet": string,
+  "historyId": unsigned long,
+  "messages": [
+    users.messages Resource
+  ]
+}

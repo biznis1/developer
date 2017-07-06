@@ -1,0 +1,5 @@
+{
+  "filter": [
+    users.settings.filters Resource
+  ]
+}

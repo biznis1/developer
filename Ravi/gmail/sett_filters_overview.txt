@@ -1,0 +1,23 @@
+{
+  "id": string,
+  "criteria": {
+    "from": string,
+    "to": string,
+    "subject": string,
+    "query": string,
+    "negatedQuery": string,
+    "hasAttachment": boolean,
+    "excludeChats": boolean,
+    "size": integer,
+    "sizeComparison": string
+  },
+  "action": {
+    "addLabelIds": [
+      string
+    ],
+    "removeLabelIds": [
+      string
+    ],
+    "forward": string
+  }
+}

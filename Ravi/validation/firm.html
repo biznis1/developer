@@ -1,0 +1,156 @@
+ <!DOCTYPE html>
+    <html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>JSOn based form wizard jQuery dForm</title>
+		
+		
+ 
+
+<link type="text/css" href="//code.cloudcms.com/alpaca/1.5.23/bootstrap/alpaca.min.css" rel="stylesheet"/>
+<script type="text/javascript" src="//code.cloudcms.com/alpaca/1.5.23/bootstrap/alpaca.min.js"></script>
+    </head>
+    <style type="text/css">
+        input, label {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+    <body>
+
+
+    <form id="demo-2-form"></form>
+
+
+    <!-- Load jQuery and the minified plugin -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="dist/jquery.validate.js"></script>
+    <script type="text/javascript" src="dist/jquery.dform-1.0.1.js"></script>
+
+
+    <script type="text/javascript" class="demo" id="demo-2">
+    $('#demo-2-form').dform({
+        "action":"index.html",
+        "method":"post",
+        "html":[
+            {
+                "type":"fieldset",
+                "caption":"User information",
+                "html":[
+                    {
+                        "name":"email",
+                        "caption":"Email address",
+                        "type":"text",
+                        "placeholder":"E.g. user@example.com",
+                        "validate":{
+                            "email":true
+                        }
+                    },
+                    {
+                        "name":"password",
+                        "caption":"Password",
+                        "type":"password",
+                        "id":"registration-password",
+                        "validate":{
+                            "required":true,
+                            "minlength":5,
+                            "messages":{
+                                "required":"Please enter a password",
+                                "minlength":"At least {0} characters long"
+                            }
+                        }
+                    },
+                    {
+                        "name":"password-repeat",
+                        "caption":"Repeat password",
+                        "type":"password",
+                        "validate":{
+                            "equalTo":"#registration-password",
+                            "messages":{
+                                "equalTo":"Please repeat your password"
+                            }
+                        }
+                    },
+                    {
+                        "type":"radiobuttons",
+                        "caption":"Sex",
+                        "name":"sex",
+                        "class":"labellist",
+                        "options":{
+                            "f":"Female",
+                            "m":"Male"
+                        }
+                    },
+                    {
+                        "type":"checkboxes",
+                        "name":"test",
+                        "caption":"Receive newsletter about",
+                        "class":"labellist",
+                        "options":{
+                            "updates":"Product updates",
+                            "errors":{
+                                "value":"security",
+                                "caption":"Security warnings",
+                                "checked":"checked"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "type":"fieldset",
+                "caption":"Address information",
+                "html":[
+                    {
+                        "name":"name",
+                        "caption":"Your name",
+                        "type":"text",
+                        "placeholder":"E.g. John Doe"
+                    },
+                    {
+                        "name":"address",
+                        "caption":"Address",
+                        "type":"text",
+                        "validate":{ "required":true }
+                    },
+                    {
+                        "name":"zip",
+                        "caption":"ZIP code",
+                        "type":"text",
+                        "size":5,
+                        "validate":{ "required":true }
+                    },
+                    {
+                        "name":"city",
+                        "caption":"City",
+                        "type":"text",
+                        "validate":{ "required":true }
+                    },
+                    {
+                        "type":"select",
+                        "name":"continent",
+                        "caption":"Choose a continent",
+                        "options":{
+                            "america":"America",
+                            "europe":{
+                                "selected":"true",
+                                "id":"europe-option",
+                                "value":"europe",
+                                "html":"Europe"
+                            },
+                            "asia":"Asia",
+                            "africa":"Africa",
+                            "australia":"Australia"
+                        }
+                    }
+                ]
+            },
+            {
+                "type":"submit",
+                "value":"Signup"
+            }
+        ]
+    });
+    </script>
+    </body>
+    </html>

@@ -3,17 +3,16 @@ namespace ankilib;
 
 Class abc
 {
-	 function makeTag($name,$val,$ops){
+	 function makeTag($gr){
+        $t="<".$gr['TagName']." ";
 
-        $t="<$name ";
+        foreach($gr['ops'] as $k=>$v){
 
-        foreach($ops as $k=>$v){
-
-            $t.=$k.'="'.htmlentities($v).'"';
-
+           $t.=$k.'="'.htmlentities($v).'"';
+           
         }
 
-        $t.=">".htmlentities($val)."</$name>";
+       $t.=">".htmlentities($gr['text'])."</".$gr['TagName'].">";
 
         return $t;
 
@@ -21,6 +20,13 @@ Class abc
    }
  
  $a=new abc();
- //$r=array("name"=>"test");
- echo $a->makeTag('p','this is a text',$r);
- 
+ $r=array("TagName"=>"test");
+
+
+//http://localhost/dev/html/html/demo.php?name=p&text=this%20is%20a%20text&ops[]=%22type%22=%3E%22text%22,%22id%22=%3E3
+//192.168.2.61/dev/html/html/demo.php?name=p&text=this%20is%20a%20text&ops[]="type"=>"text","id"=>3
+//http://192.168.2.61/dev/html/html/demo.php?name=p&text=this%20is%20a%20text&ops[]="type"=>"text","id"=>3
+
+$gr=$_GET;
+ echo $a->makeTag($gr);
+//print_r($ops);

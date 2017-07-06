@@ -5,10 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   
 
+	
+	
+ 
+<!-- alpaca -->
+<link type="text/css" href="//code.cloudcms.com/alpaca/1.5.23/bootstrap/alpaca.min.css" rel="stylesheet"/>
+<script type="text/javascript" src="//code.cloudcms.com/alpaca/1.5.23/bootstrap/alpaca.min.js"></script>
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    
     <script>
      var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
@@ -54,7 +61,7 @@
       
       
       <div class="row center">
-          <a class="btn modal-trigger" onclick="$('#modal1').modal('open')" >GSTR</a>
+          <a class="btn modal-trigger" onclick="$('#modal1').modal('open')" >GSTR1</a>
       </div>
       <br><br>
 
@@ -134,11 +141,42 @@
           <input id="Chksum" type="text" class="validate">
           <label for="Chksum">VAL</label>
         </div>
+        
+        <table rules="all" style="background:#fff;">
+            <tr>
+            <td style="font-size:14px;" >num</td>
+            <td style="font-size:14px;">rt</td>
+            <td style="font-size:14px;">txval</td>
+             <td style="font-size:14px;">iamt</td>
+             <td style="font-size:14px;">camt</td>
+             <td style="font-size:14px;">samt</td>  
+             <td style="font-size:14px;">csamt</td>     
+            <td><span style="font:normal 12px agency, arial; color:blue; text-decoration:underline; cursor:pointer;" onclick="addMoreRows(this.form);">
+            <i class="material-icons">note_add</i>
+            </span>
+            </td>
+            </tr>
+            <tr id="rowId">
+            <td><input name="" type="text"  value="" size="17%"/></td>
+            <td><input name="" type="text"  value="" /></td>
+            <td><input name="" type="text"  value="" /></td>
+            <td><input name="" type="text"  value="" /></td>
+            <td><input name="" type="text"  value="" /></td>
+            <td><input name="" type="text"  value="" /></td>
+             <td><input name="" type="text"  value="" /></td>   
+                </tr>
+            </table>
+            <div id="addedRows"></div>
+        
     </div>
+    
+     
+
     <div class="modal-footer">
       <a onclick="submit('success')" href="#!" class="left modal-action modal-close waves-effect waves-green btn-flat ">submit</a>
       <a  href="#!" class="right modal-action modal-close waves-effect waves-green btn-flat red-text">Cancel</a>
     </div>
+    
   </div>
 
   <!--  Scripts-->
@@ -153,5 +191,16 @@
             window.location.replace('index.html?result='+val);
             
         }
-    </script>
+   
+var rowCount = 1;
+function addMoreRows(frm) {
+rowCount ++;
+var recRow = '<tr id="rowCount'+rowCount+'"><td><input name="" type="text"  maxlength="120" /></td><td><input name="" type="text"  maxlength="120"/></td><td><input name="" type="text" maxlength="120" /></td><td><input name="" type="text" maxlength="120" /></td><td><input name="" type="text" maxlength="120" /></td><td><input name="" type="text" maxlength="120" /></td><td><input name="" type="text" maxlength="120" /></td><td> <a href="javascript:void(0);" onclick="removeRow('+rowCount+');"><i class="material-icons" style="color:red">indeterminate_check_box</i></a></td></tr>';
+jQuery('#addedRows').append(recRow);
+}
+
+function removeRow(removeNum) {
+jQuery('#rowCount'+removeNum).remove();
+}
+</script>
 </html>

@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    
+    <script>
+     var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
+        
+        
+    var result = getUrlParameter('result');
+        
+       function result1(){
+           window.localStorage.setItem('rowVal',0);
+           $('#result').html(result);
+           $("#result").fadeOut(5000);
+       }
+          
+        
+    </script>
+</head>
+<body onload="result1()">
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">GSTR1</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+      
+      
+    </div>
+  </nav>
+    <center><p id='result'></p></center>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      
+      
+      <div class="row center">
+          <a class="btn modal-trigger" onclick="$('#modal1').modal('open')" >B2B Invoice</a>
+          <a class="btn modal-trigger" onclick="$('#modal2').modal('open')" >B2BA Invoice</a>
+          <br><br><a class="btn modal-trigger" onclick="$('#modal3').modal('open')" >CDNR Invoice</a>
+          <a class="btn modal-trigger" onclick="$('#modal4').modal('open')" >CDNRA Invoice</a>
+          <br><br><a class="btn modal-trigger" onclick="$('#modal5').modal('open')" >B2CS Invoice</a>
+          <a class="btn modal-trigger" onclick="$('#modal6').modal('open')" >B2CSA Invoice</a>
+          <br><br><a class="btn modal-trigger" onclick="$('#modal7').modal('open')" >B2CL Invoice</a>
+          <a class="btn modal-trigger" onclick="$('#modal8').modal('open')" >B2CLA Invoice</a>
+      </div>
+      <br><br>
+
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+        </div>
+        </div></div></div>
+    <br><br>
+  </div>
+
+  
+    
+<div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <center><h6>B2B invoice</h6></center>
+      <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">CHKSUM</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">UPDBY</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">INUM</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">IDT</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">VAL</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">POS</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">RCHRG</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">INV TYP</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">CFLAG</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">ETIN</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">VAL</label>
+        </div>
+        
+        <table rules="all" style="background:#fff;">
+            <tr>
+            <td style="font-size:14px;" >num</td>
+            <td style="font-size:14px;">rt</td>
+            <td style="font-size:14px;">txval</td>
+             <td style="font-size:14px;">iamt</td>
+             <td style="font-size:14px;">camt</td>
+             <td style="font-size:14px;">samt</td>
+              <td style="font-size:14px;">csamt</td>   
+            <td><span style="font:normal 12px agency, arial; color:blue; text-decoration:underline; cursor:pointer;" onclick="addMoreRows(this.form);">
+            <i class="material-icons">note_add</i>
+            </span>
+            </td>
+            </tr>
+            <tr id="rowCount0">
+            <td><input name="" id="num0" type="text"  value="" /></td>
+            <td><input name="" id="rt0" type="text"  value="" /></td>
+            <td><input name="" id="txval0" type="text"  value="" /></td>
+            <td><input name="" id="iamt0" type="text"  value="" /></td>
+            <td><input name="" id="camt0" type="text"  value="" /></td>
+            <td><input name="" id="samt0" type="text"  value="" /></td>
+             <td><input name="" id="samt0" type="text"  value="" /></td>   
+            </tr>
+            </table>
+            <div id="addedRows"></div>
+        
+    </div>
+    
+     
+
+    <div class="modal-footer">
+      <a onclick="saveData()" href="#!" class="left modal-action modal-close waves-effect waves-green btn-flat ">submit</a>
+      <a  href="#!" class="right modal-action modal-close waves-effect waves-green btn-flat red-text">Cancel</a>
+    </div>
+    
+  </div>
+
+    
+    <div id="modal2" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <center><h6>B2BA invoice</h6></center>
+      <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">ctin</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">cfs</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">flag</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">chksum</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">updby</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">oinum</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">oidt</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">inum</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">idt</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">val</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">pos</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">rchrg</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">prs</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">od_num</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">od_dt</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">etin</label>
+        </div>
+        <table rules="all" style="background:#fff;">
+            <tr>
+            <td style="font-size:14px;" >num</td>
+            <td style="font-size:14px;">ty</td>
+            <td style="font-size:14px;">hsn_sc</td>
+             <td style="font-size:14px;">txval</td>
+             <td style="font-size:14px;">irt</td>
+             <td style="font-size:14px;">iamt</td> 
+              <td style="font-size:14px;">crt</td> 
+                <td style="font-size:14px;">camt</td> 
+                <td style="font-size:14px;">srt</td> 
+                <td style="font-size:14px;">samt</td>
+                <td style="font-size:14px;">csrt</td>
+                <td style="font-size:14px;">csamt</td>
+            <td><span style="font:normal 12px agency, arial; color:blue; text-decoration:underline; cursor:pointer;" onclick="addMoreRows1(this.form);">
+            <i class="material-icons">note_add</i>
+            </span>
+            </td>
+            </tr>
+            <tr id="rowCount0">
+            <td><input name="" id="num0" type="text"  value="" /></td>
+            <td><input name="" id="ty0" type="text"  value="" /></td>
+            <td><input name="" id="hsn_sc0" type="text"  value="" /></td>
+            <td><input name="" id="txval0" type="text"  value="" /></td>
+            <td><input name="" id="irt0" type="text"  value="" /></td>
+            <td><input name="" id="iamt0" type="text"  value="" /></td>
+            <td><input name="" id="crt0" type="text"  value="" /></td>
+            <td><input name="" id="camt0" type="text"  value="" /></td>
+            <td><input name="" id="srt0" type="text"  value="" /></td>
+            <td><input name="" id="samt0" type="text"  value="" /></td>
+            <td><input name="" id="csrt0" type="text"  value="" /></td>
+            <td><input name="" id="csamt0" type="text"  value="" /></td> 
+            </tr>
+            </table>
+            <div id="addedRows1"></div>
+        
+    </div>
+    
+     
+
+    <div class="modal-footer">
+      <a href="#!" class="left modal-action modal-close waves-effect waves-green btn-flat ">submit</a>
+      <a  href="#!" class="right modal-action modal-close waves-effect waves-green btn-flat red-text">Cancel</a>
+    </div>
+    
+  </div>
+    
+   <div id="modal3" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <center><h6>CDNR invoice</h6></center>
+      <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">ctin</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">cfs</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">chksum</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">cflag</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">updby</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">ntty</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">nt_num</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">nt_dt</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">rsn</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">p_gst</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">inum</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">idt</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">val</label>
+        </div>
+        
+        <table rules="all" style="background:#fff;">
+            <tr>
+            <td style="font-size:14px;" >num</td>
+            <td style="font-size:14px;">rt</td>
+            <td style="font-size:14px;">txval</td>
+             <td style="font-size:14px;">iamt</td>
+             <td style="font-size:14px;">csamt</td>
+             
+            <td><span style="font:normal 12px agency, arial; color:blue; text-decoration:underline; cursor:pointer;" onclick="addMoreRows2(this.form);">
+            <i class="material-icons">note_add</i>
+            </span>
+            </td>
+            </tr>
+            <tr id="rowCount0">
+            <td><input name="" id="num0" type="text"  value="" /></td>
+            <td><input name="" id="rt0" type="text"  value="" /></td>
+            <td><input name="" id="txval0" type="text"  value="" /></td>
+            <td><input name="" id="iamt0" type="text"  value="" /></td>
+            <td><input name="" id="csamt0" type="text"  value="" /></td>
+           
+            </tr>
+            </table>
+            <div id="addedRows2"></div>
+        
+    </div>
+    
+     
+
+    <div class="modal-footer">
+      <a href="#!" class="left modal-action modal-close waves-effect waves-green btn-flat ">submit</a>
+      <a  href="#!" class="right modal-action modal-close waves-effect waves-green btn-flat red-text">Cancel</a>
+    </div>
+    
+  </div>
+    
+   <div id="modal4" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <center><h6>CDNRA invoice</h6></center>
+      <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">ctin</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">cfs</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">flag</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">updby</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">chksum</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">ntty</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">rsn</label>
+        </div>
+        
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">ont_num</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">ont_dt</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">nt_num</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">nt_dt</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">inum</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">idt</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">rchrg</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">val</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">irt</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">iamt</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">crt</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">camt</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">srt</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">samt</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">csrt</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">csamt</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">etin</label>
+        </div>
+         </div>
+    <div class="modal-footer">
+      <a href="#!" class="left modal-action modal-close waves-effect waves-green btn-flat ">submit</a>
+      <a  href="#!" class="right modal-action modal-close waves-effect waves-green btn-flat red-text">Cancel</a>
+    </div>
+    
+  </div>
+    
+    <div id="modal5" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <center><h6>B2CS invoice</h6></center>
+      
+        
+        <table rules="all" style="background:#fff;">
+            <tr>
+            <td style="font-size:14px;" >chksum</td>
+            <td style="font-size:14px;">sply_ty</td>
+            <td style="font-size:14px;">rt</td>
+             <td style="font-size:14px;">typ</td>
+             <td style="font-size:14px;">etin</td>
+             <td style="font-size:14px;">pos</td>
+              <td style="font-size:14px;">txval</td>
+               <td style="font-size:14px;">iamt</td> 
+             <td style="font-size:14px;">csamt</td>
+            <td><span style="font:normal 12px agency, arial; color:blue; text-decoration:underline; cursor:pointer;" onclick="addMoreRows3(this.form);">
+            <i class="material-icons">note_add</i>
+            </span>
+            </td>
+            </tr>
+            <tr id="rowCount0">
+            <td><input name="" id="chksum0" type="text"  value="" /></td>
+            <td><input name="" id="sply_ty0" type="text"  value="" /></td>
+            <td><input name="" id="rt0" type="text"  value="" /></td>
+            <td><input name="" id="typ0" type="text"  value="" /></td>
+            <td><input name="" id="etin0" type="text"  value="" /></td>
+           <td><input name="" id="pos0" type="text"  value="" /></td>
+              <td><input name="" id="txval0" type="text"  value="" /></td>
+               <td><input name="" id="iamt0" type="text"  value="" /></td> 
+             <td><input name="" id="csamt0" type="text"  value="" /></td>    
+            </tr>
+            </table>
+            <div id="addedRows3"></div>
+        
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="left modal-action modal-close waves-effect waves-green btn-flat ">submit</a>
+      <a  href="#!" class="right modal-action modal-close waves-effect waves-green btn-flat red-text">Cancel</a>
+    </div>
+    </div>
+    
+    <div id="modal6" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <center><h6>B2CSA invoice</h6></center>
+      <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">chksum</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">omon</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">oty</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">ohsn_sc</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">osupst_cd</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">ty</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">hsn_sc</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">state_cd</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">txval</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">irt</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">iamt</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">crt</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">camt</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">srt</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">samt</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">csrt</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">csamt</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">prs</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">od_num</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">od_dt</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">etin</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">typ</label>
+        </div>
+        </div>
+     <div class="modal-footer">
+      <a onclick="saveData()" href="#!" class="left modal-action modal-close waves-effect waves-green btn-flat ">submit</a>
+      <a  href="#!" class="right modal-action modal-close waves-effect waves-green btn-flat red-text">Cancel</a>
+    </div>
+    </div>
+
+   
+    <div id="modal7" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <center><h6>B2CL invoice</h6></center>
+      <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">pos</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">chksum</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">gstin</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">inum</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">idt</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">val</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">etin</label>
+        </div>
+        
+        
+        <table rules="all" style="background:#fff;">
+            <tr>
+            <td style="font-size:14px;" >num</td>
+            <td style="font-size:14px;">rt</td>
+            <td style="font-size:14px;">txval</td>
+             <td style="font-size:14px;">iamt</td>
+               
+            <td><span style="font:normal 12px agency, arial; color:blue; text-decoration:underline; cursor:pointer;" onclick="addMoreRows4(this.form);">
+            <i class="material-icons">note_add</i>
+            </span>
+            </td>
+            </tr>
+            <tr id="rowCount0">
+            <td><input name="" id="num0" type="text"  value="" /></td>
+            <td><input name="" id="rt0" type="text"  value="" /></td>
+            <td><input name="" id="txval0" type="text"  value="" /></td>
+            <td><input name="" id="iamt0" type="text"  value="" /></td>
+              
+            </tr>
+            </table>
+            <div id="addedRows4"></div>
+        
+    </div>
+    <div class="modal-footer">
+      <a onclick="saveData()" href="#!" class="left modal-action modal-close waves-effect waves-green btn-flat ">submit</a>
+      <a  href="#!" class="right modal-action modal-close waves-effect waves-green btn-flat red-text">Cancel</a>
+    </div>
+    </div>
+
+    <div id="modal8" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <center><h6>B2CLA invoice</h6></center>
+      <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">state_cd</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">chksum</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">oinum</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">oidt</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">cname</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">inum</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">idt</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">val</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">pos</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">prs</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">od_num</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">od_dt</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">etin</label>
+        </div>
+        
+        <table rules="all" style="background:#fff;">
+            <tr>
+            <td style="font-size:14px;" >num</td>
+            <td style="font-size:14px;">ty</td>
+            <td style="font-size:14px;">hsn_sc</td>
+             <td style="font-size:14px;">txval</td>
+             <td style="font-size:14px;">irt</td>
+             <td style="font-size:14px;">iamt</td>
+                
+            <td><span style="font:normal 12px agency, arial; color:blue; text-decoration:underline; cursor:pointer;" onclick="addMoreRows8(this.form);">
+            <i class="material-icons">note_add</i>
+            </span>
+            </td>
+            </tr>
+            <tr id="rowCount0">
+            <td><input name="" id="num0" type="text"  value="" /></td>
+            <td><input name="" id="ty0" type="text"  value="" /></td>
+            <td><input name="" id="hsn_sc0" type="text"  value="" /></td>
+            <td><input name="" id="txval0" type="text"  value="" /></td>
+            <td><input name="" id="irt0" type="text"  value="" /></td>
+            <td><input name="" id="iamt0" type="text"  value="" /></td>
+               
+            </tr>
+            </table>
+            <div id="addedRows8"></div>
+        
+    </div>
+    
+     
+
+    <div class="modal-footer">
+      <a onclick="saveData()" href="#!" class="left modal-action modal-close waves-effect waves-green btn-flat ">submit</a>
+      <a  href="#!" class="right modal-action modal-close waves-effect waves-green btn-flat red-text">Cancel</a>
+    </div>
+    
+  </div>
+    
+   <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+    <script>
+        function submit(val){
+//            alert(val);
+            window.location.replace('index.html?result='+val);
+            
+        }
+   
+var rowCount = 0;
+function addMoreRows(frm) {
+rowCount ++;
+    window.localStorage.setItem('rowVal',rowCount);
+var recRow = '<tr id="rowCount'+rowCount+'"><td><input name="" id="num'+rowCount+'" type="text"  maxlength="120" /></td><td><input name="" type="text" id="rt'+rowCount+'" maxlength="120"/></td><td><input name="" id="txval'+rowCount+'" type="text" maxlength="120" /></td><td><input name="" id="iamt'+rowCount+'" type="text" maxlength="120" /></td><td><input name="" id="camt'+rowCount+'" type="text" maxlength="120" /></td><td><input name="" id="samt'+rowCount+'" type="text" maxlength="120" /></td><td> <a href="javascript:void(0);" onclick="removeRow('+rowCount+');"><i class="material-icons" style="color:red">indeterminate_check_box</i></a></td></tr>';
+jQuery('#addedRows').append(recRow);
+}
+
+function addMoreRows1(frm) {
+rowCount ++;
+    window.localStorage.setItem('rowVal',rowCount);
+var recRow = '<tr id="rowCount'+rowCount+'"><td><input name="" id="num'+rowCount+'" type="text"  maxlength="120" /></td><td><input name="" type="text" id="rt'+rowCount+'" maxlength="120"/></td><td><input name="" id="txval'+rowCount+'" type="text" maxlength="120" /></td><td><input name="" id="iamt'+rowCount+'" type="text" maxlength="120" /></td><td><input name="" id="csamt'+rowCount+'" type="text" maxlength="120" /></td><td><input name="" id="samt'+rowCount+'" type="text" maxlength="120" /></td><td> <a href="javascript:void(0);" onclick="removeRow('+rowCount+');"><i class="material-icons" style="color:red">indeterminate_check_box</i></a></td></tr>';
+jQuery('#addedRows1').append(recRow);
+}
+function addMoreRows2(frm) {
+rowCount ++;
+    window.localStorage.setItem('rowVal',rowCount);
+var recRow = '<tr id="rowCount'+rowCount+'"><td><input name="" id="num'+rowCount+'" type="text"  maxlength="120" /></td><td><input name="" type="text" id="rt'+rowCount+'" maxlength="120"/></td><td><input name="" id="txval'+rowCount+'" type="text" maxlength="120" /></td><td><input name="" id="iamt'+rowCount+'" type="text" maxlength="120" /></td><td><input name="" id="camt'+rowCount+'" type="text" maxlength="120" /></td><td><input name="" id="samt'+rowCount+'" type="text" maxlength="120" /></td><td> <a href="javascript:void(0);" onclick="removeRow('+rowCount+');"><i class="material-icons" style="color:red">indeterminate_check_box</i></a></td></tr>';
+jQuery('#addedRows2').append(recRow);
+}
+function addMoreRows3(frm) {
+rowCount ++;
+    window.localStorage.setItem('rowVal',rowCount);
+var recRow = '<tr id="rowCount'+rowCount+'"><td><input name="" id="num'+rowCount+'" type="text"  maxlength="120" /></td><td><input name="" type="text" id="rt'+rowCount+'" maxlength="120"/></td><td><input name="" id="txval'+rowCount+'" type="text" maxlength="120" /></td><td><input name="" id="iamt'+rowCount+'" type="text" maxlength="120" /></td><td><input name="" id="csamt'+rowCount+'" type="text" maxlength="120" /></td><td><input name="" id="samt'+rowCount+'" type="text" maxlength="120" /></td><td> <a href="javascript:void(0);" onclick="removeRow('+rowCount+');"><i class="material-icons" style="color:red">indeterminate_check_box</i></a></td></tr>';
+jQuery('#addedRows3').append(recRow);
+}
+function addMoreRows4(frm) {
+rowCount ++;
+    window.localStorage.setItem('rowVal',rowCount);
+var recRow = '<tr id="rowCount'+rowCount+'"><td><input name="" id="num'+rowCount+'" type="text"  maxlength="120" /></td><td><input name="" type="text" id="rt'+rowCount+'" maxlength="120"/></td><td><input name="" id="txval'+rowCount+'" type="text" maxlength="120" /></td><td><input name="" id="iamt'+rowCount+'" type="text" maxlength="120" /></td><td><input name="" id="camt'+rowCount+'" type="text" maxlength="120" /></td><td><input name="" id="samt'+rowCount+'" type="text" maxlength="120" /></td><td> <a href="javascript:void(0);" onclick="removeRow('+rowCount+');"><i class="material-icons" style="color:red">indeterminate_check_box</i></a></td></tr>';
+jQuery('#addedRows4').append(recRow);
+}
+ function addMoreRows8(frm) {
+rowCount ++;
+    window.localStorage.setItem('rowVal',rowCount);
+var recRow = '<tr id="rowCount'+rowCount+'"><td><input name="" id="num'+rowCount+'" type="text"  maxlength="120" /></td><td><input name="" type="text" id="rt'+rowCount+'" maxlength="120"/></td><td><input name="" id="txval'+rowCount+'" type="text" maxlength="120" /></td><td><input name="" id="iamt'+rowCount+'" type="text" maxlength="120" /></td><td><input name="" id="camt'+rowCount+'" type="text" maxlength="120" /></td><td><input name="" id="samt'+rowCount+'" type="text" maxlength="120" /></td><td> <a href="javascript:void(0);" onclick="removeRow('+rowCount+');"><i class="material-icons" style="color:red">indeterminate_check_box</i></a></td></tr>';
+jQuery('#addedRows8').append(recRow);
+}
+           
+function removeRow(removeNum) {
+    var rowCount = window.localStorage.getItem('rowVal');
+    var rowVal = rowCount - 1;
+    window.localStorage.setItem('rowVal',rowVal);
+jQuery('#rowCount'+removeNum).remove();
+}
+        
+        function saveData(){
+            var newArray = [];
+            var newArray1 = [];
+            var newArray2 = [];
+            var rowCount = window.localStorage.getItem('rowVal');
+            for(var i=0; i<=rowCount; i++){
+                
+            var numval = document.getElementById('num'+i).value;
+            var rt = document.getElementById('rt'+i).value;
+            var txval = document.getElementById('txval'+i).value;
+            var iamt = document.getElementById('iamt'+i).value;
+            var camt = document.getElementById('camt'+i).value;
+            var samt = document.getElementById('samt'+i).value;
+//                alert(numval);
+                var rowArray = rowCount+i;
+                console.log(rowArray);
+                rowArray = {num:numval, rt:rt, txvale:txval, iamt:iamt, camt:camt, samt:samt};
+                window.localStorage.setItem('rowArray'+i, JSON.stringify(rowArray));
+            
+                newArray1 = newArray.concat(rowArray) ;
+//                newArray2 = newArray1.concat(rowArray);
+                console.log(newArray1);
+                
+            }
+//                console.log(newArray1);
+
+        }
+        
+</script>
+</html>

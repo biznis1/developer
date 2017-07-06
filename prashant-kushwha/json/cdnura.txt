@@ -1,0 +1,24 @@
+{
+  "cdnura": [
+    {
+      "chksum": "AflJufPlFStqKBZ",
+      "omon": "012017",
+      "ocname": "R Glass Factory",
+      "mon": "012017",
+      "cname": "R Glass Factory",
+      "state_cd": "06",
+      "ntty": "C",
+      "rsn": "Not mentioned",
+      "val": 10000,
+      "irt": 3,
+      "iamt": 833.33,
+      "crt": 4,
+      "camt": 500,
+      "srt": 5,
+      "samt": 900,
+      "csrt": 2,
+      "csamt": 500,
+      "etin": "01AAAAP1208Q1Z7"
+    }
+  ]
+}
