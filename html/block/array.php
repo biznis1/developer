@@ -1,36 +1,60 @@
+
+
 //img
 $hr['img']=array('src'='','srcset'=>'','sizes'=>'','height'=>'','width'=>'');
 
-//form
-$hr['form']=array('action'=>'','method'=>'','target'=>'','enctype'='');
+
 	
 //iframe
 $hr['iframe']=array('src'=>'','height'=>,'width'=>'','height'=>'');
 
 //canvas
 $hr['canvas']=array('width','height'=>'','style'=>'')
-//input
-$hr['input']=array('type'=>'','name'=>'','placeholder'=>'','required'=>'','value'=>'','src'=>'','size'=>'','height'=>'','inputmode'=>'','maxlength'=>'','pattern'=>'','step'=>'','multiple'=>'','dirname'=>'','formaction'=>'','formmethod'=>'','formenctype'=>'','formmethod'=>'');
 
+form:
+
+//form
+$hr['form']=array('action'=>'','method'=>'','target'=>'','enctype'='');
+//input
+$hr['input']=array('type'=>'','name'=>'','placeholder'=>'','required'=>'','value'=>'','src'=>'','size'=>'','height'=>'','inputmode'=>'','maxlength'=>'','pattern'=>'','step'=>'','multiple'=>'','dirname'=>'','formaction'=>'','formmethod'=>'','formenctype'=>'','formmethod'=>'','formtarget'=>'');
+
+//select
+$hr['select']=array('autofocus'=>'','disabled','multiple'=>'','name'=>'','required'=>'','size'=>'');
 //option 
 $hr['option']=array('label'=>'','selected'=>'','value'=>'');
+//optgroup
+$hr['optgroup']=array('disabed'=>'','label'=>'');
+//output
+$hr['output']=array('for'=>'','form'=>'','name'=>'');
 
 /button
 $hr['button']=array('autofocus'=>'','disabled'=>'','menu'=>'','type'=>'','value'=>'');
-
-//link
-$hr['link']=array('href'='','rel'=>'','type'=>'');
-
-//progress
-$hr['progress']=array('value'=>'','max'=>'');
 
 //textarea 
 $hr['textarea']=array('autocomplete'=>'','autofocus'=>'','disabled'=>'','dirname'=>'','maxlength'=>'','minlength'=>'','name'=>'','placeholder'=>'','rows'=>'','cols'=>'',
 'wrap'=>'','required'=>'','readonly'=>'');
 
+
+//datalist
+$hr['datalist']=array(''=>'');
+
+
+
+//keygen
+$hr['keygen']=array('autofocus'=>'','challenged'=>'','disabled'=>'','keytype'=>'');
+
+
 //fieldset
 
 $hr['fieldset']=array('disabled'=>'','name'=>'','id'=>'');
+
+
+//link
+$hr['link']=array('href'='','rel'=>'','type'=>'');
+
+
+//progress
+$hr['progress']=array('value'=>'','max'=>'');
 
 //audio
 $hr['audio']=array('src'='','preload'=>'','autoplay'=>'','mediagroup'=>'','loop'=>'','controls'=>'');
@@ -59,8 +83,7 @@ $hr['menuitem']=array('type'=>'','label'=>'','icon'=>'','checked'=>'','radiogrou
 $hr['track']=array('kind'=>'','label'=>'','src'=>'','srclang'=>'');
 //blockquote
 $hr['blockquoute']=array('cite'=>'');
-//keygen
-$hr['keygen']=array('autofocus'=>'','challenged'=>'','disabled'=>'','keytype'=>'');
+
 //area
 $hr['area']=array('alt'=>'','coords'=>'',''download'=>'','href'=>'','hreflang'=>'','target'=>'','shape'=>'','type'=>'','rel'=>'');
 //base
@@ -86,3 +109,4 @@ $hr['bdo']=array('dir'=>'');
 
 
 //https://www.quackit.com/html_5/tags/html_input_tag.cfm
+//http://html5doctor.com/html5-forms-introduction-and-new-attributes/

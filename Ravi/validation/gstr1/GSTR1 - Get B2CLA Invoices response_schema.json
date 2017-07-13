@@ -1,0 +1,146 @@
+{
+  "type": "object",
+  "properties": {
+    "b2cla": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "state_cd": {
+            "type": "string",
+            "description": "Recipient state code"
+          },
+          "inv": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "chksum": {
+                  "description": "Checksum Value",
+                  "type": "string",
+                  "pattern": "^[a-zA-Z0-9]+$"
+                },
+                "oinum": {
+                  "description": "Original invoice number",
+                  "type": "string",
+                  "pattern": "^[a-zA-Z0-9]+$"
+                },
+                "oidt": {
+                  "description": "Original invoice date",
+                  "type": "string",
+                  "pattern": "^((0[1-9]|[12][0-9]|3[01])[-](0[1-9]|1[012])[-]((19|20)\\d\\d))*$"
+                },
+                "cname": {
+                  "type": "string",
+                  "description": "Counter party Name",
+                  "maxLength": 100,
+                  "pattern": "^[a-zA-Z._\\s]+$"
+                },
+                "inum": {
+                  "type": "string",
+                  "description": "Supplier Invoice Number",
+                  "pattern": "^[a-zA-Z0-9]+$"
+                },
+                "idt": {
+                  "description": "Supplier Invoice Date",
+                  "type": "string",
+                  "pattern": "^((0[1-9]|[12][0-9]|3[01])[-](0[1-9]|1[012])[-]((19|20)\\d\\d))*$"
+                },
+                "val": {
+                  "description": "Supplier Invoice Value",
+                  "type": "number"
+                },
+                "pos": {
+                  "description": "Place of supply",
+                  "type": "string"
+                },
+                "prs": {
+                  "description": "Provisional assessment",
+                  "type": "string"
+                },
+                "od_num": {
+                  "type": "string",
+                  "description": "Order Number",
+                  "pattern": "^[a-zA-Z0-9]+$"
+                },
+                "od_dt": {
+                  "description": "Order Date",
+                  "type": "string",
+                  "pattern": "^((0[1-9]|[12][0-9]|3[01])[-](0[1-9]|1[012])[-]((19|20)\\d\\d))*$"
+                },
+                "etin": {
+                  "description": "Ecommerce GSTIN",
+                  "type": "string"
+                },
+                "itms": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "num": {
+                        "type": "integer"
+                      },
+                      "itm_det": {
+                        "type": "object",
+                        "properties": {
+                          "ty": {
+                            "description": "Identifier if Goods or Services",
+                            "type": "string"
+                          },
+                          "hsn_sc": {
+                            "description": "HSN or SAC of Goods or Services as per Invoice line items",
+                            "type": "string"
+                          },
+                          "txval": {
+                            "description": "Taxable value of Goods or Service as per invoice",
+                            "type": "number"
+                          },
+                          "irt": {
+                            "description": "IGST Rate as per invoice",
+                            "type": "number"
+                          },
+                          "iamt": {
+                            "description": "IGST Amount as per invoice",
+                            "type": "number"
+                          }
+                        },
+                        "required": [
+                          "ty",
+                          "hsn_sc",
+                          "txval"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "num",
+                      "itm_det"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "chksum",
+                "oinum",
+                "oidt",
+                "cname",
+                "inum",
+                "idt",
+                "val",
+                "pos",
+                "prs",
+                "itms"
+              ]
+            }
+          }
+        },
+        "required": [
+          "state_cd",
+          "inv"
+        ]
+      }
+    }
+  },
+  "required": [
+    "b2cla"
+  ]
+}

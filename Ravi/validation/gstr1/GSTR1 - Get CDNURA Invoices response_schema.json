@@ -1,0 +1,101 @@
+{
+  "type": "object",
+  "properties": {
+    "cdnura": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "chksum": {
+            "description": "Invoice Check sum value",
+            "type": "string"
+          },
+          "omon": {
+            "description": "Original month of Credit/ Debit",
+            "type": "string"
+          },
+          "ocname": {
+            "description": "Original Name of Recipient",
+            "type": "string"
+          },
+          "mon": {
+            "description": "month of Credit/ Debit",
+            "type": "string"
+          },
+          "cname": {
+            "description": "Name of Recipient",
+            "type": "string"
+          },
+          "state_cd": {
+            "description": "state code",
+            "type": "string"
+          },
+          "ntty": {
+            "description": "Credit/debit note type",
+            "type": "string"
+          },
+          "rsn": {
+            "description": "Reason Code for issuing Debit/Credit Note",
+            "type": "string"
+          },
+          "val": {
+            "description": "Supplier Invoice Value",
+            "type": "number"
+          },
+          "irt": {
+            "description": "IGST Rate as per invoice",
+            "type": "number"
+          },
+          "iamt": {
+            "description": "IGST Amount as per invoice",
+            "type": "number"
+          },
+          "crt": {
+            "description": "CGST Rate as per invoice",
+            "type": "number"
+          },
+          "camt": {
+            "description": "CGST Amount as per invoice",
+            "type": "number"
+          },
+          "srt": {
+            "description": "SGST Rate as per invoice",
+            "type": "number"
+          },
+          "samt": {
+            "description": "SGST Amount as per invoice",
+            "type": "number"
+          },
+          "csrt": {
+            "description": "Cess Rate as per invoice",
+            "type": "number"
+          },
+          "csamt": {
+            "description": "Cess Amount as per invoice",
+            "type": "number"
+          },
+          "etin": {
+            "description": "Ecommerce Gstin",
+            "type": "string",
+            "maxLength": 15,
+            "minLength": 15
+          }
+        },
+        "required": [
+          "chksum",
+          "omon",
+          "ocname",
+          "mon",
+          "cname",
+          "ntty",
+          "rsn",
+          "val",
+          "state_cd"
+        ]
+      }
+    }
+  },
+  "required": [
+    "cdnura"
+  ]
+}

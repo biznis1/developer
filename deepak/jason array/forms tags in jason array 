@@ -1,0 +1,113 @@
+
+{
+    "forms": [
+        "accept-charset":"",
+        "action":"",
+        "autocomplete":"",
+        "enctype":"",
+        "method":"",
+        "name":"",
+        "novalidate":"",
+        "target":""
+    ]
+}
+
+{
+    "inputs": [
+        "type":"",
+        "name":"",
+        "placeholder":"",
+        "requried":"",
+        "value":"",
+        "src":"",
+        "size":"",
+        "height":"",
+        "inputmode":"",
+        "maxlenghth":"",
+        "pattern":"",
+        "step":"",
+        "multiple":"",
+        "dirname":"",
+        "formaction":"",
+        "formmethod":"",
+        "formenctype":""
+    ]
+}
+
+{
+    "select": [
+        "autofocus":"",
+        "disable":"",
+        "multiple":"",
+        "name":"",
+        "requried":"",
+        "size":""
+    ]
+}
+
+{
+    "option": [
+        "label":"",
+        "selected":"",
+        "value":""
+    ]
+}
+
+{
+    "optgroup": [
+        "disabled":"",
+        "label":""
+    ]
+}
+
+
+{
+    "output": [
+        "for":"",
+        "form":"",
+        "name":""
+    ]
+}
+
+{
+    "button": [
+        "autofocus":"",
+        "disabled":"",
+        "menu":"",
+        "type":"",
+        "value":""
+    ]
+}
+
+{
+    "textarea": [
+        "autocompelete":"",
+        "autofocus":"",
+        "disbaled":"",
+        "dirname":"",
+        "mmaxlength":"",
+        "minlength":"",
+        "name":"",
+        "placeholder":"",
+        "rows":"",
+        "cols":"",
+        "wrap":"",
+        "requried":"",
+        "readonly":""
+    ]
+}
+
+{
+    "fieldset": [
+        "disabled":"",
+        "form":"",
+        "name":""
+    ]
+}
+
+{
+    "label": [
+        "for":"",
+        "form":""
+    ]
+}

@@ -1,0 +1,31 @@
+The following JSON structure shows the format of a thumbnails resource:
+
+
+
+{
+  "default": {
+    "url": "string",
+    "width": "unsigned integer",
+    "height": "unsigned integer"
+  },
+  "medium": {
+    "url": "string",
+    "width": "unsigned integer",
+    "height": "unsigned integer"
+  },
+  "high": {
+    "url": "string",
+    "width": "unsigned integer",
+    "height": "unsigned integer"
+  },
+  "standard": {
+    "url": "string",
+    "width": "unsigned integer",
+    "height": "unsigned integer"
+  },
+  "maxres": {
+    "url": "string",
+    "width": "unsigned integer",
+    "height": "unsigned integer"
+  }
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+ 
+
+</head>
+<body>
+
+  <div class="container">
+ <div class="row">
+ <h3>mm-cs-usembassy </h3>
+    <form class="col s12">
+	<div class="row">
+
+    <div class="input-field col s12">
+	
+    <select id="media_type">  
+                
+      
+      <option value="pm">Print Media</option>
+      <option value="nm">New Media</option>
+      <option value="em">Electronic Media</option>
+	   <option value="sm">Social Media</option>
+	   
+                  
+                </select>
+	<label for='media_type'>MEDIA TYPE</label>
+  </div>
+		</div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input  id="work_date" type="date" class="datepicker">
+          <label for="work_date">WORK DATE</label>
+        </div>
+		</div>
+		 <div class="row">
+        <div class="input-field col s12">
+          <input  id="due_date" type="date" class="datepicker">
+          <label for="due_date">DUE DATE</label>
+        </div>
+		</div>
+		<div class="row">
+		        <div class="input-field col s12">
+          <input  id="serial" type="text" class="validate">
+          <label for="serial">SERIAL</label>
+        </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="clip_id" type="text" class="validate">
+          <label for="clip_id">CLIP ID</label>
+        </div>
+		</div>
+		 <select id="item_type">  
+                
+      
+      <option value="pdf">PDF</option>
+      <option value="pm">Hardcopy</option>
+      <option value="pd">Digest</option>
+	   <option value="tv">TV</option>
+	    <option value="tr">Translation</option>
+		 <option value="trc">Transcription</option>
+		  <option value="tvds">TV Detailed Summary</option>
+                  
+                </select>
+	<label for='item_type'>ITEM TYPE</label>
+  </div>
+		
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="item_lang" type="text" class="validate">
+          <label for="item_lang">ITEM LANG</label>
+        </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="ns" type="text" class="validate">
+          <label for="ns">NS
+</label>
+        </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="item_title" type="text" class="validate">
+          <label for="item_title">ITEM TITLE
+</label>
+        </div>
+		</div>
+		<div class="row">
+          <div class="input-field col s12">
+            <textarea id="item_about" class="materialize-textarea"></textarea>
+            <label for="item_about">ITEM ABOUT</label>
+          </div>
+        </div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="url1" type="text" class="validate">
+          <label for="url1">URL1
+</label>
+        </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="url2" type="text" class="validate">
+          <label for="url2">URL2
+</label>
+        </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="url2" type="text" class="validate">
+          <label for="url3">URL3
+</label>
+        </div>
+		</div>
+			<div class="row">
+
+    <div class="input-field col s12">
+	
+    <select id="status">  
+                
+      
+      <option value="pm">1. Pending</option>
+      <option value="nm">2. Translating</option>
+      <option value="em">3. Translated</option>
+	   <option value="sm">4. Editing</option>
+	    <option value="sm">5. Edited</option>
+	   <option value="sm">6. Checking</option>
+	   <option value="sm">7. Checked</option>
+	    <option value="sm">8. Releasing</option>
+	    <option value="sm">9. Released</option>
+		 <option value="sm">a. Dropped</option>
+		  <option value="sm">b. Hold</option>
+	   
+	   
+	   
+                  
+                </select>
+	<label for='status'>STATUS</label>
+  </div>
+		</div>
+		
+	</form>
+	
+	</div>
+
+	
+	  
+	  <script src="jquery.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/custom.js"></script>
+  
+  
+ 
+</div>
+
+</body>
+    
+</div>
+	  </html>

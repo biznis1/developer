@@ -1,0 +1,135 @@
+{
+  "type": "object",
+  "properties": {
+    "cdnr": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ctin": {
+            "description":"Counter party GSTIN",
+            "type":"string",
+            "maxLength":15,
+            "minLength":15,
+            "pattern":"^[a-zA-Z0-9]+$",
+            "type": "string"
+          },
+          "cfs": {
+            "type": "string"
+          },
+          "nt": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "flag": {
+                  "description":"flag value for accepting or rejecting a note",
+                  "type": "string"
+                },
+                "updby": {
+                  "description":"supplier/receiver",
+                  "type":"string"
+                },
+                "chksum": {
+                  "description":"checksum value",
+                  "type": "string"
+                },
+                "ntty": {
+                  "description":"Note type",
+                  "type":"string"
+                },
+                "nt_num": {
+                  "type":"string",
+                  "description":"Debit Note/Credit Note No."
+                },
+                "nt_dt": {
+                  "description":"Credit/Debit date",
+                  "type":"string",
+                  "pattern":"^((0[1-9]|[12][0-9]|3[01])[-](0[1-9]|1[012])[-]((19|20)\\d\\d))*$"
+                },
+                "rsn": {
+                  "description":"Reason Code for issuing Debit/Credit Note",
+                  "type":"string"
+                },
+				"rchrg": {
+                  "description": "Reverse Charge",
+                  "type": "string"
+                },
+                "inum": {
+                  "description":"Original invoice number",
+                  "type": "string"
+                },
+                "idt": {
+                  "description":"Invoice date",
+                  "type":"string",
+                  "pattern":"^((0[1-9]|[12][0-9]|3[01])[-](0[1-9]|1[012])[-]((19|20)\\d\\d))*$"
+                },
+                "val":{
+                  "description":"Differential Value for which Dr./ Cr. note is issued",
+                  "type":"number"
+                },
+                "irt":{
+                  "description":"IGST Rate as per invoice",
+                  "type":"number"
+                },
+                "iamt":{
+                  "description":"IGST Amount as per invoice",
+                  "type":"number"
+                },
+                "crt":{
+                  "description":"CGST Rate as per invoice",
+                  "type":"number"
+                },
+                "camt":{
+                  "description":"CGST Amount as per invoice",
+                  "type":"number"
+                },
+                "srt":{
+                  "description":"SGST Rate as per invoice",
+                  "type":"number"
+                },
+                "samt":{
+                  "description":"SGST Amount as per invoice",
+                  "type":"number"
+                },
+                "csrt": {
+                  "description":"Cess rate as per invoice",
+                  "type": "number"
+                },
+                "csamt": {
+                  "description":"Cess Amount as per invoice",
+                  "type": "number"
+                },
+                "etin": {
+                  "description":"Ecom gstin",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "flag",
+                "updby",
+                "chksum",
+                "ntty",
+                "nt_num",
+                "nt_dt",
+                "rsn",
+				"rchrg",
+                "inum",
+                "idt",
+                "val"
+              ]
+            }
+          }
+        },
+        "required": [
+          "ctin",
+          "cfs",
+          "nt"
+        ]
+      }
+    }
+  },
+  "required": [
+    "cdnr"
+  ]
+}

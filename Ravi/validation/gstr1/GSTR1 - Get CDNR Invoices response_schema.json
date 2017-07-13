@@ -1,0 +1,172 @@
+{
+  "id": "Get-CDNR-Schema",
+  "properties": {
+    "cdnr": {
+      "items": {
+        "properties": {
+          "cfs": {
+            "description": "GSTR2 filing status of counter party",
+            "type": "string"
+          },
+          "ctin": {
+            "type": "string",
+            "maxLength": 15,
+            "minLength": 15,
+            "pattern": "^[a-zA-Z0-9._\\s]+$",
+            "description": "GSTIN/UID of the Receiver taxpayer/UN,Govt Bodies"
+          },
+          "nt": {
+            "items": {
+              "properties": {
+                "cflag": {
+                  "description": "Status of counter party",
+                  "type": "string"
+                },
+                "flag": {
+                  "description": "Status of Invoice",
+                  "type": "string"
+                },
+                "chksum": {
+                  "maxLength": 64,
+                  "description": "Invoice checksum value",
+                  "type": "string",
+                  "pattern": "^[a-zA-Z0-9]+$",
+                  "minLength": 1
+                },
+                "idt": {
+                  "description": "Supplier Invoice Date",
+                  "type": "string",
+                  "pattern": "^((0[1-9]|[12][0-9]|3[01])[-](0[1-9]|1[012])[-]((19|20)\\d\\d))$"
+                },
+                "inum": {
+                  "maxLength": 16,
+                  "description": "Supplier Invoice Number",
+                  "type": "string"
+                },
+                "rsn": {
+                  "maxLength": 50,
+                  "description": "Reason for Issuing Cr. / Dr. Note",
+                  "type": "string"
+                },
+                "p_gst": {
+                  "maxLength": 1,
+                  "description": "Pre GST Regime Dr./ Cr. Notes",
+                  "type": "string",
+                  "enum": [
+                    "Y",
+                    "N"
+                  ]
+                },
+                "itms": {
+                  "items": {
+                    "properties": {
+                      "itm_det": {
+                        "properties": {
+                          "rt": {
+                            "description": "rate as per invoice",
+                            "type": "number"
+                          },
+                          "iamt": {
+                            "description": "IGST Amount as per invoice",
+                            "type": "number"
+                          },
+                          "camt": {
+                            "description": "CGST Amount as per invoice",
+                            "type": "number"
+                          },
+                          "samt": {
+                            "description": "SGST Amount as per invoice",
+                            "type": "number"
+                          },
+                          "csamt": {
+                            "description": "Cess Amount as per invoice",
+                            "type": "number"
+                          },
+                          "txval": {
+                            "description": "Taxable value of Goods or Service as per invoice",
+                            "type": "number",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "rt",
+                          "txval"
+                        ],
+                        "type": "object"
+                      },
+                      "num": {
+                        "description": "Serial no",
+                        "type": "number",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "itm_det",
+                      "num"
+                    ],
+                    "type": "object"
+                  },
+                  "type": "array"
+                },
+                "nt_dt": {
+                  "description": "Credit Note/Debit Note/  Refund Voucher date",
+                  "type": "string",
+                  "pattern": "^((0[1-9]|[12][0-9]|3[01])[-](0[1-9]|1[012])[-]((19|20)\\d\\d))$"
+                },
+                "nt_num": {
+                  "description": "Credit note/debit note / Refund Voucher Number",
+                  "type": "string"
+                },
+                "ntty": {
+                  "description": "Credit/debit note type/ Refund Voucher",
+                  "type": "string",
+                  "enum": [
+                    "C",
+                    "R",
+                    "D"
+                  ]
+                },
+                "updby": {
+                  "description": "Uploaded by",
+                  "type": "string"
+                },
+                "val": {
+                  "description": "Total Note Value",
+                  "type": "number"
+                }
+              },
+              "required": [
+                "inum",
+                "cflag",
+                "itms",
+                "val",
+                "nt_num",
+                "idt",
+                "updby",
+                "nt_dt",
+                "flag",
+                "chksum",
+                "p_gst",
+                "rsn",
+                "ntty"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "ctin",
+          "nt",
+          "cfs"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "cdnr"
+  ],
+  "type": "object"
+}

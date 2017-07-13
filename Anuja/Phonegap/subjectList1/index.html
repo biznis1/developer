@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Media Monitoring Technology Panel</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <script>
+//$( document ).ready( function() {
+//  $('#textarea1').val('New Text');
+//  $('#textarea1').trigger('autoresize');
+//
+//}); 
+</script>
+    
+   <style>
+     .btn-flat {
+    box-shadow: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;    float: right !important;
+    transition: background-color .2s;
+}  
+       .input-field {
+    position: relative;
+    margin-top: 0px;
+}
+       td, th {
+    padding: 5px 5px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+    border-radius: 2px;
+}
+       input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #9e9e9e;
+    border-radius: 0;
+    outline: none;
+    height: 3rem;
+    width: 100%;
+    font-size: 1rem;
+    margin: 0 0 0px 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: content-box;
+    transition: all 0.3s;
+}
+    </style>
+    
+</head>
+<body onload="mmsAppend()" >
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">MMS - Media Monitoring Technology Panel</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Links</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Links</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+
+        
+        <table class="striped">
+             <h5 class="left">Section</h5>
+        <thead>
+          <tr>
+              <th>Code</th>
+              <th>Name</th>
+              <th>Priority</th>
+          </tr>
+        </thead>
+
+        <tbody id="mmsAppend">
+  
+        </tbody>
+            
+            
+         
+      </table>
+        <br>
+        
+            <a onclick="saveData()" href="#!" class="left modal-action modal-close waves-effect waves-green btn-flat ">Submit</a>
+        <br><br><br>
+        
+    </div>
+  </div>
+
+
+  <footer class="page-footer orange">
+    
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Business News and Information Services</a>
+      </div>
+    </div>
+  </footer>
+
+ <script>
+     
+     function mmsAppend(){
+         $.ajax({
+        url: "http://192.168.2.61/dev/Anuja/Phonegap/mms-subject-list/mms-print.php",
+        dataType: 'json',
+        success: function (result) {
+//            console.log(result); 
+            for(var i=0; i<30; i++){
+                $('#mmsAppend').append("<tr><td><div class='input-field col s6'><input id='last_name' name='code[]' value='"+result.code+i+"' type='text' class='validate'></div></td><td><div class='input-field col s6'><input id='last_name' name='name[]' value='"+result.name+i+"' type='text' class='validate'></div></td><td><div class='input-field col s6'><input id='last_name' name='priority[]' value="+result.priority+i+" type='text' class='validate'></div></td></tr>")
+            }
+            
+
+        },
+        error: function (textStatus, errorThrown) {
+           
+        }
+    });
+        
+}
+     
+        function saveData(){
+          $(function() {
+              var newArray2 = [];
+                var code = $('input[name="code[]"]').map(function() {
+                    return this.value
+                }).get();
+              var name = $('input[name="name[]"]').map(function() {
+                    return this.value
+                }).get();
+              var priority = $('input[name="priority[]"]').map(function() {
+                    return this.value
+                }).get();
+              
+//              console.log(name);
+              var rowArray;
+              for(var i=0; i<code.length; i++){
+                  rowArray = {code:code[i], name:name[i], priority:priority[i]};
+                  newArray2[i] = rowArray;
+              }
+              console.log('arrayIs',newArray2);
+              console.log('arrayIs',JSON.stringify(newArray2));
+              
+            });
+            
+          
+        }
+    </script>
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>

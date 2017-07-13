@@ -1,4 +1,4 @@
 {
-  "accessWindow": string,
-  "disposition": string
+  "accessWindow": "string",
+  "disposition": "string"
 }

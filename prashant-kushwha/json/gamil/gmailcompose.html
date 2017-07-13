@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Compose Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"/>
+
+  <style>
+  
+		
+.cross{
+color:white;
+}
+#main{background:#fff;}
+#min:hover{background-color:gray;}
+.cross:hover{background-color:gray;}
+#max:hover{background-color:gray;}
+
+textarea {
+    width: 100%;
+    height: 380px;
+	color:black;
+	padding-top:12px;
+	padding-left:12px;
+}
+#em1{width:100%;
+	height:34px;
+	line-height:35px;
+}
+#eml{display:none;}
+.fixed {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    width: 300px;
+}
+#compose{
+display:none
+}
+#com{position: fixed;
+    top: 10px;
+    left: 10px;
+   }
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: -1px;
+}
+
+input::placeholder {
+  color: gray;padding:4px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: gray;padding:4px;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+  color: gray;padding:4px;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+  color: gray;padding:4px;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: gray;padding:4px;
+}
+
+
+input, select {
+    font-family: inherit;
+    font-size: inherit;    padding-left: 10px;
+    line-height: 4px !important;
+}
+#mess{
+display:none;
+margin-top:100px;
+width:40%;
+box-shadow:0 0 5px black;
+}
+  </style>
+  <script>
+  
+		$(document).ready(function()
+		{
+			$("#com").click(function()
+			{
+				$("#compose").css("display","block");
+			});
+			$("#min").click(function()
+			{
+				$("#main").css("display","none");
+				$("#foot").css("display","none");
+			});
+			$("#max").click(function()
+			{
+				$("#main").css("display","block");
+				$("#foot").css("display","block");
+			});
+			$("#em1").focus(function()
+			{
+				$("#em1").css("display","none");
+				$("#eml").css("display","block");
+				$("#email").focus();
+			});
+			$(".cross").click(function()
+			{
+				$("#compose").css("display","none")
+			});
+			$("#dismiss").click(function()
+			{
+				$("#compose").css("display","none")
+			});
+			$("#subject").click(function()
+			{
+				$("#subject").focus(function()
+				{
+				
+				var email=$("#emial").val();
+				if(email== " ")
+				{alert("dddf");
+					$("#em1").css("display","block");
+					$("#eml").css("display","none");
+				}
+				});
+			});
+			$("#message").click(function()
+			{
+				$("#message").focus(function()
+				{
+				
+				var email=$("#emial").val();
+				if(email== " ")
+				{alert("dddf");
+					$("#em1").css("display","block");
+					$("#eml").css("display","none");
+				}
+				});
+			});
+			$("#undo").click(function()
+			{
+				$("#compose").css("display","block");
+			});
+			$("#trash").click(function()
+			{
+			$("#compose").css("display","none");
+				$("#mess").css("display","block");
+				$("#mess").fadeOut(7000);
+			});
+		});
+	
+  </script>
+</head>
+<body>
+  <button type="button" class="btn btn-info btn-lg" id="com">Compose</button>
+ <div  class="container" id="mess" >Your message has been discarded.  <a href="javascript:void(0);" id="undo">Undo discard</a></div>
+<div class="container fixed" style="width:45%;box-shadow:0 0 5px black" id="compose">
+
+<div class="row header"  style="padding:8px;background-color:black;color:white">
+<button type="button" class="close cross">&times;</button>
+		  <button class="close modalMinimize"  id="max"><span class="glyphicon glyphicon-resize-small"></span></button>
+		  <button class="close modalMinimize"  id="min"><span class="glyphicon glyphicon-minus"></span></button>
+          <h4 class="modal-title">New Message</h4>
+</div>
+<div class="row body" id="main">
+		 <form>
+		 <table class="table table-bordegray">
+    <thead>
+      <tr>
+        <input type="email" id="em1" placeholder="Recipients"><div class="input-group" id="eml">
+		<span class="input-group-btn"><a href="#" style="color:gray" id="spwd">To</a></span>
+		<input type="email" name="email" class="form-control" id="email">
+		</div>
+      </tr>
+    </thead>
+    <tbody>
+	<tr><input type="text" id="subject" placeholder="Subject" style="width:100%;height:35px">
+	</tr>
+	<tr>
+      <textarea id="message" style="resize:none"></textarea>
+      </tr>
+    </tbody>
+  </table>
+		 </form>
+</div>
+<div class="row footer" style="background-color:white;padding-bottom:4px;padding-left:8px" id="foot">
+<button type="button" class="btn btn-primary pull-left" id="dismiss">send</button>
+<ul class="nav navbar-nav">
+<li><button class="btn" type="button"><span class="glyphicon glyphicon-text-color" title="Formatting options"></span></button></li>
+<li><button class="btn" type="button"><i class="fa fa-paperclip" title="Attach files"></i></button></li>
+<li><button class="btn" type="button"><span class="glyphicon glyphicon-link" title="insert link(ctrl+k)"></span></button></li>
+<li><button class="btn" type="button"><i class="fa fa-picture-o" title="insert photo" aria-hidden="true"></i></button></li>
+<li><button class="btn" type="button"><img src="//storage.googleapis.com/support-kms-prod/jNZVWboVMuUTASpI5Dme4yb7TmvqsHIDgYxr" width="18" height="18" alt="Google Drive" title="insert files using Drive"></button></li>
+<li></li>
+</ul>
+<ul class="nav navbar-nav pull-right">
+		 <li id="trash"><button class="btn" type="button"><span class="glyphicon glyphicon-trash"></span></button></li>
+		 <li><div class="dropup pull-right" style="padding-right:8px">
+  <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"><span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a >Default to full-screen</a></li>
+    <li class="dropup"><a href="javascript:void(0);" class="dropdown-toggle" data-target="dropdown">Label<span class="caret pull-right" style="padding-top:2px"></span></a></li>
+    <li><a >Plain text mode</a></li>
+	<li><a >Print</a></li>
+	<li><a >Check spelling</a></li>
+  </ul>
+</div></li>
+</ul>
+         
+</div>
+</div>
+<!-- <div class="container">
+  <h2>Compose Form</h2>
+  <!-- Trigger the modal with a button -->
+ <!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Compose</button>-->
+
+  <!-- Modal -->
+  <!--<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">-->
+    
+      <!-- Modal content-->
+      <!--<div class="modal-content">
+        <div class="modal-header" style="background-color:black;color:white">
+		  <button type="button" class="close cross" data-dismiss="modal">&times;</button>
+		  <button class="close modalMinimize"  id="max"><span class="glyphicon glyphicon-resize-small"></span></button>
+		  <button class="close modalMinimize"  id="min"><span class="glyphicon glyphicon-minus"></span></button>
+          <h4 class="modal-title">New Message</h4>
+        </div>
+        <div class="modal-body" id="main">
+		 <form>
+		 <table class="table table-bordegray">
+    <thead>
+      <tr>
+        <th><input type="text" id="em1" placeholder="Recipients"><div class="input-group" id="eml">
+		<span class="input-group-btn"><a href="#" id="spwd">To</a></span>
+		<input type="email" name="pwd" class="form-control" id="pwd">
+		</div></th>
+      </tr>
+    </thead>
+  </table>
+		 </form>
+        </div>
+        <div class="modal-footer" id="foot">
+		
+          <button type="button" class="btn btn-primary pull-left" data-dismiss="modal">send</button>
+
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div> -->
+
+</body>
+</html>
+
+
+
+

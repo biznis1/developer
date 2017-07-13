@@ -1,10 +1,10 @@
 {
-  "enableAutoReply": boolean,
-  "responseSubject": string,
-  "responseBodyPlainText": string,
-  "responseBodyHtml": string,
-  "restrictToContacts": boolean,
-  "restrictToDomain": boolean,
-  "startTime": long,
-  "endTime": long
+  "enableAutoReply": "boolean",
+  "responseSubject": "string",
+  "responseBodyPlainText": "string",
+  "responseBodyHtml": "string",
+  "restrictToContacts": "boolean",
+  "restrictToDomain": "boolean",
+  "startTime": "long",
+  "endTime": "long"
 }

@@ -1,0 +1,187 @@
+{
+	"type": "object",
+	"properties": {
+		"cdna": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"ctin": {
+						"description": "Counter party GSTIN",
+						"type": "string",
+						"maxLength": 15,
+						"minLength": 15,
+						"pattern": "^[a-zA-Z0-9]+$"
+
+					},
+					"cfs": {
+						"type": "string"
+					},
+					"nt": {
+						"type": "array",
+						"items": {
+							"type": "object",
+							"properties": {
+								"flag": {
+									"description": "flag value for accepting or rejecting a note",
+									"type": "string"
+								},
+								"chksum": {
+									"description": "checksum value",
+									"type": "string"
+								},
+								"nt_num": {
+									"type": "string",
+									"description": "Debit Note/Credit Note No."
+								},
+								"nt_dt": {
+									"description": "Credit/Debit date",
+									"type": "string",
+									"pattern": "^((0[1-9]|[12][0-9]|3[01])[-](0[1-9]|1[012])[-]((19|20)\\d\\d))*$"
+								},
+								"inum": {
+									"description": "Original invoice number",
+									"type": "string"
+								},
+								"idt": {
+									"description": "Invoice date",
+									"type": "string",
+									"pattern": "^((0[1-9]|[12][0-9]|3[01])[-](0[1-9]|1[012])[-]((19|20)\\d\\d))*$"
+								},
+								"ntty": {
+									"description": "Note type",
+									"type": "string"
+								},
+								"updby": {
+									"description": "supplier/receiver",
+									"type": "string"
+								},
+								"rsn": {
+									"description": "Reason Code for issuing Debit/Credit Note",
+									"type": "string"
+								},
+								"val": {
+									"description": "Differential Value for which Dr./ Cr. note is issued",
+									"type": "number"
+								},
+								"irt": {
+									"description": "IGST Rate as per invoice",
+									"type": "number"
+								},
+								"iamt": {
+									"description": "IGST Amount as per invoice",
+									"type": "number"
+								},
+								"crt": {
+									"description": "CGST Rate as per invoice",
+									"type": "number"
+								},
+								"camt": {
+									"description": "CGST Amount as per invoice",
+									"type": "number"
+								},
+								"srt": {
+									"description": "SGST Rate as per invoice",
+									"type": "number"
+								},
+								"samt": {
+									"description": "SGST Amount as per invoice",
+									"type": "number"
+								},
+								"csrt": {
+									"description": "Cess rate as per invoice",
+									"type": "number"
+								},
+								"csamt": {
+									"description": "Cess Amount as per invoice",
+									"type": "number"
+								},								
+								"ont_num": {
+									"description": "Original Credit/debit note number",
+									"type": "string"
+								},
+								"ont_dt": {
+									"description": "Original Credit/Debit date",
+									"pattern": "^((0[1-9]|[12][0-9]|3[01])[-](0[1-9]|1[012])[-]((19|20)\\d\\d))*$",
+									"type": "string"
+								},
+								"rchrg": {
+									"description": "Reverse Charge",
+									"type": "string"
+								},
+								"itc": {
+									"type": "object",
+									"properties": {
+										"tx_i": {
+											"description": "Total Tax Available as ITC for igst ",
+											"type": "number"
+										},
+										"tx_c": {
+											"description": "Total Tax Available as ITC for cgst",
+											"type": "number"
+										},
+										"tx_s": {
+											"description": "Total Tax Available as ITC for sgst",
+											"type": "number"
+										},
+										"tx_cs": {
+											"description": "Total Tax Available as ITC for cess",
+											"type": "number"
+										},
+										"tc_i": {
+											"description": "ITC Available this month for igst",
+											"type": "number"
+										},
+										"tc_c": {
+											"description": "ITC Available this month for cgst",
+											"type": "number"
+										},
+										"tc_s": {
+											"description": "ITC Available this month for sgst",
+											"type": "number"
+										},
+										"tc_cs": {
+											"description": "ITC Available this month for cess",
+											"type": "number"
+										},
+										"elg": {
+											"description": "eligibility",
+											"type": "string"
+										}
+									},
+									"required": [						
+										"elg"
+									]
+								}
+							},
+							"required": [
+								"chksum",
+								"flag",
+								"ntty",
+								"nt_num",
+								"nt_dt",
+								"ont_num",
+								"ont_dt",
+								"rsn",
+								"inum",
+								"idt",
+								"val",						
+								"updby",
+								"rchrg",
+								"itc"
+							]
+						}
+					}
+				},
+				"required": [
+					"ctin",
+					"cfs",
+					"nt"
+				]
+			}
+		}
+	},
+	"required": [
+		"cdna"
+	]
+}

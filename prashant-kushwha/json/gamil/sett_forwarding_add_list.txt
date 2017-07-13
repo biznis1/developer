@@ -1,5 +1,5 @@
 {
   "forwardingAddresses": [
-    users.settings.forwardingAddresses Resource
+    "users.settings.forwardingAddresses Resource"
   ]
 }

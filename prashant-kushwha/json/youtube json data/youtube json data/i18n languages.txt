@@ -1,0 +1,12 @@
+The following JSON structure shows the format of a i18nLanguages resource:
+
+
+{
+  "kind": "youtube#i18nLanguage",
+  "etag": "etag",
+  "id": "string",
+  "snippet": {
+    "hl": "string",
+    "name": "string"
+  }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  <title>Really Cool Page</title>
+  <style type="text/css">/* All in one selector */
+.image-replacement {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(http://akamaicovers.oreilly.com/images/9780596517748/cat.gif) no-repeat;
+  width: 180px;
+  height: 236px;
+  padding-left: 180px;
+}
+
+.text-replacement {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 250px;
+  width: 250px;
+  padding-top: 250px;
+  overflow: hidden;
+  background: #333 url(https://cdn.css-tricks.com/wp-content/themes/CSS-Tricks-10/images/footer-logo-shoptalk.png) no-repeat;
+}</style>
+</head>
+
+<body>
+ <!-- .header would be across site on other pages with different children, so no background image adding -->
+  
+
+<h2>Image replaced with Image</h2>
+<img class="image-replacement" src="http://akamaicovers.oreilly.com/images/9781593272869/cat.gif" />
+
+<h2>Text Replaced with Image<h2>
+<div class="text-replacement">Some text to replace here</div>
+
+
+
+</body>
+</html>
+

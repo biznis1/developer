@@ -1,0 +1,19 @@
+The following JSON structure shows the format of a videoAbuseReportReason resource:
+
+
+
+
+{
+  "kind": "youtube#videoAbuseReportReason",
+  "etag": etag,
+  "id": string,
+  "snippet": {
+    "label": string,
+    "secondaryReasons": [
+      {
+        "id": string,
+        "label": string
+      }
+    ]
+  }
+}

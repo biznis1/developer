@@ -1,0 +1,8 @@
+The following JSON structure shows the format of a channelBanners resource:
+
+
+{
+  "kind": "youtube#channelBannerResource",
+  "etag": "etag",
+  "url": "string"
+}

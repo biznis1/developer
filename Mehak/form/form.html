@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+ 
+
+</head>
+<body>
+
+  <div class="container">
+ <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+          <label for="first_name">First Name</label>
+        </div>
+		<div class="input-field col s6">
+      <input value="Alvin" id="first_name2" type="text" class="validate">
+      <label class="active" for="first_name2">Middle Name</label>
+    </div>
+	</div>
+         <div class="input-field col s6">
+          <input id="last_name" type="text" class="validate">
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+	  
+
+      <div class="row">
+        <div class="input-field col s12">
+           <input type="date" class="datepicker">
+          <label for="date">date</label>
+        </div>
+      </div>
+	  <div class="row">
+        <div class="input-field col s12">
+        
+        <input id="lunchtime" type="text" class="timepicker">
+		<label for="lunchtime">Lunchtime</label>
+        
+		</div>
+		</div>
+	  
+      <div class="row">
+        <div class="col s12">
+          This is an inline input field:
+          <div class="input-field inline">
+            <input id="email" type="email" class="validate">
+            <label for="email" data-error="wrong" data-success="right">Email</label>
+          </div>
+        </div>
+      </div>
+	  <div class="row">
+
+    <div class="input-field col s3">
+    <select>  
+                
+       <option value="" disabled selected></option>
+      <option value="1">Id1</option>
+      <option value="2">Id2</option>
+      <option value="3">Id3</option>
+	   <option value="4">Id4</option>
+	    <option value="5">Id5</option>
+                  
+                </select>
+	<label>sender id </label>
+  </div>
+  </div>
+	  <div class="row">
+	  <div class="input-field col s12">
+	  
+	  <p>
+	  <label>color</label>
+      <input name="group1" type="radio" id="test1" />
+      <label for="test1">Red</label>
+    </p>
+    <p>
+      <input name="group1" type="radio" id="test2" />
+      <label for="test2">Yellow</label>
+	  
+    </p>
+	</div>
+	</div>
+	<div class="row">
+ <div class="input-field col s12">
+ <label> checkbox </label>
+	    <p>
+      <input type="checkbox" id="test5" />
+      <label for="test5">Red</label>
+    </p>
+    <p>
+      <input type="checkbox" id="test6" checked="checked" />
+      <label for="test6">Yellow</label>
+    </p>
+	</div>
+	<div class="row">
+    <div class="file-field input-field">
+      <div class="btn">
+        <span>File</span>
+        <input type="file">
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text">
+      </div>
+    </div>
+        
+        </div>
+		<div class="row">
+		 <div class="file-field input-field">
+      <div class="btn">
+        <span>File</span>
+        <input type="file" multiple>
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text" placeholder="Upload one or more files">
+      </div>
+    </div>
+	</div>
+		<div class="row">
+		 <!-- Switch -->
+  <div class="switch">
+    <label>
+      Off
+      <input type="checkbox">
+      <span class="lever"></span>
+      On
+    </label>
+  </div>
+
+  <!-- Disabled Switch -->
+  <div class="switch">
+    <label>
+      Off
+      <input disabled type="checkbox">
+      <span class="lever"></span>
+      On
+    </label>
+  </div>
+  </div>
+
+     
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="input_text" type="text" data-length="10">
+            <label for="input_text">Input text</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea id="textarea1" class="materialize-textarea" data-length="120"></textarea>
+            <label for="textarea1">Textarea</label>
+          </div>
+        </div>
+      
+    
+	
+	<div class="row">
+	<p class="range-field">
+      <input type="range" id="test5" min="0" max="100" />
+    </p>
+	</div>
+	<div class="row">
+	<h4> preloader </h4>
+  <h3> linear </h3>
+  <div class="progress">
+      <div class="determinate" style="width: 70%"></div>
+  </div>
+  <br/><br/>
+  <h3> intermediate </h3>
+  <div class="progress">
+      <div class="indeterminate"></div>
+	 
+  </div>
+  </div>
+  
+  <a class="waves-effect waves-light btn" style="float:right;">Submit Quote Form</a>
+	</form>
+	
+	</div>
+
+	
+	  
+	  <script src="jquery.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/custom.js"></script>
+  
+   <script>
+  $('.timepicker').pickatime({
+    default: 'now', // Set default time
+    fromnow: 0,       // set default time to * milliseconds from now (using with default = 'now')
+    twelvehour: false, // Use AM/PM or 24-hour format
+    donetext: 'OK', // text for done-button
+    cleartext: 'Clear', // text for clear-button
+    canceltext: 'Cancel', // Text for cancel-button
+    autoclose: false, // automatic close timepicker
+    ampmclickable: true, // make AM PM clickable
+    aftershow: function(){} //Function for after opening timepicker  
+  });
+  </script>
+ 
+</div>
+
+</body>
+    
+
+	  </html>

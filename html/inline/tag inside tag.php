@@ -2,6 +2,18 @@
 //namespace ankilib;
 Class abc
 {
+
+	function make($attribute,$val,$ops)
+	{
+		$a="<$attribute";
+
+		$a.=$this->ops($ops);
+
+        $a.=">".htmlentities($val)."</$attribute>";
+
+        return $t;
+
+
  function makeTag($name,$val,$ops){
 
 
@@ -17,23 +29,14 @@ Class abc
 
     }
 
-	
+	}
 	
 
 	function u($gr)
 	{
-
-		function b($gr)	
-	{
-
-$par=array('name'=>'','id'=>'','class'=>'','style'=>'');
-$ops=array_intersect_key($gr,$par);
-return $this->makeTag('b',$gr['val'],$ops);
-	}
-
 $par=array('target'=>'','name'=>'','href'=>'','shape'=>'');
 $ops=array_intersect_key($gr,$par);
-echo 'hello';
+//echo 'hello';
 //echo $a->b($gr);
 return $this->makeTag('u',$gr['val'],$ops);
 //return $this->makeTag('b',$gr['val'],$ops);
@@ -41,6 +44,14 @@ return $this->makeTag('u',$gr['val'],$ops);
 	}
 	//http://192.168.2.61/dev/html/inline/u.php?val=deepak
 	
+
+		function b($gr)	
+	{
+
+$par=array('name'=>'','id'=>'','class'=>'','style'=>'');
+$ops=array_intersect_key($gr,$par);
+return $this->make('b',$gr['val'],$ops);
+	}
 		
 	function ops($ops)
 	{

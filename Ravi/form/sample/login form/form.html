@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	
+	<script>
+	
+  $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15 // Creates a dropdown of 15 years to control year
+  });
+      
+	  </script>
+
+	</head>
+<body class="container">
+<div class="row">
+	<div class="user-login-form-container">
+		<form id="login-form" class="col s12">
+			<div class="">Welcome to GST101</div>
+			<h4>Sign in</h4>
+			<div class="form-header">Login with your email address</div>
+			<div class="row">
+			<div class="nput-field col s4"><input type="text" name="email" id="email" class="validate" placeholder="Enter your mail id"></div></div>
+			<div class="row">
+			<div class="input-field col s4"><input type="password" name="password" id="password" placeholder="Enter your cleartax password"><a class="forgot-password-link" href="forgot password.html">Forgot password ?</a></div></div>
+			<div class="row">
+				<div class="input-field inline">
+			<div class="col s6"><input type="submit" value="Login" class="btn waves-effect waves-light"></div>
+			<div class="nput-field col s8"><!-- react-text: 41 -->New to ClearTax ?<!-- /react-text --><a href="http://192.168.2.61/dev/Ravi/form/signup.html">Sign up</a></div></div></div>
+		</form>
+	</div>
+</div>
+	</body>   
+</html>

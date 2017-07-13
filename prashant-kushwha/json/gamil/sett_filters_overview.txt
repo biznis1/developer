@@ -1,5 +1,5 @@
 {
-  "id": string,
+  "id": "string",
   "criteria": {
     "from": "string",
     "to": "string",

@@ -1,14 +1,14 @@
 <?php 
 
-$json=file_get_contents(__DIR__.'/message_overview.txt');
+/* $json=file_get_contents(__DIR__.'/message_overview.txt');
 $jr=json_decode($json,1);
 $ar=message_overviewDecode($jr);
-print_r($ar);
+print_r($ar); */
 
-/* $json=file_get_contents(__DIR__.'/mess_modify.txt');
+$json=file_get_contents(__DIR__.'/mess_modify.txt');
 $jr=json_decode($json,1);
 $ar=mess_modifyDecode($jr);
-print_r($ar); */
+print_r($ar);
 
 /* $json=file_get_contents(__DIR__.'/drafts.txt');
 $jr=json_decode($json,1);
@@ -69,18 +69,19 @@ print_r($ar); */
 
 function message_overviewDecode($ir)
 {
-	$rar['message_overview']=array('id'=>$ir['id'], 'thread_id'=>$ir['threadId'], 'label_ids'=>$ir['labelIds'], 'snippet'=>$ir['snippet'], 'history_id'=>$ir['historyId'], 'internal_date'=>$ir['internalDate'], 'payload'=>$ir['payload'], 'size_estimate'=>$ir['sizeEstimate'], 'raw'=>$ir['raw']);
-	$rar['message_overview']['payload']=array('part_id'=>$ir['payload']['partId'], 'mime_type'=>$ir['payload']['mimeType'], 'filename'=>$ir['payload']['filename'], 'headers'=>$ir['payload']['headers'], 'body'=>$ir['payload']['body'], 'parts'=>$ir['payload']['parts'],);
-	$rar['message_overview']['payload']['headers']=array('name'=>$ir['payload']['headers'][0]['name'], 'value'=>$ir['payload']['headers'][0]['value']);
-	$rar['message_overview']['payload']['parts']=$ir['payload']['parts'];
+	$rar['message']=array('id'=>$ir['id'], 'thread_id'=>$ir['threadId'], 'snippet'=>$ir['snippet'], 'history_id'=>$ir['historyId'], 'internal_date'=>$ir['internalDate'], 'size_estimate'=>$ir['sizeEstimate'], 'raw'=>$ir['raw']);
+	$rar['message_label_ids']=$ir['labelIds'];
+	$rar['message_payload']=array('part_id'=>$ir['payload']['partId'], 'mime_type'=>$ir['payload']['mimeType'], 'filename'=>$ir['payload']['filename'], 'body'=>$ir['payload']['body']);
+	$rar['message_headers']=array('name'=>$ir['payload']['headers'][0]['name'], 'value'=>$ir['payload']['headers'][0]['value']);
+	$rar['message_parts']=$ir['payload']['parts'];
 	
 	return $rar;
 }
 
 function mess_modifyDecode($ir)
 {
-	$rar['mess_modify']=array('add_label_ids'=>$ir['addLabelIds'],'remove_label_ids'=>$ir['removeLabelIds']);
-	
+	$rar['mess_modify_add_label_ids']=$ir['addLabelIds'];
+	$rar['mess_modify_remove_label_ids']=$ir['removeLabelIds'];
 	return $rar;
 }
 

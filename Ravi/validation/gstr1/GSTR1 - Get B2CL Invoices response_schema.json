@@ -1,0 +1,112 @@
+{
+  "id": "Get-B2CL-Schema",
+  "properties": {
+    "b2cl": {
+      "items": {
+        "properties": {
+          "inv": {
+            "items": {
+              "properties": {
+                "chksum": {
+                  "maxLength": 2,
+                  "description": "Invoice checksum",
+                  "type": "string",
+                  "pattern": "^[a-zA-Z0-9]+$",
+                  "minLength": 1
+                },
+                "etin": {
+                  "description": "Ecom Tin",
+                  "type": "string",
+                  "maxLength": 15,
+                  "minLength": 15,
+                  "pattern": "^[a-zA-Z0-9._\\s]+$"
+                },
+                "idt": {
+                  "description": "Supplier Invoice Date",
+                  "type": "string",
+                  "pattern": "^((0[1-9]|[12][0-9]|3[01])[-](0[1-9]|1[012])[-]((19|20)\\d\\d))$"
+                },
+                "inum": {
+                  "maxLength": 2,
+                  "description": "Supplier Invoice Number",
+                  "type": "string"
+                },
+                "itms": {
+                  "items": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "itm_det": {
+                        "additionalProperties": false,
+                        "properties": {
+                          "rt": {
+                            "description": "rate as per invoice",
+                            "type": "number"
+                          },
+                          "iamt": {
+                            "description": "IGST Amount as per invoice",
+                            "type": "number"
+                          },
+                          "txval": {
+                            "description": "Taxable value of Goods or Service as per invoice",
+                            "type": "number",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "rt",
+                          "iamt",
+                          "txval"
+                        ],
+                        "type": "object"
+                      },
+                      "num": {
+                        "description": "Serial no",
+                        "type": "number",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "itm_det",
+                      "num"
+                    ],
+                    "type": "object"
+                  },
+                  "type": "array"
+                },
+                "val": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "val",
+                "idt",
+                "inum",
+                "chksum",
+                "itms"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "pos": {
+            "description": "Actual Place of Supply",
+            "maxLength": 2,
+            "minLength": 2,
+            "type": "string"
+          }
+          
+        },
+        "required": [
+          "inv",
+          "pos"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "b2cl"
+  ],
+  "type": "object"
+}

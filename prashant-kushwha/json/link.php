@@ -1,4 +1,9 @@
-<?php
-    $con = mysql_connect("username","password","") or die('Could not connect: ' . mysql_error());
-    mysql_select_db("employee", $con);
-?>
+ <?php
+try {
+	$conn = new PDO("mysql:host=localhost;dbname=prashant", "root", "root");
+    echo "Connected successfully";
+    }
+catch(PDOException $e)
+    {
+    echo "Connection failed: " . $e->getMessage();
+    }

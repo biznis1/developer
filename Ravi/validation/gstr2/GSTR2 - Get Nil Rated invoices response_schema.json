@@ -1,0 +1,62 @@
+{
+	"properties": {
+		"nil_supplies": {
+			"properties": {
+				"chksum": {
+					"type": "string"
+				},
+				"inter": {
+					"properties": {
+
+						"cpddr": {
+							"description": "Value of supplies received from Compounding Dealer",
+							"type": "number"
+						},
+						"exptdsply": {
+							"description": "Value of exempted supplies received",
+							"type": "number"
+						},
+						"ngsply": {
+							"description": "Total Non GST outward supplies",
+							"type": "number"
+						},
+						"nilsply": {
+							"description": "Nil Rated Supply",
+							"type": "integer"
+						}
+					},
+					"type": "object"
+				},
+				"intra": {
+					"properties": {
+						"cpddr": {
+							"description": "Value of supplies received from Compounding Dealer",
+							"type": "number"
+						},
+						"exptdsply": {
+							"description": "Value of exempted supplies received",
+							"type": "number"
+						},
+						"ngsply": {
+							"description": "Total Non GST outward supplies",
+							"type": "number"
+						},
+						"nilsply": {
+							"description": "Nil Rated Supply",
+							"type": "integer"
+						}
+					},
+					"type": "object"
+				}
+			},
+			"required": [
+				"chksum"
+			],
+			"type": "object"
+		}
+	},
+	"required": [
+		"nil_supplies"
+	],
+	"type": "object"
+}

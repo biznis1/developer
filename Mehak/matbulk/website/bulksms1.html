@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <style>
+  .select-wrapper + label {
+    position: absolute;
+    top: -14px;
+    font-size: 18px;
+}
+.input-field label {
+  color: #9e9e9e;
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  font-size: 16px;
+  cursor: text;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
+  text-align: initial;
+}
+label {
+  font-size: 16px;
+  color: #9e9e9e;
+}
+</style>
+  
+  </head>
+  <body>
+  <div class="container">
+  <div class="row">
+ 
+    <form class="col s12">
+  <div class="row">
+        <div class="col s12 m12">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title" align="center">BulkSMS Send SMS Form</span>
+			  </div>
+			  </div>
+			  </div>
+			  </div>
+			</div>
+  
+      <div class="row">
+	
+        <div class="input-field col s12">
+          <textarea id="message" class="materialize-textarea" placeholder="Enter your message here" ></textarea>
+          <label for="textarea1">Message</label>
+        </div>
+		</div>
+      
+	   
+	   <div class="row">
+	   <div class="input-field col s4 ">
+          <input value=" " id="message_length" type="text">
+          <label for="message_length">Length</label>
+        </div>
+		
+	
+
+		 <div class="input-field col s4">
+          <input value=" " id="message_parts" type="text" class="validate">
+          <label for="message_parts">Messages</label>
+        </div>
+		<div class="input-field col s4">
+	<p>
+      <input type="checkbox" id="message_unicode"/>
+      <label for="message_unicode">Unicode</label>
+    </p>
+	</div>
+		</div>
+	  
+	        <div class="row">
+        <div class="input-field col s12">
+          <textarea id="numbers" class="materialize-textarea"></textarea>
+          <label for="numbers">Number</label>
+        </div>
+		</div>
+   <div class="row">
+	  <div class="input-field col s6">
+          <input id="groups" type="text" class="validate">
+          <label for="groups">Groups</label>
+        </div>
+		<div class="input-field col s6">
+          <input id="schedule" type="text" class="validate">
+          <label for="schedule">schedule</label>
+        </div>
+		</div>
+		<div class="row">
+
+    <div class="input-field col s3">
+	
+    <select id="sender_id">  
+                
+       <option value="" disabled selected></option>
+      <option value="1">Id1</option>
+      <option value="2">Id2</option>
+      <option value="3">Id3</option>
+	   <option value="4">Id4</option>
+	    <option value="5">Id5</option>
+                  
+                </select>
+	<label>sender id </label>
+  </div>
+  
+  
+		
+		</div>
+		<a class="waves-effect waves-light btn" style="float:right;">Submit Quote Form</a>
+</div>
+
+  
+  </form>
+  </body>
+  <script src="jquery.js"></
+	  <script src="jquery.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/custom.js"></script>
+  <script>
+$(document).ready(function(){
+	
+	$("#message").keyup(function(){ 
+	r=smsCount(this.value);
+	$('#message_length').val(r[0]);
+	if(r[1] == 1) {
+		$('#message_unicode').prop('checked', true);
+	}else {
+		$('#message_unicode').prop('checked', false);
+	} 
+	$('#message_parts').val(r[2]);
+	})
+});
+
+
+function smsCount(Msg) {
+    var unicodeFlag = 0;
+   var extraChars = 0;
+   var msgCount = 0; 
+   for (var i = 0; (!unicodeFlag && (i < Msg.length)); i++) {
+      if ((Msg.charAt(i) >= '0') && (Msg.charAt(i) <= '9')) {
+      }
+      else if ((Msg.charAt(i) >= 'A') && (Msg.charAt(i) <= 'Z')) {
+      }
+      else if ((Msg.charAt(i) >= 'a') && (Msg.charAt(i) <= 'z')) {
+      }
+      else if (Msg.charAt(i) == '@') {
+      }
+      else if (Msg.charCodeAt(i) == 0xA3) {
+      }
+      else if (Msg.charAt(i) == '$') {
+      }
+      else if (Msg.charCodeAt(i) == 0xA5) {
+      }
+      else if (Msg.charCodeAt(i) == 0xE8) {
+      }
+      else if (Msg.charCodeAt(i) == 0xE9) {
+      }
+      else if (Msg.charCodeAt(i) == 0xF9) {
+      }
+      else if (Msg.charCodeAt(i) == 0xEC) {
+      }
+      else if (Msg.charCodeAt(i) == 0xF2) {
+      }
+      else if (Msg.charCodeAt(i) == 0xC7) {
+      }
+      else if (Msg.charAt(i) == '\r') {
+      }
+      else if (Msg.charAt(i) == '\n') {
+      }
+      else if (Msg.charCodeAt(i) == 0xD8) {
+      }
+      else if (Msg.charCodeAt(i) == 0xF8) {
+      }
+      else if (Msg.charCodeAt(i) == 0xC5) {
+      }
+      else if (Msg.charCodeAt(i) == 0xE5) {
+      }
+      else if (Msg.charCodeAt(i) == 0x394) {
+      }
+      else if (Msg.charAt(i) == '_') {
+      }
+      else if (Msg.charCodeAt(i) == 0x3A6) {
+      }
+      else if (Msg.charCodeAt(i) == 0x393) {
+      }
+      else if (Msg.charCodeAt(i) == 0x39B) {
+      }
+      else if (Msg.charCodeAt(i) == 0x3A9) {
+      }
+      else if (Msg.charCodeAt(i) == 0x3A0) {
+      }
+      else if (Msg.charCodeAt(i) == 0x3A8) {
+      }
+      else if (Msg.charCodeAt(i) == 0x3A3) {
+      }
+      else if (Msg.charCodeAt(i) == 0x398) {
+      }
+      else if (Msg.charCodeAt(i) == 0x39E) {
+      }
+      else if (Msg.charCodeAt(i) == 0xC6) {
+      }
+      else if (Msg.charCodeAt(i) == 0xE6) {
+      }
+      else if (Msg.charCodeAt(i) == 0xDF) {
+      }
+      else if (Msg.charCodeAt(i) == 0xC9) {
+      }
+      else if (Msg.charAt(i) == ' ') {
+      }
+      else if (Msg.charAt(i) == '!') {
+      }
+      else if (Msg.charAt(i) == '\"') {
+      }
+      else if (Msg.charAt(i) == '#') {
+      }
+      else if (Msg.charCodeAt(i) == 0xA4) {
+      }
+      else if (Msg.charAt(i) == '%') {
+      }
+      else if (Msg.charAt(i) == '&') {
+      }
+      else if (Msg.charAt(i) == '\'') {
+      }
+      else if (Msg.charAt(i) == '(') {
+      }
+      else if (Msg.charAt(i) == ')') {
+      }
+      else if (Msg.charAt(i) == '*') {
+      }
+      else if (Msg.charAt(i) == '+') {
+      }
+      else if (Msg.charAt(i) == ',') {
+      }
+      else if (Msg.charAt(i) == '-') {
+      }
+      else if (Msg.charAt(i) == '.') {
+      }
+      else if (Msg.charAt(i) == '/') {
+      }
+      else if (Msg.charAt(i) == ':') {
+      }
+      else if (Msg.charAt(i) == ';') {
+      }
+      else if (Msg.charAt(i) == '<') {
+      }
+      else if (Msg.charAt(i) == '=') {
+      }
+      else if (Msg.charAt(i) == '>') {
+      }
+      else if (Msg.charAt(i) == '?') {
+      }
+      else if (Msg.charCodeAt(i) == 0xA1) {
+      }
+      else if (Msg.charCodeAt(i) == 0xC4) {
+      }
+      else if (Msg.charCodeAt(i) == 0xD6) {
+      }
+      else if (Msg.charCodeAt(i) == 0xD1) {
+      }
+      else if (Msg.charCodeAt(i) == 0xDC) {
+      }
+      else if (Msg.charCodeAt(i) == 0xA7) {
+      }
+      else if (Msg.charCodeAt(i) == 0xBF) {
+      }
+      else if (Msg.charCodeAt(i) == 0xE4) {
+      }
+      else if (Msg.charCodeAt(i) == 0xF6) {
+      }
+      else if (Msg.charCodeAt(i) == 0xF1) {
+      }
+      else if (Msg.charCodeAt(i) == 0xFC) {
+      }
+      else if (Msg.charCodeAt(i) == 0xE0) {
+      }
+      else if (Msg.charCodeAt(i) == 0x391) {
+      }
+      else if (Msg.charCodeAt(i) == 0x392) {
+      }
+      else if (Msg.charCodeAt(i) == 0x395) {
+      }
+      else if (Msg.charCodeAt(i) == 0x396) {
+      }
+      else if (Msg.charCodeAt(i) == 0x397) {
+      }
+      else if (Msg.charCodeAt(i) == 0x399) {
+      }
+      else if (Msg.charCodeAt(i) == 0x39A) {
+      }
+      else if (Msg.charCodeAt(i) == 0x39C) {
+      }
+      else if (Msg.charCodeAt(i) == 0x39D) {
+      }
+      else if (Msg.charCodeAt(i) == 0x39F) {
+      }
+      else if (Msg.charCodeAt(i) == 0x3A1) {
+      }
+      else if (Msg.charCodeAt(i) == 0x3A4) {
+      }
+      else if (Msg.charCodeAt(i) == 0x3A5) {
+      }
+      else if (Msg.charCodeAt(i) == 0x3A7) {
+      }
+      else if (Msg.charAt(i) == '^') {
+         extraChars++;
+      }
+      else if (Msg.charAt(i) == '{') {
+         extraChars++;
+      }
+      else if (Msg.charAt(i) == '}') {
+         extraChars++;
+      }
+      else if (Msg.charAt(i) == '\\') {
+         extraChars++;
+      }
+      else if (Msg.charAt(i) == '[') {
+         extraChars++;
+      }
+      else if (Msg.charAt(i) == '~') {
+         extraChars++;
+      }
+      else if (Msg.charAt(i) == ']') {
+         extraChars++;
+      }
+      else if (Msg.charAt(i) == '|') {
+         extraChars++;
+      }
+      else if (Msg.charCodeAt(i) == 0x20AC) {
+         extraChars++;
+      }
+      else {
+         unicodeFlag = 1;
+      }
+   }
+    
+   if (unicodeFlag) {
+      msgCount = Msg.length;
+
+ 
+      if (msgCount <= 70) {
+         msgCount = 1;
+      }
+      else {
+         msgCount += (67-1);
+         msgCount -= (msgCount % 67);
+         msgCount /= 67;
+      }
+   } 
+   else {
+      msgCount = Msg.length + extraChars;
+	
+      if (msgCount <= 160) {
+         msgCount = 1;
+      }
+      else {
+         msgCount += (153-1);
+         msgCount -= (msgCount % 153);
+         msgCount /= 153;
+      }
+   }
+    return [Msg.length,unicodeFlag,msgCount]
+ 
+    
+}
+</script>
+  
+	
+  </html>

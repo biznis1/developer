@@ -1,0 +1,18 @@
+The JSON structure below shows the format of a watermarks resource:
+
+
+
+{
+  "timing": {
+    "type": "string",
+    "offsetMs": "unsigned long",
+    "durationMs": "unsigned long"
+  },
+  "position": {
+    "type": "string",
+    "cornerPosition": "string"
+  },
+  "imageUrl": "string",
+  "imageBytes": "bytes",
+  "targetChannelId": "string"
+}

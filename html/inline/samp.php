@@ -41,7 +41,7 @@ return $this->makeTag('samp',$gr['val'],$ops);
 //$r=array("name"=>"test");
 $gr=$_GET;
 //echo $a->makeTag('p','this is a text',$r);
-echo $a->samp(	$gr);
+echo $a->samp($gr);
 
 //ops[]=array('name'=>'','id'=>'','class'=>'','style'=>'');
 

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  
+<!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
+  </head>
+    <h5 style="margin-left:20px;" >PayPal Payment (Billed in USD) </h5>
+    <br><br>
+    <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email" data-error="wrong" data-success="right">Payment for:</label>
+        </div>
+         <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email" data-error="wrong" data-success="right">Amount in AED::</label>
+        </div> 
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email" data-error="wrong" data-success="right">Amount in USD (includes a 2% Paypal Transaction Charge):</label>
+        </div> 
+        
+    <a class="waves-effect waves-light btn">Buy Now</a><br>
+         <img src="https://png.icons8.com/visa/color/24" title="Visa" width="24" height="24">
+          <!-- MasterCard icon by Icons8 -->
+<img src="https://png.icons8.com/mastercard/win8/26" title="MasterCard" width="26" height="26">
+          <img class="icon icons8-Credit-Card" width="26" height="26" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABe0lEQVRoQ2NkGOKAcYi7n2HUAwMdg6MxMBoDFIbAaBKiMAAp1o4RAwnbvysw//vfDzTZACipQLENVDDgPwPDA6AxF/4yMRYu8OQEseEAxQNgx//9d56RkVGACvZS3Yj///9/+MvMZIjsCRQPpGz9tgFoqz/VbaaugRvneHMFwIxE8UDylq/vB2vowxwMSk5zvbkUsXoAGANA+cEPgDEAD3iUGDB39x8SHji5c+OoBwY0nY3GwIAGP9Dy4RsDQ74YHTYeqLdlH+hkjtX+xsM/weI4KzJYDIx6gEbxNxoDNApYoo0lOgaINnGAFBLMxAPkLqKtHfUA0UFFI4WjMUCjgCXa2NEYIDqoaKQQTwx8/cDAwMhPI3upYixw1OEhcFhFAdewytAe2AINLbL8+3dh8MbC/49/mJgMcA4tgqIF4on/E4BRBRrcladKvFNoCCjZAN1y4Q8TYwHewV0K7RkQ7aMTHAMS7EiWjsbAaAxQGAKjSYjCAKRY+5CPAQAVDaoxNXYWiAAAAABJRU5ErkJggg==">
+          <img class="icon icons8-Debit-Card" width="26" height="26" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAFV0lEQVR4Xu1aS28cRRCumd2d8dobYgtk84g4cAYBijgmCnEULMQjnJB9IYmEBEoOscLfiMwhuSGSXOCCRARIGJT8ByD8AsQzUrCD4+x7hqpe92xPb/d4ema2vcpOH3t6aqq+rvqqunocmPLhTLn9UAJQesCUI1CGwJQ7QEmCZQiUITDlCJQhMOUOUGaBKAQ2Ll2fD7qwgZCcQa+Yf2w9I4Qbbg3W1z89t002RgBcufD5LXCcdx9bwwXDwjC8+cm182fjAFy8HtJE541lCJ5eHBsOlYoDT9QBHrYBul32STb4vPhheQ1/1vAdqNXMVQz+uAftW7fpxe3LV88tKAFofbBqLjnlG46Dxs8CtNHwVmf4Ep93hZzU7MTX8NUzHkDdy568mte+YKIQACZkGAJ7HjBOABq48/TBnWYcsUN1B6qV4VynB7DbGnoHf1JD7yEZecaBAUC7VquGaLwDGIORDTRPu8pHPxhdQ89cdI9DaLzoJaZANDHs4LMD8ACv5sAsGrnTAuj3h8bT/Jw/NINwkdcwN8XQacxAzEtMjaewe4QAzNz80m4IELmR8k2M+Y5EejQv7uguKiiu4UbOIkg+gpV19PpIugg+eZ5VABi51UPo9BwEYLjzfJ7cmg8iRXFNRHpoeF3wElMQyKv+Q84JMLRoWAVAR3o0T4TGRw/DQiZGelYE6T1E47tC2FkDgIhtBnfvwaOB6/GRlvRUqdF091Wp1AoANTS8gW5LrpeF9MhQOTWaGq9LpZkB8L79HsJGA7qvH2O6uL/9DtWffgV3a0upG1v72qsQPH+EPedkaJv0ZOUyAUCGVn++C8HSInRWlplM76tvwN3dTdyYYGEBOu+sKNMYT0uyADk1mu68LpVGpGqaBp37W+B/t8neb7+1AuGTrISO2PTiOjtUjYyrG4MDJVWWcu1OaWmnOVrp+T/cAefve6Y2x9aHzyxB+/RJrQxjDyDXd//dht7LL0HvlRcjwVzQfgDAh6ux2p12SCZGEkqkV//xNgR/5gNA9FIVCtYBqF9Yi+khEyN/KKdGUzfQpdLcHJA3BEQAdJWenBpNjdedHwrxABISkeAeqdFcGhJ0n5oH//03B/yxV4vLSo2b9HJ7ABfA0uDcHHRPHmdTlAa9X+4C3FeTIDTmwDt2FCovHAEd6alSo+nu67xKJ8eYA7SCsNihak+ss2mt3LCQa3EuT3UeMDVed35IklMIALxGl+tsVe0ur7FNeoWFABfEGxNtPL21hOOtqmFBDQhxDZeRt62lS6VpPCi3B1CNTidLsWWlaljoSI+fE9Ioq1ujS6VpZOYCgBoTFSzmeXOBf1BuWIgNCFGpgyC9wkJA19aiI6/YsEgivaLaWml2utAsQDvnb+rLVPe5JfDPDA5JnPS8zTvg/qMua8X1XNH218nyK28vx84PSfL7eK/RxfsN1TAOgaiXjwrCXxqDnl0E/71TrKXF+/2JAOytFxVMBADXN0+fijVWkuQnnQeMAVCRHilus5evS6VZQsEIAF0vPy3pFdXLV6XSLMazQi1tP0AmvSSX208ZMeZVrq7iBJKpS6X7fS93Jajq5ecCQIh5JQAKTtCl0jzGp/KA9tk1fS8fLzZTXWAW3MvPa7T4/r4hUP1o9cAvMIskPeNCyPt4deQCUyY9XQNiXL18qx7QPb82cb18qwCI/wdMSi/fKgD8FxmTC0zbba2sgLjYcvew9Y5XdQ/wHyHWty9/kuJoDn6TC2/gUf8E7v7hrChP+nv0h1il5lwa+U1u0hUfl37Zf7sYl0aW5ZYAWAZ84j5XesDEbYllhUoPsAz4xH2u9ICJ2xLLCv0PhH+3bucWdQwAAAAASUVORK5CYII=">
+          
+        </div></form></div>
+    
+    
+    <h5 style="margin-left:20px;" >BANKING INFORMATION </h5>
+    <h6 style="margin-left:20px;">Please use the following bank account information in order to make payments.</h6>
+    
+    
+    <table class="striped" style="margin-left:20px;" >
+        <thead>
+          <tr>
+              <th>Bank Name</th>
+              <th> RAK BANK</th>
+              
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Account Name</td>
+            <td>Ankiti Technologies FZCO</td>
+            
+          </tr>
+          <tr>
+            <td>IBAN - International Bank Account Number</td>
+            <td>AE380400000332371024001</td>
+           
+          </tr>
+          <tr>
+            <td>SWIFT Code</td>
+            <td>NRAKAEAK</td>
+            
+          </tr>
+            <tr>
+            <td>Local Account Number</td>
+            <td>0332371024001 (for local transfers/deposits)</td>
+            
+          </tr>
+        </tbody>
+      </table><br><br>
+    <h5 style="margin-left:20px;">For a List of RAK Bank Branches, Please<a href="https://rakbank.ae/wps/portal/header/atm-branches"> click here</a></h5>
+    
+     <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+        
+    <script>$(document).ready(function() {
+    Materialize.updateTextFields();
+  });</script> 
+      
+</html>

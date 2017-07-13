@@ -1,5 +1,5 @@
 {
   "sendAs": [
-    users.settings.sendAs Resource
+    "users.settings.sendAs Resource"
   ]
 }

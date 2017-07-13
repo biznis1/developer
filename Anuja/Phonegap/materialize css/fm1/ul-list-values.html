@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  
+   
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+ <script type="text/javascript">
+   $(document).ready(function(){
+$('#result').append(
+    $('#thelist').find('li').filter(function() {
+        return $(this).find('ul').length === 0;
+    }).map(function(i, e) {
+        return $(this).text();
+    }).get().join('<br/>')
+);
+});
+
+ </script>
+</head>
+<body class="container">
+ <div class="row">
+    <div class="col s12">
+<ul id="thelist">
+  <li style="height: 65px; display: list-item; ">
+    <ul>
+      <li class="botHeader">
+        "Evelin dice"
+                <span>14:37:52</span>
+      </li>
+      <li class="botMsg">
+        "Hola, bienvenido"
+      </li>
+    <ul>
+  </li>
+  <li style="height: 26px; display: list-item; ">
+    <ul>
+      <li class="userHeader">
+        "Usted dice"
+                <span>14:37:59</span>
+      </li>
+      <li class="userMsg">
+        "Hola como estas"
+      </li>
+    <ul>
+  </li>
+  <li style="height: 39px; display: list-item; ">
+    <ul>
+      <li class="botHeader">
+        "Evelin dice"
+                <span>14:37:59</span>
+      </li>
+      <li class="botMsg">
+        "Gracias por preguntar, todo bien"
+      </li>
+    <ul>
+  </li>
+</ul>
+
+<a href="#" id="send">enviar</a>
+<div id="result">
+
+</div>
+
+	
+    </div>
+  </div>
+         </body>
+	  
+	  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+   <script src="js/custom.js"></script>
+	  </html>

@@ -1,0 +1,403 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+
+      <!--Import materialize.css-->
+
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <!--Import style.css-->
+      <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
+         
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/> -->
+  <!-- <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/> -->
+   <link href="http://materializecss.com/css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+    <style type="text/css">
+      .green {
+    background-color: green !important;
+    height: 100px;
+}
+.red {
+    background-color: red !important;
+    height: 100px;
+}
+.blue {
+    background-color: blue !important;
+    height: 100px;
+}
+
+    </style>
+
+
+    </head>
+
+      <body style="background-color:#f9f9f9;" >
+   
+<div class="navbar-fixed">     
+ <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+</div>   
+     
+        <br><br>      
+
+ <div class="container">
+   
+
+    <div class="carousel">
+    <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/250/250/nature/1"></a>
+    <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/250/250/nature/2"></a>
+    <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/250/250/nature/3"></a>
+    <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/250/250/nature/4"></a>
+    <a class="carousel-item" href="#five!"><img src="https://lorempixel.com/250/250/nature/5"></a>
+  </div>  
+
+<ul class="collapsible " data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header">First</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header">Second</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header">Third</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+  </ul>
+
+   <ul class="collapsible  popout" data-collapsible="accordion"> 
+    <li>
+      <div class="collapsible-header">First</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header">Second</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header">Third</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+  </ul>
+        <ul class="collapsible" data-collapsible="accordion"><li>
+      <div class="collapsible-header">First</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header">Second</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header">Third</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li></ul>
+
+    <ul class="collapsible" data-collapsible="expandable"> 
+     <li><div class="collapsible-header">First</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header">Second</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header">Third</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li></ul>
+
+   <div> <a class="btn" onclick="Materialize.toast('I am a toast', 4000)">Toast!</a></div>
+
+    <div class="row"><div><a class="btn" onclick="Materialize.toast('I am a toast', 4000,'',function(){alert('Your toast was dismissed')})">Toast!</a></div></div>
+    <!-- data-position can be : bottom, top, left, or right -->
+  <!-- data-delay controls delay before tooltip shows (in milliseconds)-->
+  <a class="btn tooltipped" data-position="right" data-delay="50" data-tooltip="I am tooltip">Hover me!</a>
+
+  <div class="container">   
+  <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Drop Me!</a>
+
+    
+  <ul id='dropdown1' class='dropdown-content'>
+    <li><a href="#!">one</a></li>
+    <li><a href="#!">two</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">three</a></li>
+    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+  </ul></div>
+
+  <div class="container">
+  <div class="row">
+    <div class="col s12">
+      <a class="waves-effect waves-light btn" onclick="$('.tap-target').tapTarget('open')">Open tap target</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="waves-effect waves-light btn" onclick="$('.tap-target').tapTarget('close')">Close tap target</a>
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+          <a id="menu" class="btn btn-floating btn-large cyan"><i class="material-icons">menu</i></a>
+        </div>
+        <div class="tap-target-wrapper" style="right: -348px; bottom: -327px; position: fixed;"><div class="tap-target cyan" data-activates="menu">
+          <div class="tap-target-content white-text" style="width: 456px; height: 400px; top: 0px; right: 0px; bottom: 0px; left: 0px; padding: 56px; vertical-align: bottom;">
+            <h5>I am here</h5>
+            <p class="white-text">Provide value and encourage return visits by introducing users to new features and functionality at contextually relevant moments.</p>
+          </div>
+        </div><div class="tap-target-wave" style="top: 344px; left: 344px; width: 112px; height: 112px;"><a class="btn btn-floating btn-large cyan tap-target-origin"><i class="material-icons">menu</i></a></div></div>
+
+  </div>
+  </div>
+          </div>
+
+              <img class="materialboxed" width="650" src="https://lorempixel.com/250/250/nature/1">
+
+                <img class="materialboxed" data-caption="A picture of a way with a group of trees in a park" width="250" src="https://lorempixel.com/800/400/nature/4">
+
+                 <div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/1"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/2"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Left Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/3"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>Right Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/4"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <a class="waves-effect waves-light btn" href="#modal">Modal</a>
+
+  <!-- Modal Structure -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+       <!-- <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Disagree</a> -->
+    </div>
+  </div>
+
+
+    <div class="parallax-container">
+      <div class="parallax"><img src="images/parallax1.jpg"></div>
+    </div>
+
+    <a class="waves-effect waves-light btn-large" href="#">Wave</a>
+
+    <a href="#!" class="waves-effect waves-circle waves-light btn-floating secondary-content">
+    <i class="material-icons">add</i></a>
+
+    <div><a href="#!" class="btn" onclick="Materialize.showStaggeredList('#staggered-test')">Click Me</a></div>
+
+    <div>  <a href="#!" class="btn" onclick="Materialize.fadeInImage('#image-test')">Click Me</a></div>
+
+     <div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s3"><a href="#test1">Test 1</a></li>
+        <li class="tab col s3"><a class="active" href="#test2">Test 2</a></li>
+        <li class="tab col s3 disabled"><a href="#test3">Disabled Tab</a></li>
+        <li class="tab col s3"><a href="#test4">Test 4</a></li>
+      </ul>
+    </div>
+    <div id="test1" class="col s12">Test 1</div>
+    <div id="test2" class="col s12">Test 2</div>
+    <div id="test3" class="col s12">Test 3</div>
+    <div id="test4" class="col s12">Test 4</div>
+  </div>
+
+
+  <div class="container"><ul id="tabs-swipe-demo" class="tabs">
+    <li class="tab col s3"><a href="#test-swipe-1">Test 1</a></li>
+    <li class="tab col s3"><a class="active" href="#test-swipe-2">Test 2</a></li>
+    <li class="tab col s3"><a href="#test-swipe-3">Test 3</a></li>
+  </ul>
+  <div id="test-swipe-1" class="col s12 blue">Test 1</div>
+  <div id="test-swipe-2" class="col s12 red">Test 2</div>
+  <div id="test-swipe-3" class="col s12 green">Test 3</div>
+</div>
+
+ <ul id="slide-out" class="side-nav">
+    <li><div class="user-view">
+      <div class="background">
+        <img src="images/office.jpg">
+      </div>
+      <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
+      <a href="#!name"><span class="white-text name">John Doe</span></a>
+      <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+    </div></li>
+    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+    <li><a href="#!">Second Link</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Subheader</a></li>
+    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+  </ul>
+  <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+ <div class="row">
+    <div class="col s12 m9 l10">
+      <div id="introduction" class="section scrollspy">
+        <p>Content </p>
+      </div>
+
+      <div id="structure" class="section scrollspy">
+        <p>Content </p>
+      </div>
+
+      <div id="initialization" class="section scrollspy">
+        <p>Content </p>
+      </div>
+    </div>
+    <div class="col hide-on-small-only m3 l2">
+      <ul class="section table-of-contents">
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#structure">Structure</a></li>
+        <li><a href="#initialization">Intialization</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+<script type="text/javascript">  // Initialize collapse button
+  $(".button-collapse").sideNav();
+  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+  //$('.collapsible').collapsible();</script>
+  <script type="text/javascript">
+  $('.button-collapse').sideNav({
+      menuWidth: 300, // Default is 300
+      edge: 'right', // Choose the horizontal origin
+      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      draggable: true, // Choose whether you can drag to open on touch screens,
+      onOpen: function(el) { /* Do Stuff* / }, // A function to be called when sideNav is opened
+      onClose: function(el) { /* Do Stuff* / }, // A function to be called when sideNav is closed
+    }
+  );
+        </script>
+
+
+
+<script >var options = [
+      {selector: '#staggered-test', offset: 50, callback: function(el) {
+        Materialize.toast("This is our ScrollFire Demo!", 1500 );
+      } },
+      {selector: '#staggered-test', offset: 205, callback: function(el) {
+        Materialize.toast("Please continue scrolling!", 1500 );
+      } },
+      {selector: '#staggered-test', offset: 400, callback: function(el) {
+        Materialize.showStaggeredList($(el));
+      } },
+      {selector: '#image-test', offset: 500, callback: function(el) {
+        Materialize.fadeInImage($(el));
+      } }
+    ];
+    Materialize.scrollFire(options);</script>
+
+<script > var options = [
+    {selector: '.class', offset: 200, callback: customCallbackFunc } },
+    {selector: '.other-class', offset: 200, callback: function() {
+      customCallbackFunc();
+    } },
+  ];
+  Materialize.scrollFire(options);</script>
+<script > $(document).ready(function(){
+    $('.scrollspy').scrollSpy();
+  });</script>
+<script >  // Initialize collapse button
+  $(".button-collapse").sideNav();
+  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+  //$('.collapsible').collapsible();</script>
+
+  <script > $('.button-collapse').sideNav({
+      menuWidth: 300, // Default is 300
+      edge: 'right', // Choose the horizontal origin
+      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      draggable: true, // Choose whether you can drag to open on touch screens,
+      onOpen: function(el) { /* Do Stuff* / }, // A function to be called when sideNav is opened
+      onClose: function(el) { /* Do Stuff* / }, // A function to be called when sideNav is closed
+    }
+  );</script>
+
+  <script > $('.button-collapse').sideNav('show');</script>
+  <script > $(document).ready(function(){
+    $('ul.tabs').tabs();
+  });
+      </script>
+
+      <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/custom.js"></script>
+   
+   <script> 
+     $(document).ready(function(){
+    $('.collapsible').collapsible();
+  });</script>
+  <script > // Materialize.toast(message, displayLength, className, completeCallback);
+  Materialize.toast('I am a toast!', 4000) // 4000 is the duration of the toast</script>
+
+  <script >var $toastContent = $('<span>I am toast content</span>');
+  Materialize.toast($toastContent, 5000);
+        </script>
+
+        <script >Materialize.toast('I am a toast!', 3000, 'rounded') // 'rounded' is the class I'm applying to the toast
+</script>
+
+<script > $(document).ready(function(){
+    $('.tooltipped').tooltip({delay: 50});
+  });</script>
+  <script > $('.dropdown-button').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      constrainWidth: false, // Does not change width of dropdown to that of the activator
+      hover: true, // Activate on hover
+      gutter: 0, // Spacing from edge
+      belowOrigin: false, // Displays dropdown below the button
+      alignment: 'left', // Displays dropdown with edge aligned to the left of button
+      stopPropagation: false // Stops event propagation
+    }
+  );</script>
+
+  <script >  $(document).ready(function(){
+    $('.materialboxed').materialbox();
+  });</script>
+
+  <script > $(document).ready(function(){
+      $('.parallax').parallax();
+    });
+        </script>
+ 
+    </body>
+
+  </html>
+        

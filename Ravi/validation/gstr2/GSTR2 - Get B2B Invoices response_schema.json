@@ -1,0 +1,180 @@
+{
+  "type": "object",
+  "properties": {
+    "b2b": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ctin": {
+                  "description":"GSTIN/UID of the Receiver taxpayer/UN,Govt Bodies",
+                  "type":"string",
+                  "maxLength":15,
+                  "minLength":15,
+                  "pattern":"^[a-zA-Z0-9]+$"
+          },
+            "cfs": {
+             "description": "R2_Fil_Status",
+            "type": "string"
+          },
+          "inv": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+              "flag": {
+				  "description":"flag for accepting or rejecting a invoice",
+                  "type": "string"
+                },
+              "cflag": {
+				  "description":"flag for supplier action",
+                  "type": "string",
+                  "maxLength":2
+                },
+              "opd": {
+				  "description":"optional field only present for carry forwarded invoices",
+                  "type": "string"
+                },
+                "chksum": {
+				  "description":"checksum value",
+                  "type": "string"
+                },
+                "inum": {
+                  "type": "string",
+				  "description":"Supplier Invoice Number",
+                  "pattern":"^[a-zA-Z0-9]+$"
+                },
+                "idt": {
+                  "description":"Supplier Invoice Date",
+                  "type":"string",
+                  "pattern":"^((0[1-9]|[12][0-9]|3[01])[-](0[1-9]|1[012])[-]((19|20)\\d\\d))*$"
+                },              
+                "val": {
+				  "description":"Supplier Invoice Value",
+                  "type": "number"
+                },
+                "pos": {
+				  "description":"Maintained in GST System common database POS as provided in law / actual provision of service.",
+                  "type": "string"
+                },
+                "rchrg": {
+				  "description":"Reverse Charge",
+                  "type": "string"
+                },
+                "updby": {
+				  "description":"Uploaded by supplier/receiver",
+                  "type": "string"
+                },
+                "inv_typ": {
+				  "description":"flag to determine if it is sez or deemed",
+                  "type": "string"
+                }, 
+                "itms": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "num": {
+					    "description":"row numer",
+                        "type": "integer"
+                      },                   
+                      "itc": {
+                        "type": "object",
+						"description":"indirect tax component",
+                        "properties": {
+                          "tx_i": {
+						   "description":"Total Tax Available as ITC for igst ",
+                           "type": "number"
+                          },
+                          "tx_c": {
+						    "description":"Total Tax Available as ITC for cgst",
+                            "type": "number"
+                          },
+                          "tx_s": {
+						    "description":"Total Tax Available as ITC for sgst",
+                            "type": "number"
+                          },
+                          "tx_cs": {
+						    "description":"Total Tax Available as ITC for cess",
+                            "type": "number"
+                          },                  
+                          "elg": {
+						    "description":"eligibility",
+                            "type": "string"
+                          }
+                        },
+                        "required": [                 
+						  "elg"
+                        ]
+                      },
+                      "itm_det": {
+                        "type": "object",
+						"description":"details of the items of invoice",
+                        "properties": {          
+                          "txval": {
+						    "description":"Taxable value of Goods or Service as per invoice",
+                            "type": "number"
+                          },              
+                          "iamt": {
+						    "description":"tax amount for igst",
+                            "type": "number"
+                          },                 
+                          "camt": {
+						    "description":"tax amount for cgst",
+                            "type": "number"
+                          },                    
+                          "samt": {
+						    "description":"tax amount for sgst",
+                            "type": "number"
+                          },
+                          "csamt": {
+						    "description":"tax amount for cess",
+                            "type": "number"
+                          },
+						  "rt": {
+					         "description":"Tax Rate",
+                               "type": "number"
+                          }
+                        },
+                        "required": [
+                            "txval",
+                             "rt"							
+                        ]
+                      }
+                    },
+                    "required": [
+                      "num",
+                      "itm_det",
+                      "itc"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "chksum",
+                "flag",
+                "cflag",
+                "inum",
+                "idt",
+                "val",
+                "pos",
+                "rchrg",
+                "updby",
+                "inv_typ",             
+                "itms"
+             ]
+            }
+          }
+        },
+        "required": [
+          "ctin",
+          "cfs",
+          "inv"
+        ]
+      }
+    }
+  },
+  "required": [
+    "b2b"
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "type": "object",
+  "properties": {
+    "b2csa": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "chksum": {
+            "description": "Checksum Value",
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9]+$"
+          },
+          "omon": {
+            "description": "Month",
+            "type": "string",
+            "pattern": "^[a-zA-z0-9]+$"
+          },
+          "oty": {
+            "description": "Line Item Type i.e. Goods/Services",
+            "type": "string",
+            "pattern": "^[a-zA-z]+$"
+          },
+          "ohsn_sc": {
+            "description": "HSN/SAC Value",
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9]+$"
+          },
+          "osupst_cd": {
+            "description": "Supply State Code",
+            "type": "string"
+          },
+          "ty": {
+            "description": "Identifer if Goods or Services",
+            "type": "string",
+            "pattern": "^[a-zA-z]+$"
+          },
+          "hsn_sc": {
+            "description": "HSN or SAC of Goods or Services as per Invoice line items",
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9]+$"
+          },
+          "txval": {
+            "description": "Taxable value of Goods or Service as per invoice",
+            "type": "number"
+          },
+          "irt": {
+            "description": "IGST Rate as per invoice",
+            "type": "number"
+          },
+          "iamt": {
+            "description": "IGST Amount as per invoice",
+            "type": "number"
+          },
+          "crt": {
+            "description": "CGST Rate as per invoice",
+            "type": "number"
+          },
+          "camt": {
+            "description": "CGST Amount as per invoice",
+            "type": "number"
+          },
+          "srt": {
+            "description": "SGST Rate as per invoice",
+            "type": "number"
+          },
+          "samt": {
+            "description": "SGST Amount as per invoice",
+            "type": "number"
+          },
+          "prs": {
+            "description": "Provisional assessment",
+            "type": "string"
+          },
+          "od_num": {
+            "type": "string",
+            "description": "Order Number",
+            "pattern": "^[a-zA-Z0-9]+$"
+          },
+          "od_dt": {
+            "description": "Order Date",
+            "type": "string",
+            "pattern": "^((0[1-9]|[12][0-9]|3[01])[-](0[1-9]|1[012])[-]((19|20)\\d\\d))*$"
+          },
+          "typ": {
+            "description": "type, ECOM/ Non-Ecom",
+            "type": "string"
+          },
+          "etin": {
+            "description": "ECOM Operator GSTIN",
+            "type": "string"
+          }
+        },
+        "required": [
+          "chksum",
+          "omon",
+          "oty",
+          "ohsn_sc",
+          "osupst_cd",
+          "ty",
+          "hsn_sc",
+          "txval",
+          "prs",
+          "typ"
+        ]
+      }
+    }
+  },
+  "required": [
+    "b2csa"
+  ]
+}

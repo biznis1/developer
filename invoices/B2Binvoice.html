@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    
+    <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+   
+    </head>
+    <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      
+      
+      <div class="row center">
+          <a class="btn modal-trigger" onclick="$('#modal1').modal('open')" >GSTR1</a>
+      </div>
+      <br><br>
+
+    </div>
+  </div>
+
+<div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <center><h6>B2B invoice</h6></center>
+      <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">CHKSUM</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">UPDBY</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">INUM</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">IDT</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">VAL</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">POS</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">RCHRG</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">INV TYP</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">CFLAG</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">ETIN</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Chksum" type="text" class="validate">
+          <label for="Chksum">VAL</label>
+        </div>
+        
+        <table rules="all" style="background:#fff;">
+            <tr>
+            <td style="font-size:14px;" >num</td>
+            <td style="font-size:14px;">rt</td>
+            <td style="font-size:14px;">txval</td>
+             <td style="font-size:14px;">iamt</td>
+             <td style="font-size:14px;">camt</td>
+             <td style="font-size:14px;">samt</td>   
+            <td><span style="font:normal 12px agency, arial; color:blue; text-decoration:underline; cursor:pointer;" onclick="addMoreRows(this.form);">
+            
+            </span>
+            </td>
+            </tr>
+            <tr id="rowCount0">
+            <td><input id="num0" name="num[]" type="text"  value="" /></td>
+            <td><input  id="rt0" name="rt[]" type="text"  value="" /></td>
+            <td><input  id="txval0" name="txval[]" type="text"  value="" /></td>
+            <td><input  id="iamt0" name="iamt[]" type="text"  value="" /></td>
+            <td><input  id="camt0" name="camt[]" type="text"  value="" /></td>
+            <td><input  id="samt0" name="samt[]" type="text"  value="" /></td>
+            </tr>
+        </table></div></div></html>

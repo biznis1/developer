@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    
+    <script>
+     var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
+        
+        
+    var result = getUrlParameter('result');
+        
+       function result1(){
+           window.localStorage.setItem('rowVal',0);
+           $('#result').html(result);
+           $("#result").fadeOut(5000);
+       }
+          
+        
+    </script>
+</head>
+<body>
+  
+    <nav class="#1a237e indigo">
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo" style="font-size:1.2rem";><h6 style="margin-left:25px;">Bulksms is the leading provider of SMS services in US</h6> </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="sass.html" style="margin-right: 4px;">US |</a></li>
+        <li><a href="badges.html"style="padding-right:2px;">English |</a></li>
+        <li><a href="collapsible.html"style="padding-right:2px;">Login<i class="material-icons left">exit_to_app</i></a></li>
+         <li><a href="collapsible.html">Signup<i class="material-icons left">add_to_queue</i></a></li> 
+      </ul>
+    </div>
+  </nav>
+    
+    <div> 
+    <img src="http://d6jylurfutqza.cloudfront.net/com/bulksms101/img/bulk-101.png" alt="logo" class="responsive-img" style="width:260px; height:80px; margin-top:8px;    padding-left: 50px;">
+<div class="right-align"  style="marging-left:15px; marging-right:40px;padding-top:4px">Any question?  <i class="material-icons">email</i> info@bulksms.ae <strong> | </strong><i class="material-icons">call</i>+971 559973720,+971<br>503773480 
+    </div></div>
+     
+  <img src="https://png.icons8.com/facebook/color/24" title="Facebook" width="30" height="30">
+    <img src="https://png.icons8.com/instagram/office/16" title="Instagram" width="30" height="30">
+    
+        
+        
+    
+
+
+    <nav class="#000000 black" >
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo"></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="sass.html">Home<i class="material-icons left">home</i></a></li>
+        <li><a href="badges.html">Sevices</a></li>
+        <li><a href="collapsible.html">Buy Credits</a></li>
+          <li><a href="collapsible.html">International</a></li>
+          <li><a href="collapsible.html">Developers</a></li>
+          <li><a href="collapsible.html">About Us</a></li>
+          <li><a href="collapsible.html">FAQ</a></li>
+          <li><a href="collapsible.html">Contact Us</a></li>
+          <li><a href="collapsible.html">Support</a></li>
+      </ul>
+    </div>
+  </nav>
+    
+     <div class="parallax-container">
+    <div class="parallax"><img src="images.jpg"></div>
+  </div>
+  <div class="section white">
+    <div class="row container">
+      </div></div>
+    
+    
+    <center><p id='result'></p></center>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      
+      
+      <div class="row center">
+          <a class="btn modal-trigger" onclick="$('#modal1').modal('open')" ></a>
+      </div>
+      <br><br>
+
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+       <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center orange-text" ><i class="material-icons">tonality</i></h2>
+            <h5 class="center">Easy sending</h5>
+
+            <p class="light">You can send SMS instantly from website to mobile. There is no commitment or setup cost involved.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center orange-text"><i class="material-icons">perm_identity</i></h2>
+            <h5 class="center">Bulk Uploading</h5>
+
+            <p class="light">No need to type numbers manually, you can upload CSV of contacts and then send SMS to all in a single click.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center orange-text"><i class="material-icons">tune</i></h2>
+            <h5 class="center">Effective Medium</h5>
+
+            <p class="light">SMS has a very high read rate of more than 95 % and lets a user communicate in real time. You can use our web platform or API.</p>
+          </div>
+        </div>
+          <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center orange-text"><i class="material-icons">location_searching</i></h2>
+            <h5 class="center">Marketing</h5>
+
+            <p class="light">You can use our services for marketing and running campaigns to increase the awareness of your brand.</p>
+          </div>
+        </div>
+           <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center orange-text"><i class="material-icons">blur_off</i></h2>
+            <h5 class="center">Multiple Languages</h5>
+
+            <p class="light">Send messages in English, Arabic and several other languages.</p>
+          </div>
+        </div>
+          <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center orange-text"><i class="material-icons">sms</i></h2>
+            <h5 class="center">Send Long Messages</h5>
+
+            <p class="light">You can now send messages upto 1000 characters.</p>
+          </div>
+        </div> 
+         <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center orange-text"><i class="material-icons">network_cell</i></h2>
+            <h5 class="center">International Sms Network</h5>
+
+            <p class="light">You can send SMS to both national and international numbers. In fact, you can keep all numbers in a single list.</p>
+          </div>
+        </div> 
+          <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center orange-text"><i class="material-icons">gamepad</i></h2>
+            <h5 class="center">Sender IDs: SMS branding</h5>
+
+            <p class="light">You can send SMS that displays your brand name as the sender of SMS</p>
+          </div>
+        </div>  
+           <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center orange-text"><i  class="material-icons">web</i></h2>
+            <h5 class="center">Web based platform</h5>
+
+            <p class="light">We provide you with a secure https customer panel in which you can login from any device connected to the internet.</p>
+          </div>
+        </div> 
+           
+      </div>
+    </div>
+    <br><br>
+  </div>
+
+  
+    
+
+        
+        
+     
+
+    
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+    <script>
+        function submit(val){
+//            alert(val);
+            window.location.replace('index.html?result='+val);
+            
+        }
+   
+var rowCount = 0;
+function addMoreRows(frm) {
+rowCount ++;
+    window.localStorage.setItem('rowVal',rowCount);
+var recRow = '<tr id="rowCount'+rowCount+'"><td><input name="num[]" id="num'+rowCount+'" type="text"  maxlength="120" /></td><td><input name="rt[]" type="text" id="rt'+rowCount+'" maxlength="120"/></td><td><input name="txval[]" id="txval'+rowCount+'" type="text" maxlength="120" /></td><td><input name="iamt[]" id="iamt'+rowCount+'" type="text" maxlength="120" /></td><td><input name="camt[]" id="camt'+rowCount+'" type="text" maxlength="120" /></td><td><input name="samt[]" id="samt'+rowCount+'" type="text" maxlength="120" /></td><td> <a href="javascript:void(0);" onclick="removeRow('+rowCount+');"><i class="material-icons" style="color:red">indeterminate_check_box</i></a></td></tr>';
+jQuery('#addedRows').append(recRow);
+}
+
+function removeRow(removeNum) {
+    var rowCount = window.localStorage.getItem('rowVal');
+    var rowVal = rowCount - 1;
+    window.localStorage.setItem('rowVal',rowVal);
+jQuery('#rowCount'+removeNum).remove();
+}
+        
+        function saveData(){
+          $(function() {
+              var newArray2 = [];
+                var num = $('input[name="num[]"]').map(function() {
+                    return this.value
+                }).get();
+              var rt = $('input[name="rt[]"]').map(function() {
+                    return this.value
+                }).get();
+              var txval = $('input[name="txval[]"]').map(function() {
+                    return this.value
+                }).get();
+              
+              var iamt = $('input[name="iamt[]"]').map(function() {
+                    return this.value
+                }).get();
+              
+               var camt = $('input[name="camt[]"]').map(function() {
+                    return this.value
+                }).get();
+               var samt = $('input[name="samt[]"]').map(function() {
+                    return this.value
+                }).get();
+//              console.log(iamt);
+              var rowArray;
+              for(var i=0; i<num.length; i++){
+                  rowArray = {num:num[i], rt:rt[i], txvale:txval[i], iamt:iamt[i], camt:camt[i], samt:samt[i]};
+//                  console.log(rowArray);
+                  newArray2[i] = rowArray;
+              }
+              console.log('arrayIs',newArray2);
+              console.log('arrayIs',JSON.stringify(newArray2));
+              
+            });
+            
+          
+        }
+        
+</script>
+</html>

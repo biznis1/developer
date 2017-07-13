@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+ 
+
+</head>
+<body>
+
+  <div class="container">
+ <div class="row">
+ <h3>mm-nm-sources </h3>
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <input  id="URL" type="text" class="validate">
+          <label for="URL">URL</label>
+        </div>
+		</div>
+		<div class="row">
+		        <div class="input-field col s12">
+          <input  id="url_dynamic" type="text" class="validate">
+          <label for="url_dynamic">URL DYNAMIC</label>
+        </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="name" type="text" class="validate">
+          <label for="name">NAME</label>
+        </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="name_tr" type="text" class="validate">
+          <label for="name_tr">NAME TR</label>
+        </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="edition" type="text" class="validate">
+          <label for="edition">EDITION</label>
+        </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="ns" type="text" class="validate">
+          <label for="ns">NS</label>
+        </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="domain" type="text" class="validate">
+          <label for="domain">DOMAIN</label>
+        </div>
+		</div>
+		<div class="row">
+
+    <div class="input-field col s12">
+	
+    <select id="downloader">  
+                
+       <option value="" disabled selected>0.Default</option>
+      <option value="1">0.Default</option>
+      <option value="2">1.Web</option>
+      <option value="3">2.Mobile Downoader</option>
+	   
+                  
+                </select>
+	<label for='downloader'>DOWNLOADER</label>
+  </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="parser" type="text" class="validate">
+          <label for="parser">PARSER</label>
+        </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="parser_code" type="text" class="validate">
+          <label for="parser_code">PARSER CODE</label>
+        </div>
+		</div>
+				<div class="row">
+
+    <div class="input-field col s12">
+	
+    <select id="content_type">  
+                
+      
+      <option value="1">1.News</option>
+      <option value="2">2.Epaper</option>
+      <option value="3">3.Tenders</option>
+	   <option value="3">4.E-commerce</option>
+	   
+                  
+                </select>
+	<label for='content_type'>CONTENT TYPE</label>
+  </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="code" type="text" class="validate">
+          <label for="code">CODE</label>
+        </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="lang" type="text" class="validate">
+          <label for="lang">LANG</label>
+        </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="lang_script" type="text" class="validate">
+          <label for="lang_script">LANG SCRIPT</label>
+        </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="lang_country" type="text" class="validate">
+          <label for="lang_country">LANG COUNTRY</label>
+        </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="country" type="text" class="validate">
+          <label for="country">COUNTRY</label>
+        </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="tags" type="text" class="validate">
+          <label for="tags">TAGS</label>
+        </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="priority" type="text" class="validate">
+          <label for="priority">PRIORITY</label>
+        </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="schedule" type="text" class="validate">
+          <label for="schedule">SCHEDULE</label>
+        </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="last_done" type="text" class="validate">
+          <label for="parser_code">LAST DONE</label>
+        </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="next_due" type="text" class="validate">
+          <label for="parser_code">NEXT DUE</label>
+        </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="status" type="text" class="validate">
+          <label for="status">STATUS</label>
+        </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="status_remark" type="text" class="validate">
+          <label for="status_remark">REMARKS</label>
+        </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="crawl_delay" type="text" class="validate">
+          <label for="crawl_delay">CRAWL DELAY</label>
+        </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="crawl_maxdepth" type="text" class="validate">
+          <label for="crawl_maxdepth">CRAWL MAXDEPTH</label>
+        </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="crawl_maxtime" type="text" class="validate">
+          <label for="crawl_maxtime">CRAWL MAXTIME</label>
+        </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="crawl_maxlinks" type="text" class="validate">
+          <label for="crawl_maxlinks">CRAWL MAXLINKS</label>
+        </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="crawl_external_url" type="text" class="validate">
+          <label for="crawl_external_url">CRAWL EXTERNAL URL</label>
+        </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="crawl_robot_url" type="text" class="validate">
+          <label for="crawl_robot_url">CRAWL ROBOT URL</label>
+        </div>
+		</div>
+		<div class="row">
+		<div class="input-field col s12">
+          <input  id="downloader_actions" type="text" class="validate">
+          <label for="downloader_actions">DOWNLOADER ACTIONS</label>
+        </div>
+		</div>
+		<div class="row"
+		<div class="btn">
+		</div>
+		<a class="waves-effect waves-light btn" style="float:right;">Submit </a>
+		</div>
+	</form>
+	
+	</div>
+
+	
+	  
+	  <script src="jquery.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/custom.js"></script>
+  
+  
+ 
+</div>
+
+</body>
+    
+
+	  </html>

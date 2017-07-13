@@ -1,0 +1,178 @@
+{
+
+    "properties": {
+        "cdn": {
+            "items": {
+                "properties": {
+                    "cfs": {
+					    "description": "Counter party filing status",
+                        "type": "string"
+                    },
+                    "ctin": {
+					    "description": "Counter party gstin",
+                        "type": "string"
+                    },
+                    "nt": {
+                        "items": {
+                            "properties": {
+                                "cflag": {
+								    "description": "Counter party action",
+                                    "type": "string"
+                                },
+                                "chksum": {
+								    "description": "Checksum",
+                                    "type": "string"
+                                },
+                                "flag": {
+								     "description": "Receiver action",
+                                    "type": "string"
+                                },
+                                "idt": {
+								    "description": "Involice date",
+                                    "type": "string"
+                                },
+                                "inum": {
+								    "description": "Involice number",
+                                    "type": "string"
+                                },
+                                "itms": {
+                                    "items": {
+                                        "properties": {
+                                            "itc": {
+                                                "properties": {
+                                                    "elg": {
+													    "description": "Elegibility",
+                                                        "type": "string"
+                                                    },
+                                                    "tx_c": {
+													    "description": "ITC claimed as CGST",
+                                                        "type": "number"
+                                                    },
+                                                    "tx_cs": {
+													    "description": "ITC claimed as CESS",
+                                                        "type": "number"
+                                                    },
+                                                    "tx_i": {
+													    "description": "ITC claimed as IGST",
+                                                        "type": "number"
+                                                    },
+                                                    "tx_s": {
+													    "description": "ITC claimed as SGST",
+                                                        "type": "number"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "elg"
+                                                ],
+                                                "type": "object"
+                                            },
+                                            "itm_det": {
+                                                "properties": {
+                                                    "camt": {
+													    "description": "CGST amount",
+                                                        "type": "number"
+                                                    },
+                                                    "csamt": {
+													    "description": "CESS amount",
+                                                        "type": "number"
+                                                    },
+                                                    "iamt": {
+													    "description": "IGST amount",
+                                                        "type": "number"
+                                                    },
+                                                    "samt": {
+													    "description": "SGST amount",
+                                                        "type": "number"
+                                                    },
+                                                    "txval": {
+													    "description": "Taxval amount",
+                                                        "type": "number"
+                                                    },
+                                                   "rt": {
+											          "description": "Tax rate",
+                                                      "type": "number"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "txval",
+													"rt"
+                                                ],
+                                                "type": "object"
+                                            },
+                                            "num": {
+											    "description": "Item number",
+                                                "type": "integer"
+                                            }
+                                        },
+                                        "required": [
+                                            "num",
+                                            "itm_det",
+                                            "itc"
+                                        ],
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                },
+                                "nt_dt": {
+								    "description": "note date",
+                                    "type": "string"
+                                },
+                                "nt_num": {
+								    "description": "note number",
+                                    "type": "string"
+                                },
+                                "p_gst": {
+								    "description": "Pre GST Regime Dr./ Cr. Notes",
+                                    "type": "string"
+                                },
+                                "rsn": {
+								    "description": "Reason for Issuing Dr./ Cr. Notes",
+                                    "type": "string"
+                                },
+                                "ntty": {
+								    "description": "note type",
+                                    "type": "string"
+                                },
+                                "opd": {
+								    "description": "original period",
+                                    "type": "string"
+                                },                                
+                                "updby": {
+								    "description": "upload by flag",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "cflag",
+                                "itms",
+                                "nt_num",
+                                "idt",
+                                "p_gst",
+                                "rsn",
+                                "inum",
+                                "nt_dt",
+                                "flag",
+                                "updby",
+                                "chksum",
+                                "ntty"
+                            ],
+                            "type": "object"
+                        },
+                        "type": "array"
+                    }
+                },
+                "required": [
+                    "ctin",
+                    "nt",
+                    "cfs"
+                ],
+                "type": "object"
+            },
+            "type": "array"
+        }
+    },
+    "required": [
+        "cdn"
+    ],
+    "type": "object"
+}

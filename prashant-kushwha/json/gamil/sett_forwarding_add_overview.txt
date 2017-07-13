@@ -1,4 +1,4 @@
 {
-  "forwardingEmail": string,
-  "verificationStatus": string
+  "forwardingEmail": "string",
+  "verificationStatus": "string"
 }

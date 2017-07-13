@@ -1,0 +1,22 @@
+{
+    "forms": [
+        "accept-charset",
+        "action",
+        "autocomplete",
+        "enctype",
+        "method",
+        "name",
+        "novalidate",
+        "target",
+        {
+    "inputs":[
+        "type",
+        "name",
+        "placeholder",
+        "required",
+        "value"
+        ]
+
+        }
+    ]
+}

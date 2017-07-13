@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Compose Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="gmailcompose.css">
+  <script src="gmailcompose.js"></script>
+</head>
+<body id="color" onload="myFont()">
+  <button type="button" class="btn btn-info btn-lg" id="com">Compose</button>
+
+ <div  class="container" id="mess" >Your message has been discarded.  <a href="javascript:void(0);" id="undo">Undo discard</a></div>
+<div class="container fixed" style="width:45%;box-shadow:0 0 5px white" id="compose">
+  <div class="container fcolor" style="width:20%" id="fcolor">
+  <table class="table table-bordered" style="margin-top:70px;border:2px solid white">
+    <tbody>
+      <tr style="border:2px solid white">
+        <td class="btn" id="red" style="width:13px;height:13;border:2px solid white;background-color:red"></td>
+        <td class="btn" id="green" style="width:13px;height:13;border:2px solid white;background-color:green"></td>
+        <td class="btn" id="yellow" style="width:13px;height:13;border:2px solid white;background-color:yellow"></td>
+		<td class="btn" id="blue" style="width:13px;height:13;border:2px solid white;background-color:blue"></td>
+        <td class="btn" id="purple" style="width:13px;height:13;border:2px solid white;background-color:purple"></td>
+        <td class="btn" id="pink" style="width:13px;height:13;border:2px solid white;background-color:pink"></td>
+      </tr>
+      <tr style="border:2px solid white">
+        <td class="btn" id="orange" style="width:13px;height:13;border:2px solid white;background-color:orange"></td>
+        <td class="btn" id="gray" style="width:13px;height:13;border:2px solid white;background-color:gray"></td>
+        <td class="btn" id="c1" style="width:13px;height:13;border:2px solid white;background-color:#234332"></td>
+		<td  class="btn" id="cyan" style="width:13px;height:13;border:2px solid white;background-color:cyan"></td>
+        <td class="btn"  id="black" style="width:13px;height:13;border:2px solid white;background-color:black"></td>
+        <td  class="btn" id="c2" style="width:13px;height:13;border:2px solid white;background-color:#39bfdf"></td>
+      </tr>
+      <tr style="border:2px solid white">
+        <td  class="btn" id="c3" style="width:13px;height:13;border:2px solid white;background-color:#efbaff"></td>
+        <td  class="btn" id="c4" style="width:13px;height:13;border:2px solid white;background-color:#1d6a7a"></td>
+        <td  class="btn" id="c5" style="width:13px;height:13;border:2px solid white;background-color:#e5972e"></td>
+		<td  class="btn" id="c6" style="width:13px;height:13;border:2px solid white;background-color:#be7139"></td>
+        <td class="btn"  id="c7" style="width:13px;height:13;border:2px solid white;background-color:#e50b68"></td>
+        <td  class="btn" id="c8" style="width:13px;height:13;border:2px solid white;background-color:#3aff6b"></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+<div class="row header"  style="padding:8px;background-color:#404040;color:white">
+<button type="button" class="close cross actions">&times;</button>
+		  <button class="close modalMaximize actions" id="max"><i class="fa fa-expand" id="maxicon" aria-hidden="true"></i></button>
+		  <button class="close modalMinimize actions"  id="min"><i class="fa fa-minus-square" aria-hidden="true"></i></button>
+          <h4 class="modal-title">New Message</h4>
+</div>
+<div class="row body" id="main">
+		 <form method="POST" class="form-horizontal">
+		 <table class="table table-bordegray">
+    <thead>
+      <tr>
+        <input type="email" id="em1" placeholder="Recipients"><div class="input-group col-lg-12 col-md-12 col-sm-12" id="eml" style=" 
+    margin-left: -15px !important;">
+		<span class="input-group-btn  col-lg-2 col-md-2 col-sm-2" style="margin-right:25px;color:white;"><a class="btn" id="spwd">To</a></span>
+<input type="email" name="email" class="form-control col-lg-8 col-md-8 col-sm-8" id="email">
+<span class="input-group-btn  col-lg-2 col-md-2 col-sm-2" style="margin-left:-15px;color:white;"><a class="btn" id="btn-Cc">Cc</a><a class="btn" id="btn-Bcc">Bcc</a></span>
+</div>
+      </tr>
+	  <tr>
+	  <input type="email" name="Cc" placeholder="Cc" style="width:100%;height:35px" id="Cc">
+	  </tr>
+	  <tr>
+	  <input type="email" name="Bcc" placeholder="Bcc" style="width:100%;height:35px" id="Bcc">
+	  </tr>
+    </thead>
+    <tbody>
+	<tr><input type="text" id="subject" placeholder="Subject" style="width:100%;height:35px">
+	</tr>
+	<tr>
+      <textarea id="message" style="color:black;resize:none"></textarea>
+      </tr>
+    </tbody>
+  </table>
+		 </form>
+		 
+</div>
+<div class="row footer" style="background-color:#f5f5f5;padding-bottom:4px;padding-left:8px;padding-top:4px" id="foot">
+<button type="button" class="btn btn-primary pull-left" id="dismiss">send</button>
+<ul class="nav navbar-nav">
+<li><button id="tedit" class="btn btn-whitee" type="button" data-toggle="tooltip" title="Formatting options"><span class="glyphicon glyphicon-text-color"></span></button></li>
+<li class="gU"><div class="Uz" aria-hidden="true"></div></li>
+<li><button class="btn btn-white" type="button" data-toggle="tooltip" id="af" title="Attach files"><span class="glyphicon glyphicon-paperclip"></span></button></li>
+<li><button class="btn btn-white" type="button" data-toggle="tooltip"  title="insert link(ctrl+k)"><span class="glyphicon glyphicon-link"></span></button></li>
+<li><button class="btn btn-white" type="button" data-toggle="tooltip"  title="insert photo"><span class="glyphicon glyphicon-picture"></span></button></li>
+<li><button class="btn btn-white" type="button" data-toggle="tooltip"  title="insert files using Drive"><img src="drive.png" width="18" height="18" alt="Google Drive"></button></li>
+<li></li>
+</ul>
+<ul class="nav navbar-nav pull-right">
+		 <li id="trash"><button class="btn btn-whiteee" data-toggle="tooltip"  title="Discard draft" type="button"><span class="glyphicon glyphicon-trash"></span></button></li>
+		 <li class="gU"><div class="Uz" aria-hidden="true"></div></li>
+		 <li><div class="dropup pull-right" style="padding-right:8px" data-toggle="tooltip" title="More options">
+  <button class="btn dropdown-toggle btn-whiteee" type="button" data-toggle="dropdown"><span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a >Default to full-screen</a></li>
+    <li class="dropup"><a href="javascript:void(0);" class="dropdown-toggle" data-target="dropdown">Label<span class="caret pull-right" style="padding-top:2px"></span></a></li>
+    <li><a >Plain text mode</a></li>
+	<li><a >Print</a></li>
+	<li><a >Check spelling</a></li>
+  </ul>
+</div></li>
+</ul>
+         
+</div>
+</div>
+<!--formatting text div in div------------------------------------------------------------------------------>
+<div class="container tedittor" style="background-color:gray;" id="tedittor"><div class="row" style="margin:5px;"><ul class="nav navbar-nav">
+<li><div class="dropup pull-right" style="padding-right:2px">
+  <button class="btn btn-sm dropdown-toggle tebtn" type="button" data-toggle="dropdown">Times New Roman&nbsp;<span class="caret"></span></button>
+  <ul class="dropdown-menu" id="myRadio">
+    <li class="radio"><label>&nbsp&nbsp<input id="f1" type="radio" value="Serif" name="rd">Serif</a></li>
+    <li class="radio"><label>&nbsp&nbsp<input id="f2" type="radio" value="Sans-serif" name="rd">Sans-serif</a></li>
+    <li class="radio"><label>&nbsp&nbsp<input id="f3" type="radio" value="Courier New" name="rd">Courier New</a></li>
+	<li class="radio"><label>&nbsp&nbsp<input id="f4" type="radio" value="Times New Roman" name="rd">Times New Roman</a></li>
+	<li class="radio"><label>&nbsp&nbsp<input id="f5" type="radio" value="Courier" name="rd">Courier</a></li>
+	<li class="radio"><label>&nbsp&nbsp<input id="f6" type="radio" value="Georgia" name="rd">Georgia</a></li>
+    <li class="radio"><label>&nbsp&nbsp<input id="f7" type="radio" value="Palatinow" name="rd">Palatinow</a></li>
+	<li class="radio"><label>&nbsp&nbsp<input id="f8" type="radio" value="Trebuchet MS" name="rd">Trebuchet MS</a></li>
+	<li class="radio"><label>&nbsp&nbsp<input id="f9" type="radio" value="Arial white" name="rd">Arial white</a></li>
+  </ul>
+</div></li>
+<li><div class="dropup pull-right" style="padding-right:2px">
+  <button class="btn btn-sm dropdown-toggle tebtn" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-text-height"></span><span class="caret"></span></button>
+  <ul class="dropdown-menu" id="mysize">
+	<li class="radio"><label>&nbsp&nbsp<input type="radio" value="extra-small" name="ch">extra-small</label></li>
+    <li class="radio"><label>&nbsp&nbsp<input type="radio" value="small" name="ch">small</label></li>
+    <li class="radio"><label>&nbsp&nbsp<input type="radio" value="medium" name="ch">medium</label></li>
+    <li class="radio"><label>&nbsp&nbsp<input type="radio" value="large" name="ch">large</label></li>
+	<li class="radio"><label>&nbsp&nbsp<input type="radio" value="extra-large" name="ch">extra-large</label></li>
+  </ul>
+</div></li>
+<li><button class="btn btn-sm tebtn btn-danger" style="color:white" type="button" id="ffcolor"><i class="fa fa-paint-brush" aria-hidden="true"></i></button></li>
+<li><button class="btn btn-sm tebtn" id="B" type="button"><span class="glyphicon glyphicon-bold"></span></button></li>
+<li><button class="btn btn-sm tebtn" id="I" type="button"><span class="glyphicon glyphicon-italic"></span></button></li>
+<li><button class="btn btn-sm tebtn" id="AL"  type="button"><span class="glyphicon glyphicon-align-left"></span></button></li>
+<li><button class="btn btn-sm tebtn" id="AR"  type="button"><span class="glyphicon glyphicon-align-right"></span></button></li>
+<li><button class="btn btn-sm tebtn" id="AC"  type="button"><span class="glyphicon glyphicon-align-center"></span></button></li>
+<li><button class="btn btn-sm tebtn" id="AJ"  type="button"><span class="glyphicon glyphicon-align-justify"></span></button></li>
+<li></li>
+</ul></div></div>
+<!--end of formatting text div in div------------------------------------->
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="row header"  style="padding:8px;background-color:#404040;color:white">
+<button type="button" class="close cross actions" id="mcross">&times;</button>
+		  <button class="close modalMaximize actions" data-toggle="modal" data-target="#myModal"  id="mmax"><i class="fa fa-compress" id="mmaxicon" aria-hidden="true"></i></button>
+		  <button class="close modalMinimize actions"  id="mmin"><i class="fa fa-minus-square" aria-hidden="true"></i></button>
+          <h4 class="modal-title">New Message</h4>
+</div>
+<div class="row body" id="mmain">
+		 <form method="POST" class="form-horizontal">
+		 <table class="table table-bordegray">
+    <thead>
+       <tr>
+        <input type="email" id="mem1" placeholder="Recipients"><div class="input-group col-lg-12 col-md-12 col-sm-12" id="meml" style=" 
+    margin-left: -15px !important;">
+		<span class="input-group-btn  col-lg-2 col-md-2 col-sm-2" style="margin-right:25px;color:white;"><a class="btn" id="mspwd">To</a></span>
+<input type="email" name="memail" class="form-control col-lg-8 col-md-8 col-sm-8" id="memail">
+<span class="input-group-btn  col-lg-2 col-md-2 col-sm-2" style="margin-left:-15px;color:white;"><a class="btn" id="btn-mCc">Cc</a><a class="btn" id="btn-mBcc">Bcc</a></span>
+</div>
+      </tr>
+	  <tr>
+	  <input type="email" name="mCc" placeholder="Cc" style="width:100%;height:35px" id="mCc">
+	  </tr>
+	  <tr>
+	  <input type="email" name="mBcc" placeholder="Bcc" style="width:100%;height:35px" id="mBcc">
+	  </tr>
+    </thead>
+    <tbody>
+	<tr><input type="text" id="msubject" placeholder="Subject" style="width:100%;height:35px">
+	</tr>
+	<tr>
+      <textarea id="mmessage" style="resize:none"></textarea>
+      </tr>
+    </tbody>
+  </table>
+		 </form>
+		 
+</div>
+
+<div class="row footer" style="background-color:#f5f5f5;padding-bottom:4px;padding-left:8px;padding-top:4px" id="ffoot">
+<button type="button" class="btn btn-primary pull-left" id="mdismiss">send</button>
+<ul class="nav navbar-nav">
+<li><button class="btn btn-whitee" type="button" data-toggle="tooltip" title="Formatting options"><span class="glyphicon glyphicon-text-color"></span></button></li>
+<li class="gU"><div class="Uz" aria-hidden="true"></div></li>
+<li><button class="btn btn-white" type="button" data-toggle="tooltip"  title="Attach files"><span class="glyphicon glyphicon-paperclip"></span></button></li>
+<li><button class="btn btn-white" type="button" data-toggle="tooltip"  title="insert link(ctrl+k)"><span class="glyphicon glyphicon-link"></span></button></li>
+<li><button class="btn btn-white" type="button" data-toggle="tooltip"  title="insert photo"><span class="glyphicon glyphicon-picture"></span></button></li>
+<li><button class="btn btn-white" type="button" data-toggle="tooltip"  title="insert files using Drive"><img src="drive.png" width="18" height="18" alt="Google Drive"></button></li>
+<li></li>
+</ul>
+<ul class="nav navbar-nav pull-right">
+		 <li id="mtrash"><button class="btn btn-whiteee" data-toggle="tooltip"  title="Discard draft" type="button"><span class="glyphicon glyphicon-trash"></span></button></li>
+		 <li class="gU"><div class="Uz" aria-hidden="true"></div></li>
+		 <li><div class="dropup pull-right" style="padding-right:8px" data-toggle="tooltip" title="More options">
+  <button class="btn dropdown-toggle btn-whiteee" type="button" data-toggle="dropdown"><span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a >Default to full-screen</a></li>
+    <li class="dropup"><a href="javascript:void(0);" class="dropdown-toggle" data-target="dropdown">Label<span class="caret pull-right" style="padding-top:2px"></span></a></li>
+    <li><a >Plain text mode</a></li>
+	<li><a >Print</a></li>
+	<li><a >Check spelling</a></li>
+  </ul>
+</div></li>
+</ul>
+         
+</div>
+      </div>
+      
+    </div>
+  </div>
+  <!--formatting text div in modal------------------------------------------------------------------------------>
+  <div class="container tedittor" style="background-color:gray;" id="mtedittor"><div class="row" style="margin:5px;"><ul class="nav navbar-nav">
+<li><div class="dropup pull-right" style="padding-right:2px">
+  <button class="btn btn-sm dropdown-toggle tebtn" type="button" data-toggle="dropdown">Times New Roman&nbsp;<span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li id="Serif"><a >Serif</a></li>
+    <li id="Sans-seri"><a >Sans-serif</a></li>
+    <li id="Courier New"><a >Courier New</a></li>
+	<li id="Times"><a >Times</a></li>
+	<li id="Courier"><a >Courier</a></li>
+	<li id="Georgia"><a >Georgia</a></li>
+    <li id="Palatinow"><a >Palatinow</a></li>
+	<li id="Trebuchet MS"><a >Trebuchet MS</a></li>
+	<li id="Arial white"><a >Arial white</a></li>
+  </ul>
+</div></li>
+<li><div class="dropup pull-right" style="padding-right:2px">
+  <button class="btn btn-sm dropdown-toggle tebtn" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-text-height"></span><span class="caret"></span></button>
+  <ul class="dropdown-menu">
+	<li id="extra-small"><a >extra-small</a></li>
+    <li id="small"><a >small</a></li>
+    <li id="medium"><a >medium</a></li>
+    <li id="large"><a >large</a></li>
+	<li id="extra-large"><a >extra-large</a></li>
+  </ul>
+</div></li>
+
+<li><button class="btn btn-sm tebtn" type="button"><span class="glyphicon glyphicon-bold"></span></button></li>
+<li><button class="btn btn-sm tebtn" type="button"><span class="glyphicon glyphicon-italic"></span></button></li>
+<li><button class="btn btn-sm tebtn" type="button"><span class="glyphicon glyphicon-align-left"></span></button></li>
+<li><button class="btn btn-sm tebtn" type="button"><span class="glyphicon glyphicon-align-right"></span></button></li>
+<li><button class="btn btn-sm tebtn" type="button"><span class="glyphicon glyphicon-align-center"></span></button></li>
+<li><button class="btn btn-sm tebtn" type="button"><span class="glyphicon glyphicon-align-justify"></span></button></li>
+<li></li>
+</ul></div></div>
+<!--end of formatting text div in modal------------------------------------->
+<!--</div>-->  
+</body>
+</html>
+
+
+
+

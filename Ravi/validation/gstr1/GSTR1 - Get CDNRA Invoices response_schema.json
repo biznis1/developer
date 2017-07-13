@@ -1,0 +1,144 @@
+{
+  "type": "object",
+  "properties": {
+    "cdnra": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ctin": {
+            "description": "Counter party GSTIN",
+            "type": "string",
+            "maxLength": 15,
+            "minLength": 15,
+            "pattern": "^[a-zA-Z0-9]+$"
+          },
+          "cfs": {
+            "type": "string",
+            "description": "GSTR2 filing status of counter party"
+          },
+          "nt": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "chksum": {
+                  "type": "string"
+                },
+                "ntty": {
+                  "type": "string",
+                  "description": "Note Type"
+                },
+                "nt_num": {
+                  "type": "string",
+                  "description": "Debit Note/Credit Note No."
+                },
+                "nt_dt": {
+                  "description": "Credit/Debit date",
+                  "type": "string"
+                },
+                "ont_num": {
+                  "type": "string",
+                  "description": "Original Note Number"
+                },
+                "ont_dt": {
+                  "type": "string",
+                  "description": "Original Note Date"
+                },
+                "rsn": {
+                  "description": "Reason Code for issuing Debit/Credit Note",
+                  "type": "string"
+                },
+                "inum": {
+                  "description": "Original invoice number",
+                  "type": "string"
+                },
+                "idt": {
+                  "description": "Invoice date",
+                  "type": "string"
+                },
+                "rchrg": {
+                  "description": "Reverse Charge",
+                  "type": "string"
+                },
+                "val": {
+                  "description": "Differential Value for which Dr./ Cr. note is issued",
+                  "type": "number"
+                },
+                "irt": {
+                  "description": "IGST Rate as per invoice",
+                  "type": "number"
+                },
+                "iamt": {
+                  "description": "IGST Amount as per invoice",
+                  "type": "number"
+                },
+                "crt": {
+                  "description": "CGST Rate as per invoice",
+                  "type": "number"
+                },
+                "camt": {
+                  "description": "CGST Amount as per invoice",
+                  "type": "number"
+                },
+                "srt": {
+                  "description": "SGST Rate as per invoice",
+                  "type": "number"
+                },
+                "samt": {
+                  "description": "SGST Amount as per invoice",
+                  "type": "number"
+                },
+                "csrt": {
+                  "description": "Cess Rate as per invoice",
+                  "type": "number"
+                },
+                "csamt": {
+                  "description": "Cess Amount as per invoice",
+                  "type": "number"
+                },
+                "etin": {
+                  "description": "Ecommerce GSTIN",
+                  "type": "string",
+                  "maxLength": 15,
+                  "minLength": 15,
+                  "pattern": "^[a-zA-Z0-9]+$"
+                },
+                "updby": {
+                  "type": "string"
+                },
+                "flag": {
+                  "type": "string"
+                  
+                }
+              },
+              "required": [
+                "chksum",
+                "ntty",
+                "nt_num",
+                "nt_dt",
+                "ont_num",
+                "ont_dt",
+                "rsn",
+                "inum",
+                "idt",
+                "rchrg",
+                "val",
+                "updby",
+                "flag"
+              ]
+            }
+          }
+        },
+        "required": [
+          "ctin",
+          "cfs",
+          "nt"
+        ]
+      }
+    }
+  },
+  "required": [
+    "cdnra"
+  ]
+}
