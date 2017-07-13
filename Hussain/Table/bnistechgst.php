@@ -61,9 +61,9 @@ $pdf->SetXY(170,45);
 $refno='IT/SD/7002/Mob/App/2011';
 $pdf->Cell(20,5,$refno,0,1,'R');
 
-$pdf->Line(10,55,75,55);
+$pdf->Line(10,55,75,55,'R');
 
-$pdf->Line(105,55,75,55);
+$pdf->Line(105,85,75,85);
 
 
 
